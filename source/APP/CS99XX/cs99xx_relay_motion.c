@@ -31,9 +31,6 @@
 #include    "cs99xx_ir_shift_gear.h"
 
 
-
-static void mc14094_set_gear(u8 status);
-
 /*
  * 函数名：test_pass
  * 描述  ：测试通过调用
@@ -756,7 +753,7 @@ void bbd_load_gear(void)
 }
 
 
-static void mc14094_set_gear(uint8_t status)
+void mc14094_set_gear(uint8_t status)
 {
 	uint8_t data1 = status & (~0x80);
 	uint8_t data2 = MC14094_BUFFER[MC14094_C] & (~0X7F);

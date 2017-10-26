@@ -45,6 +45,7 @@ extern void test_ready(void);
 extern void test_pass(void);
 extern void test_fail(void);
 extern void relay_ready(void);
+extern void mc14094_set_gear(uint8_t status);
 
 #endif //__CS99XX_RELAY_MOTION__
 

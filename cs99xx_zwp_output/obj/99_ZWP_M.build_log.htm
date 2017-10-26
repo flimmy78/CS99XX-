@@ -7,6 +7,208 @@ F:\CS99XX\CS99XX_ZWP_M -改进\Project\CS99XX.uvproj
 Project File Date:  08/23/2017
 
 <h2>Output:</h2>
+Build target '支持bootloader'
+Before Build - User command #1: .\1.bat
+F:\CS99XX\CS99XX_ZWP_M -改进\Project>echo /*2017/10/26 周四 20:33:48.88*/ 1>>.\cs99xx_update.h 
+compiling system_stm32f10x.c...
+compiling app.c...
+compiling cs99xx_parameter.c...
+compiling acw_test.c...
+compiling BSP_config.c...
+linking...
+Program Size: Code=320708 RO-data=76964 RW-data=12668 ZI-data=38316  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin -o ../99_ZWP_M.bin  ../cs99xx_zwp_output/obj/99_ZWP_M.axf
+After Build - User command #2: .\del_hex.bat
+F:\CS99XX\CS99XX_ZWP_M -改进\Project>del ..\cs99xx_zwp_output\obj\*.hex 
+"..\cs99xx_zwp_output\obj\99_ZWP_M.axf" - 0 Error(s), 0 Warning(s).
 </pre>
 </body>
 </html>
+                ADC_WatchdogConfig(g_ad_dog);
+..\source\APP\CS99XX\serve_test.c: 2 warnings, 0 errors
+compiling acw_relay.c...
+compiling BSP_config.c...
+linking...
+..\cs99xx_zwp_output\obj\99_ZWP_M.axf: Error: L6218E: Undefined symbol mc14094_set_gear (referred from acw_relay.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+"..\cs99xx_zwp_output\obj\99_ZWP_M.axf" - 1 Error(s), 2 Warning(s).
+Target not created
+rror:  #20: identifier "MC14094_B" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(14): error:  #20: identifier "MC14094_AMP_RELAY1" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(15): error:  #20: identifier "MC14094_AMP_RELAY2" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY2, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(16): error:  #20: identifier "MC14094_CD4053_C" is undefined
+      MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR 置1，DCW/IR置0 */
+..\source\APP\ACW\acw_relay.c(17): error:  #20: identifier "MC14094_AC_DC" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR */
+..\source\APP\ACW\acw_relay.c(18): error:  #20: identifier "MC14094_GR_W" is undefined
+      MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR */
+..\source\APP\ACW\acw_relay.c(19): error:  #20: identifier "MC14094_PRO_CHANGE" is undefined
+      MC14094_CMD(MC14094_A, MC14094_PRO_CHANGE, RELAY_ON);/* 限幅保护电路 ACW DCW IR 为1; GR为0 */
+..\source\APP\ACW\acw_relay.c(24): warning:  #223-D: function "mc14094_set_gear" declared implicitly
+              mc14094_set_gear(MC14094_C_2uA);
+..\source\APP\ACW\acw_relay.c(24): error:  #20: identifier "MC14094_C_2uA" is undefined
+              mc14094_set_gear(MC14094_C_2uA);
+..\source\APP\ACW\acw_relay.c(25): error:  #20: identifier "MC14094_W_IR" is undefined
+              MC14094_CMD(MC14094_B, MC14094_W_IR, RELAY_OFF);/* 切换到100mA 200uA 20uA 2uA 电路 */
+..\source\APP\ACW\acw_relay.c(28): error:  #20: identifier "MC14094_C_20uA" is undefined
+              mc14094_set_gear(MC14094_C_20uA);
+..\source\APP\ACW\acw_relay.c(32): error:  #20: identifier "MC14094_C_200uA" is undefined
+              mc14094_set_gear(MC14094_C_200uA);
+..\source\APP\ACW\acw_relay.c(37): error:  #20: identifier "MC14094_W_FILES" is undefined
+              MC14094_CMD(MC14094_B, MC14094_W_FILES, RELAY_ON);/* 2mA 挡 */
+..\source\APP\ACW\acw_relay.c(48): error:  #20: identifier "MC14094_C_100mA" is undefined
+              mc14094_set_gear(MC14094_C_100mA);
+..\source\APP\ACW\acw_relay.c: 2 warnings, 18 errors
+compiling BSP_config.c...
+"..\cs99xx_zwp_output\obj\99_ZWP_M.axf" - 18 Error(s), 2 Warning(s).
+Target not created
+lay.c(10): error:  #20: identifier "vol_segment" is undefined
+      MC14094_CMD(MC14094_A, MC14094_A_VOL_SEL, !vol_segment);
+..\source\APP\ACW\acw_relay.c(12): error:  #20: identifier "g_short_delay" is undefined
+      g_short_delay = 10;
+..\source\APP\ACW\acw_relay.c(13): error:  #20: identifier "MC14094_B" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(13): error:  #20: identifier "MC14094_AMP_RELAY1" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(14): error:  #20: identifier "MC14094_AMP_RELAY2" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AMP_RELAY2, RELAY_OFF);/* 功放开关 */
+..\source\APP\ACW\acw_relay.c(15): error:  #20: identifier "MC14094_CD4053_C" is undefined
+      MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR 置1，DCW/IR置0 */
+..\source\APP\ACW\acw_relay.c(16): error:  #20: identifier "MC14094_AC_DC" is undefined
+      MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR */
+..\source\APP\ACW\acw_relay.c(17): error:  #20: identifier "MC14094_GR_W" is undefined
+      MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR */
+..\source\APP\ACW\acw_relay.c(18): error:  #20: identifier "MC14094_PRO_CHANGE" is undefined
+      MC14094_CMD(MC14094_A, MC14094_PRO_CHANGE, RELAY_ON);/* 限幅保护电路 ACW DCW IR 为1; GR为0 */
+..\source\APP\ACW\acw_relay.c(20): error:  #20: identifier "cur_gear" is undefined
+      switch(cur_gear)
+..\source\APP\ACW\acw_relay.c(22): error:  #20: identifier "AC_2uA" is undefined
+          case AC_2uA:
+..\source\APP\ACW\acw_relay.c(23): warning:  #223-D: function "mc14094_set_gear" declared implicitly
+              mc14094_set_gear(MC14094_C_2uA);
+..\source\APP\ACW\acw_relay.c(23): error:  #20: identifier "MC14094_C_2uA" is undefined
+              mc14094_set_gear(MC14094_C_2uA);
+..\source\APP\ACW\acw_relay.c(24): error:  #20: identifier "MC14094_W_IR" is undefined
+              MC14094_CMD(MC14094_B, MC14094_W_IR, RELAY_OFF);/* 切换到100mA 200uA 20uA 2uA 电路 */
+..\source\APP\ACW\acw_relay.c(26): error:  #20: identifier "AC_20uA" is undefined
+          case AC_20uA:
+..\source\APP\ACW\acw_relay.c(27): error:  #20: identifier "MC14094_C_20uA" is undefined
+              mc14094_set_gear(MC14094_C_20uA);
+..\source\APP\ACW\acw_relay.c(30): error:  #20: identifier "AC_200uA" is undefined
+          case AC_200uA:
+..\source\APP\ACW\acw_relay.c(31): error:  #20: identifier "MC14094_C_200uA" is undefined
+              mc14094_set_gear(MC14094_C_200uA);
+..\source\APP\ACW\acw_relay.c(34): error:  #20: identifier "AC_2mA" is undefined
+          case AC_2mA:
+..\source\APP\ACW\acw_relay.c(36): error:  #20: identifier "MC14094_W_FILES" is undefined
+              MC14094_CMD(MC14094_B, MC14094_W_FILES, RELAY_ON);/* 2mA 挡 */
+..\source\APP\ACW\acw_relay.c(38): error:  #20: identifier "AC_10mA" is undefined
+          case AC_10mA:
+..\source\APP\ACW\acw_relay.c(39): error:  #20: identifier "AC_20mA" is undefined
+          case AC_20mA:
+..\source\APP\ACW\acw_relay.c(43): error:  #20: identifier "AC_50mA" is undefined
+          case AC_50mA:
+..\source\APP\ACW\acw_relay.c(44): error:  #20: identifier "AC_100mA" is undefined
+          case AC_100mA:
+..\source\APP\ACW\acw_relay.c(45): error:  #20: identifier "AC_200mA" is undefined
+          case AC_200mA:
+..\source\APP\ACW\acw_relay.c(47): error:  #20: identifier "MC14094_C_100mA" is undefined
+              mc14094_set_gear(MC14094_C_100mA);
+..\source\APP\ACW\acw_relay.c: 2 warnings, 29 errors
+compiling auto_cal_comm.c...
+compiling auto_cal_server.c...
+compiling auto_calibration.c...
+compiling BSP_config.c...
+compiling RTC_Config.c...
+compiling Timer_Config.c...
+compiling keyboard.c...
+compiling STM32_ADC.c...
+compiling ADC_DMA.c...
+compiling GUI_Draw.c...
+compiling cs99xx_for_comm.c...
+..\source\Comm_app\cs99xx_for_comm.c(3280): warning:  #550-D: variable "node" was set but never used
+      NODE_STEP *node;
+..\source\Comm_app\cs99xx_for_comm.c: 1 warning, 0 errors
+compiling mb_interface.c...
+compiling mb_server.c...
+compiling dc_module.c...
+compiling mb_dc_module.c...
+compiling module.c...
+"..\cs99xx_zwp_output\obj\99_ZWP_M.axf" - 29 Error(s), 11 Warning(s).
+Target not created
+fier "AC_20uA" is undefined
+                case AC_20uA:
+..\source\APP\CS99XX\calibration.c(2275): error:  #20: identifier "AC_200uA" is undefined
+                case AC_200uA:
+..\source\APP\CS99XX\calibration.c: 0 warnings, 30 errors
+compiling cs99xx.c...
+compiling cs99xx_buzzer.c...
+compiling cs99xx_collect.c...
+..\source\APP\CS99XX\cs99xx_collect.c(296): error:  #20: identifier "AC_200uA" is undefined
+                          case AC_200uA:
+..\source\APP\CS99XX\cs99xx_collect.c(299): error:  #20: identifier "AC_2mA" is undefined
+                          case AC_2mA:
+..\source\APP\CS99XX\cs99xx_collect.c(302): error:  #20: identifier "AC_10mA" is undefined
+                          case AC_10mA:
+..\source\APP\CS99XX\cs99xx_collect.c(303): error:  #20: identifier "AC_20mA" is undefined
+                          case AC_20mA:
+..\source\APP\CS99XX\cs99xx_collect.c(304): error:  #20: identifier "AC_50mA" is undefined
+                          case AC_50mA:
+..\source\APP\CS99XX\cs99xx_collect.c(307): error:  #20: identifier "AC_100mA" is undefined
+                          case AC_100mA:
+..\source\APP\CS99XX\cs99xx_collect.c(438): error:  #20: identifier "AC_200uA" is undefined
+                      case AC_200uA:
+..\source\APP\CS99XX\cs99xx_collect.c(441): error:  #20: identifier "AC_2mA" is undefined
+                      case AC_2mA:
+..\source\APP\CS99XX\cs99xx_collect.c(444): error:  #20: identifier "AC_20mA" is undefined
+                      case AC_20mA:
+..\source\APP\CS99XX\cs99xx_collect.c: 0 warnings, 9 errors
+compiling cs99xx_eep_manage.c...
+compiling cs99xx_exception.c...
+compiling cs99xx_interface.c...
+compiling cs99xx_ir_shift_gear.c...
+..\source\APP\CS99XX\cs99xx_ir_shift_gear.c(493): warning:  #223-D: function "clear_slither_data" declared implicitly
+        clear_slither_data();/* 换挡后要清空滤波缓冲区 */
+..\source\APP\CS99XX\cs99xx_ir_shift_gear.c: 1 warning, 0 errors
+compiling cs99xx_it.c...
+compiling cs99xx_lock_key.c...
+compiling cs99xx_mem_api.c...
+..\source\APP\CS99XX\cs99xx_mem_api.c(215): error:  #20: identifier "AC_200uA" is undefined
+                                case AC_200uA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(216): error:  #20: identifier "AC_2mA" is undefined
+                                case AC_2mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(217): error:  #20: identifier "AC_20mA" is undefined
+                                case AC_20mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(218): error:  #20: identifier "AC_200mA" is undefined
+                                case AC_200mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(220): error:  #20: identifier "AC_10mA" is undefined
+                                case AC_10mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(221): error:  #20: identifier "AC_100mA" is undefined
+                                case AC_100mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c(223): error:  #20: identifier "AC_50mA" is undefined
+                                case AC_50mA:
+..\source\APP\CS99XX\cs99xx_mem_api.c: 0 warnings, 7 errors
+compiling cs99xx_memory.c...
+compiling cs99xx_offset.c...
+compiling cs99xx_par_acw.c...
+..\source\APP\CS99XX\cs99xx_par_acw.c(22): error:  #20: identifier "AC_GEAR_END" is undefined
+      gear %= AC_GEAR_END;
+..\source\APP\CS99XX\cs99xx_par_acw.c: 0 warnings, 1 error
+compiling cs99xx_par_com.c...
+..\source\APP\CS99XX\cs99xx_par_com.c(1374): warning:  #177-D: variable "p" was declared but never referenced
+        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
+..\source\APP\CS99XX\cs99xx_par_com.c(1695): warning:  #177-D: variable "p" was declared but never referenced
+        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
+..\source\APP\CS99XX\cs99xx_par_com.c(1813): warning:  #177-D: variable "p" was declared but never referenced
+        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
+..\source\APP\CS99XX\cs99xx_par_com.c(2196): warning:  #177-D: variable "p" was declared but never referenced
+        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
+..\source\APP\CS99XX\cs99xx_par_com.c: 4 warnings, 0 errors
+compiling cs99xx_par_dcw.c...
+"..\cs99xx_zwp_output\obj\99_ZWP_M.axf" - 77 Error(s), 5 Warning(s).
+Project build/rebuild aborted.

@@ -69,6 +69,8 @@
 "..\cs99xx_zwp_output\obj\md5.o"
 "..\cs99xx_zwp_output\obj\cs99xx_custom.o"
 "..\cs99xx_zwp_output\obj\cs99xx_bbd.o"
+"..\cs99xx_zwp_output\obj\acw_relay.o"
+"..\cs99xx_zwp_output\obj\acw_test.o"
 "..\cs99xx_zwp_output\obj\auto_cal_comm.o"
 "..\cs99xx_zwp_output\obj\auto_cal_crc.o"
 "..\cs99xx_zwp_output\obj\auto_cal_server.o"

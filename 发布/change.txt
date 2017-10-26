@@ -1,0 +1,363 @@
+diff --git a/APP/CS99XX/calibration.c b/APP/CS99XX/calibration.c
+index 99c1eae..d0761bf 100644
+--- a/APP/CS99XX/calibration.c
++++ b/APP/CS99XX/calibration.c
+@@ -44,8 +44,9 @@ const VOL_CAL acw_vol_cal[][2]=
+                 {{"10V"     ,"0.010kV"}, {"200V"    ,"0.200kV"}, {"500V"    ,"0.500kV"}},//1kV
+                 {{"20V"     ,"0.020kV"}, {"200V"    ,"0.200kV"}, {"500V"    ,"0.500kV"}},//5kV
+                 {{0}},                                                                   //10kV
+-                {{0}},                                                                   //20kV     
+-                {{0}},                                                                   //30kV     
++                {{0}},                                                                   //20kV
++                {{0}},                                                                   //30kV
++                {{0}},                                                                   //50kV  
+             },
+             {
+                 {0},                                               //500V
+@@ -54,6 +55,7 @@ const VOL_CAL acw_vol_cal[][2]=
+                 {{0}},                                             //10kV
+                 {{0}},                                             //20kV
+                 {{0}},                                             //30kV
++                {{0}},                                             //50kV
+             },
+         },
+         /* 第二段电压 */
+@@ -63,17 +65,19 @@ const VOL_CAL acw_vol_cal[][2]=
+                 {{"50V"     ,"0.050kV"}, {"200V"    ,"0.200kV"}, {"500V"    ,"0.500kV"}},//500V
+                 {{"500V"    ,"0.500kV"}, {"700V"    ,"0.700kV"}, {"1.0kV"   ,"1.000kV"}},//1kV
+                 {{"500V"    ,"0.500kV"}, {"2.0kV"   ,"2.000kV"}, {"5.0kV"   ,"5.000kV"}},//5kV
+-                {{"500V"    ,"0.500kV"}, {"5.0kV"   ,"5.000kV"}, {"9.0kV"   ,"9.000kV"}},//10kV
+-                {{"1000V"    ,"1.000kV"}, {"10kV"   ,"10.000kV"}, {"15kV"   ,"15.000kV"}},//20kV
+-                {{"3000V"    ,"3.000kV"}, {"10kV"   ,"10.000kV"}, {"15kV"   ,"15.000kV"}},//30kV
++                {{"500V"    ,"00.50kV"}, {"5.0kV"   ,"05.00kV"}, {"9.0kV"   ,"09.00kV"}},//10kV
++                {{"1000V"   ,"1.000kV"}, {"10kV"    ,"10.00kV"}, {"15kV"    ,"15.00kV"}},//20kV
++                {{"5000V"   ,"5.00kV" }, {"10kV"    ,"10.00kV"}, {"20kV"    ,"20.00kV"}},//30kV
++                {{"5000V"   ,"5.00kV" }, {"10kV"    ,"10.00kV"}, {"20kV"    ,"20.00kV"}},//50kV
+             },
+             {
+                 {{240	 ,50    },{1000	 ,200   },{2800 ,500    }},//500V
+                 {{1400	 ,500   },{2100	 ,700   },{2828 ,1000   }},//1kV
+                 {{56*5	 ,500   },{1140	 ,2000  },{2828 ,5000   }},//5kV
+-                {{125    ,500   },{1300  ,5000  },{2500 ,9000   }},//10kV
+-                {{125    ,1000   },{1300  ,10000  },{1800 ,15000   }},//20kV
+-                {{250    ,3000   },{850   ,10000  },{1200 ,15000   }},//30kV
++                {{125    ,50    },{1300  ,500   },{2500 ,900    }},//10kV
++                {{125    ,100   },{1300  ,1000  },{1800 ,1500   }},//20kV
++                {{265    ,500   },{531   ,1000  },{1060 ,2000   }},//30kV
++                {{265    ,500   },{531   ,1000  },{1060 ,2000   }},//50kV
+             },
+         },
+     },
+@@ -129,15 +133,19 @@ const VOL_CAL dcw_vol_cal[][2]=
+                 {{"50V"     , "0.050kV"}, {"200V"    , "0.200kV"}, {"500V"    , "0.500kV"}},//500V
+                 {{"500V"    , "0.500kV"}, {"1.0kV"   , "1.000kV"}, {"2.0kV"   , "2.000kV"}},//2kV
+                 {{"500V"    , "0.500kV"}, {"2.0kV"   , "2.000kV"}, {"6.0kV"   , "6.000kV"}},//6kV
+-                {{"500V"    , "0.500kV"}, {"5.0kV"   , "5.000kV"}, {"9.0kV"   , "9.000kV"}},//10kV
++                {{"500V"    , "00.50kV"}, {"5.0kV"   , "05.00kV"}, {"9.0kV"   , "09.00kV"}},//10kV
+                 {{"1000V"	, "1.000kV"}, {"10kV"	 , "10.000kV"}, {"15kV"   ,"15.000kV"}},//20kV
++                {{"5000V"   , "5.00kV" }, {"10kV"    ,"10.00kV" }, {"20kV"    , "20.00kV"}},//30kV
++                {{"5000V"   , "5.00kV" }, {"10kV"    ,"10.00kV" }, {"20kV"    , "20.00kV"}},//50kV
+             },
+             {
+                 {{150   ,50     },{600	 ,200   },{1500 , 500   }},//500V
+                 {{550   ,500    },{1270 , 1000  },{2500 , 2000  }},//2kV
+                 {{56*5  ,500    },{1270 , 2000  },{3802 , 6000  }},//6kV
+-                {{139   ,500    },{1582 , 5000  },{2865 , 9000  }},//10kV
+-                {{175   ,1000   },{1820 , 10000 },{2520 , 15000 }},//20kV
++                {{139   ,50     },{1582 , 500   },{2865 , 900   }},//10kV
++                {{175   ,100    },{1820 , 1000  },{2520 , 1500  }},//20kV
++                {{265   ,500    },{531  , 1000  },{1060 , 2000  }},//30kV
++                {{150   ,500    },{300  , 1000  },{700  , 2000  }},//50kV
+             },
+         }
+     },
+@@ -1409,17 +1417,12 @@ void correct_acw_out_v(const uint16_t times)
+             /********************************/
+             break;
+ 		case ACW_10kV:
+-            pmenu_data->lon = 5;
+-            pmenu_data->x = (X0+X1)/2+10;
+-            pmenu_data->y = Y1-22;
+-			pmenu_data->decs = 3;
+-			break;
+ 		case ACW_20kV:
+ 		case ACW_30kV:
+-            pmenu_data->lon = 6;
++            pmenu_data->lon = 5;
+             pmenu_data->x = (X0+X1)/2+10;
+             pmenu_data->y = Y1-22;
+-			pmenu_data->decs = 3;
++			pmenu_data->decs = 2;
+ 			break;
+ 	}
+     
+@@ -1430,7 +1433,6 @@ void correct_acw_out_v(const uint16_t times)
+         case ACW_500V:
+ 		case ACW_1kV:
+ 		case ACW_5kV:
+-		case ACW_10kV:
+             if(pmenu_data->lon == 6)
+             {
+                 GUI_DispStringAt((const char*)"0.0000kV", pmenu_data->x, pmenu_data->y);
+@@ -1440,9 +1442,11 @@ void correct_acw_out_v(const uint16_t times)
+                 GUI_DispStringAt((const char*)"0.000kV", pmenu_data->x, pmenu_data->y);
+             }
+ 			break;
++		case ACW_10kV:
+ 		case ACW_20kV:
+ 		case ACW_30kV:
+-			GUI_DispStringAt((const char*)"00.000kV", pmenu_data->x, pmenu_data->y);
++		case ACW_50kV:
++			GUI_DispStringAt((const char*)"00.00kV", pmenu_data->x, pmenu_data->y);
+ 			break;
+ 	}
+ 	
+@@ -3472,9 +3476,8 @@ void correct_dcw_out_v(const uint8_t times)
+     
+ 	switch(cur_set_meal)
+ 	{
+-//         case DCW_2kV:
+-// 		case DCW_6kV:
+-        DCW_TRANSFORMER_GROUP_1:
++        case DCW_2kV:
++		case DCW_6kV:
+ 			pmenu_data->decs = 3;
+             pmenu_data->x = (X0+X1)/2+10-3;
+             pmenu_data->y = Y1-22;
+@@ -3484,16 +3487,14 @@ void correct_dcw_out_v(const uint8_t times)
+             pmenu_data->bits = 2;
+             /********************************/
+             break;
+-        DCW_TRANSFORMER_GROUP_2:
+-            pmenu_data->x = (X0+X1)/2+10;
+-            pmenu_data->y = Y1-22;
+-			pmenu_data->decs = 3;
+-			break;
+-        DCW_TRANSFORMER_GROUP_3:
++		case DCW_10kV:
++		case DCW_20kV:
++		case DCW_30kV:
++		case DCW_50kV:
+             pmenu_data->x = (X0+X1)/2+10;
+             pmenu_data->y = Y1-22;
+-			pmenu_data->decs = 3;
+-            pmenu_data->lon = 6;
++			pmenu_data->decs = 2;
++            pmenu_data->lon = 5;
+ 			break;
+ 	}
+     
+@@ -3503,7 +3504,6 @@ void correct_dcw_out_v(const uint8_t times)
+         default:
+         case DCW_2kV:
+ 		case DCW_6kV:
+-		case DCW_10kV:
+             if(pmenu_data->lon == 6)
+             {
+                 GUI_DispStringAt((const char*)"0.0000kV", pmenu_data->x, pmenu_data->y);
+@@ -3513,8 +3513,11 @@ void correct_dcw_out_v(const uint8_t times)
+                 GUI_DispStringAt((const char*)"0.000kV", pmenu_data->x, pmenu_data->y);
+             }
+ 			break;
++		case DCW_10kV:
+ 		case DCW_20kV:
+-			GUI_DispStringAt((const char*)"00.000kV", pmenu_data->x, pmenu_data->y);
++		case DCW_30kV:
++		case DCW_50kV:
++			GUI_DispStringAt((const char*)"00.00kV", pmenu_data->x, pmenu_data->y);
+ 			break;
+ 	}
+ 	
+diff --git a/APP/CS99XX/cs99xx_collect.c b/APP/CS99XX/cs99xx_collect.c
+index c0b7140..3f75e3e 100644
+--- a/APP/CS99XX/cs99xx_collect.c
++++ b/APP/CS99XX/cs99xx_collect.c
+@@ -158,6 +158,15 @@ void count_dis_value(void)
+ 			vol_ave = temp_vol * cur_adc_k + cur_adc_b;
+ 		}
+ 		
++		//对电压小于设定值10个字的电压进行修正
++		if(vol_ave <= cur_vol)
++		{
++			if(vol_ave + 10 > cur_vol)
++			{
++				vol_ave = cur_vol + 1;
++			}
++		}
++		
+ 		if(cur_mode == IR)
+ 		{
+ 			temp_cur = slither_f(temp_cur);
+diff --git a/APP/CS99XX/cs99xx_parameter.c b/APP/CS99XX/cs99xx_parameter.c
+index 32679c6..06eeb92 100644
+--- a/APP/CS99XX/cs99xx_parameter.c
++++ b/APP/CS99XX/cs99xx_parameter.c
+@@ -117,10 +117,9 @@ void init_acw_info(void)
+ 	switch(type_spe.acw_vol_range)
+ 	{
+ 		case ACW_10kV:
+-			menu_par[GUI_ACW_OUTPUT_VOL].decs = 3;
+-			break;
+ 		case ACW_20kV:
+ 		case ACW_30kV:
++		case ACW_50kV:
+ 			menu_par[GUI_ACW_OUTPUT_VOL].decs = 2;
+ 			break;
+ 	}
+diff --git a/APP/CS99XX/cs99xx_result.c b/APP/CS99XX/cs99xx_result.c
+index 8387129..7500b85 100644
+--- a/APP/CS99XX/cs99xx_result.c
++++ b/APP/CS99XX/cs99xx_result.c
+@@ -192,18 +192,10 @@ void ch_out_result_to_string(const RESULT_STR *res, RESULT_STRING_STR* res_str)
+                     mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 53, res->un.acw.vol);
+ 					break;
+ 				case ACW_10kV:
+-                    if(res->un.acw.vol < 10000)
+-                    {
+-                        mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 53, res->un.acw.vol);
+-                    }
+-                    else
+-                    {
+-                        mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.acw.vol/10);
+-                    }
+-					break;
+ 				case ACW_20kV:
+ 				case ACW_30kV:
+-                    mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.acw.vol/10);
++				case ACW_50kV:
++                    mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.acw.vol);
+                     break;
+ 			}
+ 			break;
+@@ -219,17 +211,10 @@ void ch_out_result_to_string(const RESULT_STR *res, RESULT_STRING_STR* res_str)
+                     mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 53, res->un.dcw.vol);
+                     break;
+ 				case DCW_10kV:
+-                    if(res->un.dcw.vol < 10000)
+-                    {
+-                        mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 53, res->un.dcw.vol);
+-                    }
+-                    else
+-                    {
+-                        mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.dcw.vol/10);
+-                    }
+-					break;
+ 				case DCW_20kV:
+-                    mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.dcw.vol/10);
++				case DCW_30kV:
++				case DCW_50kV:
++                    mysprintf((uint8_t*)res_str->test_out  , unit_pool[VOL_U_kV], 52, res->un.dcw.vol);
+ 					break;
+ 			}
+ 			break;
+diff --git a/APP/CS99XX/cs99xx_type.c b/APP/CS99XX/cs99xx_type.c
+index b338cb4..79c852b 100644
+--- a/APP/CS99XX/cs99xx_type.c
++++ b/APP/CS99XX/cs99xx_type.c
+@@ -22,8 +22,8 @@ static void init_speciality(void);
+ #include    "cs99xx_type_config.h"
+ #include	"calibration.h"
+ 
+-#define __TEST			0
+-#define __TEST_TYPE		CS9929AX_CC//CS9929AX_CC //CS9927LB//TSK7630//CS9933ET_1//CS9922BX//CS9922BX_DZ//CS9917A_8//CS9950CX //CS9917CX_20//
++#define __TEST			1
++#define __TEST_TYPE		CS9917AX//CS9929AX_CC //CS9927LB//TSK7630//CS9933ET_1//CS9922BX//CS9922BX_DZ//CS9917A_8//CS9950CX //CS9917CX_20//
+ 
+ #define VERSION_NUMBER__    "2.20.69"	/* 版本号 */
+ 
+@@ -384,16 +384,18 @@ static void init_speciality(void)
+ 			break;
+ 		case ACW_10kV:
+             type_spe.transformer_type = TRANS_10kV;/* 变压器类型 */
+-			type_spe.acw_vol_h = 9999;	/* 9.999kV */
+-			type_spe.acw_vol_l = 500;	/* 500V */
++			type_spe.acw_vol_h = 1000;	/* 10.00kV */
++			type_spe.acw_vol_l = 50;	/* 0.50kV */
+ 			break;
+ 		case ACW_20kV:
+             type_spe.transformer_type = TRANS_20kV;/* 变压器类型 */
+ 			type_spe.acw_vol_h = 2000;	/* 20.00kV */
++			type_spe.acw_vol_l = 50;	/* 0.50kV */
+ 			break;
+ 		case ACW_30kV:
+             type_spe.transformer_type = TRANS_30kV;/* 变压器类型 */
+ 			type_spe.acw_vol_h = 3000;	/* 20.00kV */
++			type_spe.acw_vol_l = 50;	/* 0.50kV */
+ 			break;
+ 	}
+ 	
+diff --git a/APP/CS99XX/cs99xx_type.h b/APP/CS99XX/cs99xx_type.h
+index 9bd208f..5efc5ae 100644
+--- a/APP/CS99XX/cs99xx_type.h
++++ b/APP/CS99XX/cs99xx_type.h
+@@ -208,7 +208,8 @@ typedef enum{
+ 	ACW_5kV		= 2,/* 5kV */
+ 	ACW_10kV	= 3,/* 10kV 以下 */
+ 	ACW_20kV	= 4,/* 20KV 以下 */
+-	ACW_30kV	= 5,/* 20KV 以下 */
++	ACW_30kV	= 5,/* 30KV 以下 */
++	ACW_50kV	= 6,/* 50KV 以下 */
+ }ACW_VOL_RANGE_ENUM;
+ #define DCW_TRANSFORMER_GROUP_1     case DCW_2kV: \
+                                     case DCW_6kV
+@@ -220,6 +221,8 @@ typedef enum{
+ 	DCW_6kV,
+ 	DCW_10kV,
+ 	DCW_20kV,
++	DCW_30kV,
++	DCW_50kV,
+ }DCW_VOL_RANGE_ENUM;
+ typedef enum{
+ 	IR_750V,
+diff --git a/APP/CS99XX/serve_test.c b/APP/CS99XX/serve_test.c
+index 6ef2918..adcc745 100644
+--- a/APP/CS99XX/serve_test.c
++++ b/APP/CS99XX/serve_test.c
+@@ -957,10 +957,12 @@ void transform_test_vol_string(void)
+ 	{
+ 		case ACW:
+ 		{
+-			if(type_spe.acw_vol_range == ACW_20kV
+-				|| type_spe.acw_vol_range == ACW_30kV)
++			if(type_spe.acw_vol_range == ACW_10kV
++				|| type_spe.acw_vol_range == ACW_20kV
++				|| type_spe.acw_vol_range == ACW_30kV
++				|| type_spe.acw_vol_range == ACW_50kV)
+ 			{
+-				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, vol_ave / 10.0);
++				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, vol_ave);
+ 			}
+ 			else
+ 			{
+@@ -977,9 +979,12 @@ void transform_test_vol_string(void)
+ 		}
+ 		case DCW:
+ 		{
+-			if(type_spe.dcw_vol_range == DCW_20kV)
++			if(type_spe.dcw_vol_range == DCW_10kV
++				||type_spe.dcw_vol_range == DCW_20kV
++				||type_spe.dcw_vol_range == DCW_30kV
++				||type_spe.dcw_vol_range == DCW_50kV)
+ 			{
+-				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, vol_ave / 10.0);
++				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, vol_ave);
+ 			}
+ 			else
+ 			{
+@@ -1471,11 +1476,11 @@ void load_data(void)
+ 				cur_real_offset = 0;
+ 			}
+             
+-			if(type_spe.acw_vol_range == ACW_20kV
+-				|| type_spe.acw_vol_range == ACW_30kV)
+-			{
+-				cur_vol *= 10;
+-			}
++// 			if(type_spe.acw_vol_range == ACW_20kV
++// 				|| type_spe.acw_vol_range == ACW_30kV)
++// 			{
++// 				cur_vol *= 10;
++// 			}
+ 			
+             vol_ave = cur_vol;
+             /* 偏移测试 */

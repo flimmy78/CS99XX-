@@ -1,0 +1,107 @@
+diff --git a/APP/CS99XX/cs99xx_type.c b/APP/CS99XX/cs99xx_type.c
+index d85d311..fe16a96 100644
+--- a/APP/CS99XX/cs99xx_type.c
++++ b/APP/CS99XX/cs99xx_type.c
+@@ -25,7 +25,7 @@ static void init_speciality(void);
+ #define __TEST			0
+ #define __TEST_TYPE		CS9929AX_CC//CS9929AX_CC //CS9927LB//TSK7630//CS9933ET_1//CS9922BX//CS9922BX_DZ//CS9917A_8//CS9950CX //CS9917CX_20//
+ 
+-#define VERSION_NUMBER__    "2.20.71"	/* 版本号 */
++#define VERSION_NUMBER__    "2.20.72"	/* 版本号 */
+ 
+ 
+ 
+diff --git a/APP/CS99XX/cs99xx_vref.c b/APP/CS99XX/cs99xx_vref.c
+index 0349c5b..80de845 100644
+--- a/APP/CS99XX/cs99xx_vref.c
++++ b/APP/CS99XX/cs99xx_vref.c
+@@ -598,15 +598,16 @@ void test_vref(uint16_t cur_h)
+ 	DAC_Vol[1] = l_short_vref;
+ 	
+ 	/* ARC基准 */
+-	/* 直流耐压 电弧侦测关闭 触发电弧中断作短路处理 */
+-	if(cur_arc_gear == 0 && cur_mode == DCW)
+-	{
+-		DAC_Vol[2] = ARC_VREF_RESET;
+-	}
+-	else
+-	{
+-		DAC_Vol[2] = cur_arc_k * arc_base;
+-	}
++	/* ARC开启 2017.5.24 */
++    if(cur_arc_gear != 0)
++    {
++        DAC_Vol[2] = cur_arc_k * arc_base;
++    }
++    /* ARC关闭 2017.5.24 */
++    else
++    {
++        DAC_Vol[2] = ARC_VREF_RESET;
++    }
+ }
+ 
+ static uint16_t set_arc_vref(uint16_t base)
+diff --git a/APP/CS99XX/general_test.c b/APP/CS99XX/general_test.c
+index 24bba47..140146c 100644
+--- a/APP/CS99XX/general_test.c
++++ b/APP/CS99XX/general_test.c
+@@ -684,7 +684,11 @@ void dis_pass(void)
+     uint8_t flag = 0;
+     
+     relay_motion();/* 复位放电 */
+-    led_cmd(LED_ST_PASS);
++    
++	if(steps_pass)
++	{
++        led_cmd(LED_ST_PASS);
++    }
+ 	
+ 	if(g_comm_status == LOCAL_COMM)
+ 	{
+@@ -842,6 +846,7 @@ void dis_fail(void)
+ 	
+     dis_test_status(TEST_WAIT_INDEX, &GUI_FontHZ_SimSun_16);
+     
++    load_steps_to_list(1);//加载第一步 2017.5.20 
+ 	g_cur_step = list_99xx.head;
+ 	load_data();
+ 	dis_test_ui(); /* 画出当前步的测试数据 */
+diff --git a/APP/CS99XX/irq.c b/APP/CS99XX/irq.c
+index 593aeae..c08f8e7 100644
+--- a/APP/CS99XX/irq.c
++++ b/APP/CS99XX/irq.c
+@@ -167,11 +167,11 @@ static void serve_test_over(void)
+ {
+     HIGH = 0;
+     close_test_timer();
++    irq_stop_relay_motion();//关闭高压 2017.5.24
+     
+     /* 如果fail_mode设为FAIL_MODE_FPDFC 并且是第一步 正常结束就结束整个测试 */
+     if(sys_par.fail_mode == FAIL_MODE_FPDFC && cur_step == 1 && !CUR_FAIL)
+     {
+-        irq_stop_relay_motion();
+         CUR_OVER = 1;
+         OVER = 1;/* 测试步全部完成 */
+     }
+@@ -196,8 +196,6 @@ static void serve_test_over(void)
+         /* 停止测试 */
+         else
+         {
+-            irq_stop_relay_motion();
+-            
+             CUR_OVER = 1;
+             
+             /* 当前步是最后一步 */
+@@ -387,12 +385,6 @@ void test_irq(void)
+         {
+             open_hv();
+         }
+-        
+-// 		/* 测试时间到时 下降时间为0 */
+-// 		if(0 == fal_t && g_dis_time == tes_t)
+-// 		{
+-// 			close_hv();
+-// 		}
+ 	}
+ 	/* 第三阶段 电压下降 */
+ 	else if(g_test_time <= thr_t)

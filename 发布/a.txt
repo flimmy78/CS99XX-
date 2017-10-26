@@ -1,0 +1,851 @@
+commit 8ffab8590c00dcb57c1df5779bfc408c5aec7fea
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Nov 11 14:36:00 2016 +0800
+
+    1.修复BUG
+    PLC信号与老接口板兼容处理时发生错误。
+    结果列表数组越界。
+    V2.20.58
+
+commit c243293467dfee809a2b7d4555e423d683fd41c7
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Oct 31 11:32:25 2016 +0800
+
+    V2.20.55
+
+commit f7b4ddea72792565deda88bbaad1297c98212c3c
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Oct 31 10:53:24 2016 +0800
+
+    1.修改了软件BUG，有一处数组可能会越界。当测试步大于4步时。
+    2.定制机名称再次更改时，版本号无法显示了，进行修改
+
+commit b98ba6b15b4e97fb58df6505853bcb8cc47eb31b
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Oct 27 14:11:11 2016 +0800
+
+    清理提交
+
+commit 46c601744a23ef1a33c3d00ff04c206817ec4a47
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Oct 26 16:43:53 2016 +0800
+
+    V2.20.54
+
+commit 01f5484663aa14315647ea408bc10fb6218edd07
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Oct 24 08:07:06 2016 +0800
+
+    直流接地模块信息数据出现异常时，增加自动扫描模块功能，未完成
+
+commit 53eca5bacdd36aa20ddbcc83dbd2805d8b417b9b
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Oct 24 08:05:18 2016 +0800
+
+    V2.20.53
+
+commit c605d316c0a81ab0b74546134b44bb8ce22b6c6c
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Oct 19 11:02:50 2016 +0800
+
+    直流耐压电弧侦测关闭触发电弧中断作短路处理
+
+commit 2ffc858a86bdf43c5e26fff358a4449c072a8bc6
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Oct 11 11:45:05 2016 +0800
+
+    1.增加了定制机CS9914FX-1.
+    2.增加了手动偏移设置界面和通信的支持.
+    3.修改了电弧侦测关闭时当电弧中断触发后就作短路处理
+
+commit afd2d32c85eae3bbbef32066ad8574d7da9b31c7
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Oct 9 11:16:27 2016 +0800
+
+    更新了宋体小五字体,增加了西思特公司名称
+
+commit 60434ce589fc0047bd109b33d940560d599fc315
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Oct 9 09:54:59 2016 +0800
+
+    添加了西思特定制机RH8400AS,未完成
+
+commit 2644f82f98051e770ca1df5b1268c3b42e99dc9b
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Sep 27 13:27:28 2016 +0800
+
+    v2.20.52
+
+commit 0bdbe44048680817b59f5f0fa9ffc0cfeb804f13
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Sep 27 09:18:24 2016 +0800
+
+    v2.20.51
+
+commit a26f22be88a5d3e92b12b291dfc046435c77f693
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Sep 26 20:32:26 2016 +0800
+
+    修改了CS9923的IR电压下限为250v
+
+commit 833bf1d24b54077634bfbe9f5e93d1238c6fadd1
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Sep 22 21:27:00 2016 +0800
+
+    恢复对老接口板的支持
+
+commit ef5cf57f6f1fd1d3c9d321611348b330f73ba380
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Sep 20 08:10:48 2016 +0800
+
+    什么也没做
+
+commit 6e1cf767caedaa97895a7662298702dfdd8b8935
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Sep 18 10:42:27 2016 +0800
+
+    直流模块通讯主板程序发送数据前增加延时
+
+commit c634c02e4f215d6abea3e2556e5a2b0fc1101848
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Sep 18 09:36:18 2016 +0800
+
+    新增加CS9923CG
+
+commit 06196fdf7027c6fb212e3d93a44c48c617e31594
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Sep 13 13:51:42 2016 +0800
+
+    v2.20.49
+
+commit 51a314511b0b05a03f6fc44fe8dc13d6b8b3efdd
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Sep 13 13:51:19 2016 +0800
+
+    在v2.20.48中错误的将IR1.5kV以下电压的下限电阻的最小值改为2M,现恢复为1M
+
+commit 8f00aa8dc7c18ae429126438b93b7684c5f1b546
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Sep 9 16:01:58 2016 +0800
+
+    V2.20.48
+
+commit 12e5964a45379e77b49f46d07585248f0da1b9c0
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Sep 9 15:09:26 2016 +0800
+
+    1.修复了1.5kV IR电压校准不对的问题
+    2.新增加了BBD电流的单独校准，不再与ACW公用电流校准系数，这样就可以单独设置ACW的电流档位，而不再影响BBD了
+
+commit 5ffc7433ae993d128dc6d8e67dd8f03064fee140
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Aug 25 11:24:55 2016 +0800
+
+    1.修改了宋体小五字模bug.
+    2.修改了英文显示的bug.
+    ‘
+
+commit ed304ebe20892064de630b5ba82812d40aa5be63
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Aug 15 21:17:28 2016 +0800
+
+    1.BBD获取容值的英文界面有问题，进行修改；
+    2.IR测试增加对电阻的滑动平均滤波；
+    3.IR 1kV 100G档的换挡点进行修正；
+    4.BBD报警时显示----nF
+    5.IR增加了测试速度选择，在系统参数中，并可通过菜单定制；
+
+commit 49fe15daba91deb5025cca175682baa123462bd9
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Aug 1 17:04:47 2016 +0800
+
+    v2.20.47
+
+commit dbfbacf776f4c60670dc0841295e11d0d9509e70
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Aug 1 14:30:38 2016 +0800
+
+    v2.20.47
+
+commit 9a6541c676bcedffe46122282f1441252f4096b6
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jul 29 17:31:18 2016 +0800
+
+    1.重大BUG测试时间不准的问题，因为在中断计时函数中少了一个等号导致;
+
+commit 42e789ba7b39d5bb118c14d3eae28d00e9e59c57
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 27 11:54:47 2016 +0800
+
+    V2.20.46
+
+commit df7dc4378f8de504eb2daf7bb8208692ceaf0deb
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 27 07:53:51 2016 +0800
+
+    1.修复了通讯中电压查询与设置无法使用的BUG;
+
+commit 5d267969c0dc2a69d075c4ba37a0882f927d2c57
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 25 20:05:00 2016 +0800
+
+    1.增加IR的档位保持时间设置;
+    2.IR档位保持设置添加到定制参数中;
+    3.结果保存的编号由读取最后一条决定下一条编号,改为独立管理的计数编号,
+    该编号根据日期的更新会自动清零;
+
+commit 016a8868f88c7e0499e7ab15f74b133f12ce8a15
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 25 08:44:46 2016 +0800
+
+    1.结果编号在结果界面反显;
+    2.结果编号由4位十进制数,开展到5位;
+
+commit ad8532642797eabcafb3a8fbcd19f85be70bb3c9
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jul 21 18:07:53 2016 +0800
+
+    v2.20.45
+
+commit 8e48fa0c66cffb50e301e78823a1c82504f87d91
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jul 21 08:20:36 2016 +0800
+
+    V2.20.44
+
+commit f23c0f5d9fac7e228faeac657b3622dfee2d4fde
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 18 22:03:25 2016 +0800
+
+    1.bbd设置参数根据用户要求修改;
+    2.删除文件CS99XX_OSC.C.
+    3.新建文件cs99xx_bbd.c.
+
+commit c4726298e602abf3c16d685e76b5d24d021086e5
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 18 20:57:52 2016 +0800
+
+    1.调整了IR换挡点和校准点1.5kv;
+    2.修改了双触点变压器控制程序,与配置;
+
+commit cf8daa10c16f34cff50ec7db5997204aa0fce52f
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jul 17 14:39:01 2016 +0800
+
+    1.重新设计cs99xx_set_par_path.c中设置路径的函数;
+    2.对程序中的某些变量重新命名
+
+commit 49a18008f9116ad8a444d1b70610f036fb07013f
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jul 17 12:29:38 2016 +0800
+
+    删除了垃圾文件
+
+commit edd5c1a05a66a82bd5726ccc9ab61d52c84673f4
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jul 17 12:26:58 2016 +0800
+
+    1.通讯读取结果列表的结果记录,如果已经读的结果编号超出了范围就返回固定的字符串:"__RESULT_LIST_END__";
+    2.调整了IR的换挡点,但是有的还没有调整好,后续还要调整
+
+commit e023e69bca38a39f8d4a43925da03e58a62ccec6
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 13 14:50:19 2016 +0800
+
+    V2.20.43
+
+commit bcce86c7f8b413af7d53511d858f71d579f8ed55
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jul 12 20:02:50 2016 +0800
+
+    1.开发环境升级到MDK5;
+    2.MDK5不支持中文的c文件名,将中文文件名改为英文;
+    3.交流GR校准结束返回时按返回键无效,修正;
+    4.增加了定制开关控制数据的导入导出;
+
+commit 0e87ae6baa58ab46547efd3fa3160e7f90d55e82
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 11 11:38:51 2016 +0800
+
+    添加了数据导入导出的界面定制开关
+
+commit e3a82f43bc772b26ac2312d3ef7bea15d35d7cca
+Author: wx5575 <wx5575@163.com>
+Date:   Sat Jul 9 11:20:08 2016 +0800
+
+    短路时耐压测试的电流显示设置值
+
+commit a450ebb2b976838bb8d3002cfdaeac1522f326c5
+Author: wx5575 <wx5575@163.com>
+Date:   Sat Jul 9 11:11:52 2016 +0800
+
+    短路时耐压测试的电流显示设置值
+
+commit fa79d5ec9ae13f6857f05f0a38dc326bc7da3283
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jul 8 09:03:00 2016 +0800
+
+    OSC程序中的所有标示符全部改为BBD
+
+commit 3efc681967b51d7188f0d3325079edf08bec0711
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jul 8 08:32:39 2016 +0800
+
+    CS9927BL锂电池开路短路测试仪,在0.1s会报AMP报警,修改了功放报警时间
+
+commit dc971245294ccf49c46b0394e19f950df0606ffb
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jul 7 09:01:16 2016 +0800
+
+    V2.20.42
+
+commit e6bfedbf5cbb334b8804023cb9b55b93ac46758e
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jul 7 09:00:00 2016 +0800
+
+    1.修改CS9927LB,测试界面不显示GFI状态;
+
+commit cbc79d09e3a6ec64b5abf95522f81213e95c6bbe
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 6 16:14:15 2016 +0800
+
+    1.间隔时间测试灯不闪;
+    2.OSC改名BBD
+
+commit 975a16e66fd1c425c3c62dc24116ea371edb88ab
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 6 14:48:40 2016 +0800
+
+    1.更改了PLC测试信号;
+    2.更改了测试灯在失败继续打开的情况下,最后一不测试合格时显示测试失败后,测试灯却没有关闭
+
+commit b9294123617537b9983beb0f86f731ddd53fa096
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 6 13:15:01 2016 +0800
+
+    修改了PLC信号在测试过程中如果间隔时间为0,步间pass和步间连续打开后TEST信号闪烁
+
+commit b4e263991873f6bc2a5689f9da7923685dd12343
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jul 6 09:13:24 2016 +0800
+
+    调整500v变压器的校准点基准值
+
+commit 2970297ab71ac17180244e11b6e66164c0756e23
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jul 5 18:56:04 2016 +0800
+
+    V2.20.41
+
+commit de626992b5f6fe3a70461e67013e6d607876aa70
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jul 5 18:55:44 2016 +0800
+
+    修复了BUG当上升时间与测试时间相同时测试时间到死机
+
+commit 369e0564db3f3104b0a1e444ac50786992edbbc3
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jul 5 14:00:06 2016 +0800
+
+    1.修改了OSC的输出频率默认值
+
+commit 499b9e752613fa5d03bc26a5ddbb7ddca02e1b1b
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jul 5 09:51:05 2016 +0800
+
+    OSC添加频率
+
+commit b3b75acaedf44732a1b0d64c4ee818357c27433f
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 4 20:51:35 2016 +0800
+
+    1.发现在win10下取模软件无法正常输出c文件,返回到xp下进行取模;
+    2.用户发现并修复了通讯中的BUG EX:STEP:ACW:HIGH?;
+
+commit 286add2bd2833417a97d98c65dbf5b2be3cd5353
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 4 14:14:08 2016 +0800
+
+    添加下型号CS9927LB
+
+commit bbcc6d390d089bc306f0348850593835a9c8bda9
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 4 13:30:20 2016 +0800
+
+    删除了宋体小五字体.txt文件中重复的字
+
+commit 9f2a83afd0cbd0c237e8eab7ab7f47cd31602be1
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jul 4 13:27:41 2016 +0800
+
+    删除了宋体小五字体.txt文件中重复的字
+
+commit 6e893e7767cda72899891e8c7a0120b795663822
+Author: wx5575 <wx5575>
+Date:   Fri Jul 1 14:45:03 2016 +0800
+
+    1.增加了功放类型选择功能,包括LINE和PWD;
+    2.更新了宋体小五字体;
+
+commit 74839223b1065a5c888c09ab50bd3e061cf7d710
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jun 30 09:00:21 2016 +0800
+
+    1.修改了大电容测试时放电结束后电流不为零的情况,人为的清零;
+    2.修改了OSC测试时当失败继续打开不能正常测试的BUG
+    3.修改了测试时间到报警不能准确停止报警的问题
+
+commit b4cdcb133c946f706888c598efa44db651b40da6
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 29 14:44:28 2016 +0800
+
+    1.修改了offset测试的BUG
+    2.发布版本 V2.20.40
+
+commit b1b741e0824057c1176e58778b94f9530350217e
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 28 20:56:58 2016 +0800
+
+    增加了单GR模式下的系统参数的定制
+
+commit a1e5c96d306e9d4bd248a928dd7772db2276e043
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 28 20:23:10 2016 +0800
+
+    1.大电容测试报警时无法执行放电
+    2.大电容测试测试结果保存修正为测试阶段的电压和电流
+    3.短路报警时无法显示现场值，在异常处理函数中恢复现场
+
+commit 3cd1db80da5eb31e32fd9c52e3500935f40019eb
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 28 18:39:34 2016 +0800
+
+    增加了通信协议对OFFSET的支持
+
+commit 8a27a06edd52a66f08cdb2aa917aa698d7b1c7c5
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 28 16:02:54 2016 +0800
+
+    1.修改了CC循环测试第二圈出现开路报警的问题，原因在延时输出结束后没有停止定时器
+    2.修改了通信协议有关OSC的以及通信测试结果的模式统一保存为仪器的模式，当通信时才会转换成通信定义的模式
+
+commit 268fbdc44512afc2d258c96184e6fe789b046b3d
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 28 08:49:12 2016 +0800
+
+    当直流接地启动失败后要发送停止命令将所有的模块都挺下来
+
+commit 0765ba2207ca6f1b1675a18f84f85932e3896a3a
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jun 27 19:11:53 2016 +0800
+
+    修正了余量提示反显缺陷
+
+commit b354ecdab075a1c44d8abf85dede150637f18010
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jun 27 14:57:44 2016 +0800
+
+    去除大电容测试的上升电流参数，它的存在没有意义
+
+commit 67c5757aa4d86e36040e7f079f0bcd2722c191cd
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jun 27 14:18:06 2016 +0800
+
+    1.修改了型号选择相关程序
+    2.修改了通信的结果查询相关指令
+
+commit ad00c920b4835fbb4d308c28fc2d8b84c240d153
+Author: wx5575 <wx5575@163.com>
+Date:   Sat Jun 25 08:43:46 2016 +0800
+
+    1.增加了通信协议OSC的支持
+    2.修改了DC_GR测试输出机制，为低于20A使用一个模块，高于20A所有模块平均
+    3.当测试直流模块设置多步连续测试时，发现输出的电流不对了，经测试发现是因为测试模块没有及时得到输出的DA值就已经开始测试了，解决方法是，在启动命令发送时，将DA等参数顺便传给各个模块
+
+commit 0d1f5f48e97db1292087819c119eff971364de0a
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 22 20:17:06 2016 +0800
+
+    修改通信协议支持OSC
+
+commit f59d167c5bb01ec09d74b598f340984713f5563d
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 22 15:35:31 2016 +0800
+
+    结果保存有时电压值为0,因为显示限速程序阻碍了结果更新造成的位置在文件:CS99XX.C
+
+commit e84bb8187496d32e4d1839ec008bbf69c6556d9a
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 21 11:11:20 2016 +0800
+
+    修改型号配置
+
+commit 14fd532ffdeb1860a332c780a42488d837e4ff4f
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 21 08:36:08 2016 +0800
+
+    由于bootloader体积变大了，之前分配空间不够，需要扩容,将从40KB改为60kB
+
+commit cfcbe412172cf49064d59874266ebf38a2d46032
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 16:14:56 2016 +0800
+
+    失败继续打开报警时步间连续，将之前去除的延时时间又恢复，因为上位机结果保存在时间短的情况下是无法获取到报警信息的
+
+commit 42c0f64339081408454ba0541bf7a4c370fb5d4f
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 13:52:35 2016 +0800
+
+    增加型号CS9914CX-C
+
+commit f5bd1313fb7696553b75f5c72256004e556c0c70
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 13:15:03 2016 +0800
+
+    整理
+
+commit 1312eb3814487ad2f952891cad9636b8fb1e24b7
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 11:59:49 2016 +0800
+
+    兼容eep校准开关是低电平打开，flash校准开关是高电平打开
+
+commit bccaafa5219ead7268a38846a89f54af4af0f8d1
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 10:33:10 2016 +0800
+
+    临时的提交
+
+commit 8b3afbb59164db636baae3b4b44fbc6fdbafa78d
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 10:27:06 2016 +0800
+
+    这个版本的校准开关信号是与以前的反着的，临时修改程序
+
+commit a6c56ce61b246072a1a8840a86bc3bc1e8b914b9
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 10:23:56 2016 +0800
+
+    修改flash驱动
+
+commit 0c5da3a5f00cfd671e836dcf182b2215e2086ec7
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 17 09:49:44 2016 +0800
+
+    菜单定制蜂鸣开关，定制静音功能
+
+commit 481d2eebe8ad028f2c094149ad9a64b550b66671
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 15 22:54:00 2016 +0800
+
+    菜单定制存储器，修改存储代码
+
+commit af884c380b00df6e0bf91061c67906b8ba103d2e
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 15 21:06:31 2016 +0800
+
+    整理
+
+commit 9964df88a3106bfcfd743b4907ec8cfc75e4cda4
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 15 21:05:35 2016 +0800
+
+    更新了flash驱动，新增了100A DCDC_GR的测试功能，与一些设置特性
+
+commit 21ab9f2cbc60367d9dd7fade557999654b556deb
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 15:46:28 2016 +0800
+
+    V2.20.32
+
+commit 4f0d23185d0f9e7dfd851bbd32481d46a27729da
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 15:45:58 2016 +0800
+
+    更新FLASH驱动
+
+commit 1381177c05d1ce8f794b1d075cccdf5cc1243d29
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 15:23:44 2016 +0800
+
+    修改了测试失败继续跳到下一步时时间过长的问题
+
+commit 3364065d468b706ab0653a291b8eb3c1969fa5b7
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 11:47:29 2016 +0800
+
+    修改10kv的电压下限为500v
+
+commit be3c2797865beb9b90631551c601951b942ac854
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 11:03:09 2016 +0800
+
+    修改CS17CX 指标 使用线性功放
+
+commit c7c4092c28dc87afd0027aaf634ebe47708bf410
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 09:05:11 2016 +0800
+
+    2016.6.12
+
+commit 2825b393df7ca82a6b83ebd69a951c68a9471bfd
+Author: wx5575 <wx5575@163.com>
+Date:   Sun Jun 12 09:03:36 2016 +0800
+
+    2016.6.12
+
+commit 25e49fa5cde38c9cde019296c663cc46dea2dba2
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 8 15:12:44 2016 +0800
+
+    整理
+
+commit a8d8451d208a5e340ffab9c3a18843e3853f5934
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 8 14:27:29 2016 +0800
+
+    V2.20.31
+
+commit eed0b9485b03751b9681a612fe4b17130fc65b15
+Author: wx5575 <wx5575@163.com>
+Date:   Wed Jun 8 14:26:51 2016 +0800
+
+    大电容测试当测试时间设为0时测试过程中按下复位键，死机
+
+commit e38e0b9c57d9b6973ecf63ff2bc6cb2e758e86aa
+Author: wx5575 <wx5575@163.com>
+Date:   Tue Jun 7 20:01:44 2016 +0800
+
+    当通信连接时同样允许结果列表保存
+
+commit 3b653999b729d7f96c2df8dff7dc8422a19db818
+Author: wx5575 <wx5575@163.com>
+Date:   Mon Jun 6 09:24:47 2016 +0800
+
+    V2.20.30
+
+commit 021818e22d3f871b04bfd4e0d353b07cf53e5f2a
+Author: wx5575 <wx5575@163.com>
+Date:   Sat Jun 4 17:46:05 2016 +0800
+
+    修改TSK7630主界面显示符合用户要求
+
+commit 10f795534d4d0de4ec0d2e225abb5daf2f8aef9c
+Author: wx5575 <wx5575@163.com>
+Date:   Sat Jun 4 14:48:05 2016 +0800
+
+    1.发现IR测试的一个BUG,在测试启动时没有复位掉软件档位。
+    2.调整交流GR校准输出的DA值
+    3.增加了功放选择功能,通过界面类选择使用的是老功放还是新功放,进入设置的发放，校准开关打开，在帮助菜单下按F4+8，输入密码:000000.
+
+commit 2f7e1f1f93a2e64fe6538cace48b950d9ab0a826
+Author: wx5575 <wx5575@163.com>
+Date:   Fri Jun 3 11:17:07 2016 +0800
+
+    1.修正了交流接地时测试出现的BUG
+    2.OSC参数设置时的短路报警值默认数值错误，改为120%
+
+commit 19677eded4dd3480e584318fe8619c06bb3b13e3
+Author: wx5575 <wx5575@163.com>
+Date:   Thu Jun 2 13:47:30 2016 +0800
+
+    增加了4094A第8个output脚控制限幅保护耐压绝缘时为1，接地时为0
+
+commit f61d46c740c7e735f72baa0dea13fc022a7ded17
+Author: wx5575 <wx5575@163.com>
+Date:   Tue May 31 15:58:28 2016 +0800
+
+    1.修改了IR低电压测试大电阻出现的短路报警的问题，原因是在电压小电阻大的时候校准系数已经偏差很大，非常接近于0，如果使用这个系数计算电阻就接近于0.
+    解决方法：在电压大于200V时电阻档位就不允许切换到第五档上去，这样那个错误的系数永远也用不到。
+    2.修改了OSC测试时的BUG,修改OSC测试时间为1s,短路判断值由1-5，改为100-500
+
+commit d0676b0ce5a5b058d6cff051005e3203a075d49f
+Author: wx5575 <wx5575@163.com>
+Date:   Mon May 30 21:31:32 2016 +0800
+
+    IR测试时当测试电压小于200V,档位只能在1-4
+
+commit b23085ed7c7bb9cbb6f7b482ef35c1f93d147c53
+Author: wx5575 <wx5575@163.com>
+Date:   Mon May 30 10:59:26 2016 +0800
+
+    编译提交
+
+commit c3bacb6004afa5ec76fb5840b37d5a3e5ec84dff
+Author: wx5575 <wx5575@163.com>
+Date:   Mon May 30 07:48:56 2016 +0800
+
+    修改了文件另存为时间为当前的操作时间，之前使用的是当前文件的建立时间
+
+commit 5b68020f7df2d08933b7c47351155b2311c14311
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 28 11:43:59 2016 +0800
+
+    将电压变化的频率由100ms改为5ms
+
+commit da519e72aec13bf1a8e75f8df01020e833d26a3b
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 28 09:42:01 2016 +0800
+
+    修改了flash的值
+
+commit 18feafee1966831e4da6aa8a97e4e61319c25174
+Merge: e291605 ee7bc95
+Author: wx5575 <wx5575@163.com>
+Date:   Fri May 27 13:49:15 2016 +0800
+
+    解决合并冲突
+
+commit e29160502518e1c01a6eab72de6abfa78546cfca
+Author: wx5575 <wx5575@163.com>
+Date:   Fri May 27 13:46:59 2016 +0800
+
+    电压异常报警增加了计数报警，防止误报警
+
+commit 5abf5908c31bd44049fff31f5799dcadb031f3ed
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 26 18:14:14 2016 +0800
+
+    1.编译老是出现上级文件不能使用原因是cs99xx_update.h文件有两个一个在app目录一个在project目录,造成了程序中引用的cs99xx_update.h是app目录下的，直接导致了一些与中断向量表的文件不能重新编译，将app目录下的cs99xx_update.h删除即可
+
+commit ee7bc95a998f9cbf217bb470b1b555d721270c36
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 25 22:03:39 2016 +0800
+
+    1.电压上升没5ms更新一次数据
+    2.大电容测试BUG修改
+
+commit 40cd5009017d961be3c6c41e45504b212dd5baa7
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 25 19:41:59 2016 +0800
+
+    增加AT45驱动，删除M45驱动
+
+commit 5afe048d096680795387d20c0ab1deae05ba4fd2
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 25 19:40:09 2016 +0800
+
+    修复大电容测试过程中的BUG
+
+commit d5017f171a7662f36a3b256059e5da6e1d0fc8e6
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 25 07:59:38 2016 +0800
+
+    更改DCW短路中断消抖时间由50us改为100us
+
+commit ad4b546bacb7bed36efc26a56dedd6c86231b1d8
+Author: wx5575 <wx5575@163.com>
+Date:   Tue May 24 19:03:46 2016 +0800
+
+    整理代码
+
+commit 9e2a2e6a72bdf18a831b1f54542bb38dbc842296
+Merge: d58ff1e e2250da
+Author: wx5575 <wx5575@163.com>
+Date:   Mon May 23 20:42:46 2016 +0800
+
+    Merge branch 'CS9929EX'
+
+commit e2250da61ab9649949be8a2cd5da3742b7f4cff7
+Author: wx5575 <wx5575@163.com>
+Date:   Mon May 23 20:38:09 2016 +0800
+
+    修改了直流模块的程序，在校准时可能会进入开路报警
+
+commit d58ff1e1908524ff067d007ef08e56d6e3c79916
+Merge: 1acf63e 14ef3c4
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 21 15:21:55 2016 +0800
+
+    1.修改了4路8路14路的设置函数使之完成复用
+    2.修改了4路8路14路偏移界面中多路端口显示的内容使之完成复用
+
+commit 14ef3c47248263e86bd1cfad45906a3422a67167
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 21 15:13:20 2016 +0800
+
+    1.修改了4路8路14路的设置函数使之完成复用
+    2.修改了4路8路14路偏移界面中多路端口显示的内容使之完成复用
+
+commit 6523f0fe99cf320f289141a4bab95d5799080f11
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 21 10:49:40 2016 +0800
+
+    1.修改了直流GR在测试时模块选择程序的一个BUG
+    2.新增了对14路扫描仪的支持
+    3.修正了当多路扫描的单步结束后端口状态继电器应保持为了使回路充分放电
+
+commit 1acf63e7d5ea388e8b44972d275f09ed6436cd7f
+Author: wx5575 <wx5575@163.com>
+Date:   Sat May 21 10:49:40 2016 +0800
+
+    1.修改了直流GR在测试时模块选择程序的一个BUG
+    2.新增了对14路扫描仪的的支持
+
+commit 26119885c1122b5a73800193df4205fdf8693123
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 16:11:47 2016 +0800
+
+    MC14094.H
+
+commit e4bc11a5f7e81e609a6e838c7fa47bbfe2272ab2
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 14:35:11 2016 +0800
+
+    IR自动换挡关闭时电阻显示异常
+
+commit fd0e4e9d5a37d848f3fc39a92363699260f013c9
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 13:35:20 2016 +0800
+
+    删除所有在工程中的.bak文件
+
+commit f0296b751f2c30304fd0445806aabfde5b6ce930
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 13:11:25 2016 +0800
+
+    整理工程将源文件独立放到一个文件夹中，这样工程编译后也不会改变git跟踪的文件
+
+commit 11b2948ce0b7725df0ae35be372c28b50f0f0bf2
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 10:23:40 2016 +0800
+
+    aa
+
+commit e7e6a48a1e48c7cb361a87b33786a263ab3489d7
+Author: wx5575 <wx5575@163.com>
+Date:   Thu May 19 10:00:52 2016 +0800
+
+    2016-5-19 更新了工程的output和outlist的路径将其移除到工程外，便于git管理我们需要的文件，将编译生成的文件剔除git管理系统
+
+commit b1cfb0bfdd25858a2f9a5a18ff63424ca5660c44
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 18 19:53:02 2016 +0800
+
+    更新了型号对应的参数，是根据产品说明书上的参数来修改的
+
+commit f76ede2e360ef9bcf13d04793691dbb86247fe8d
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 18 09:32:37 2016 +0800
+
+    CS9933ET系列的绝缘电阻参数与说明书的保持一致
+
+commit 80652c2012ee386fdd5a48114e3f281582679556
+Author: wx5575 <wx5575@163.com>
+Date:   Wed May 18 08:13:24 2016 +0800
+
+    更改名字后第一次编译提交，添加更多的说明文字
+
+commit ab7409efc533fa518ff6b0dba01174c917afe86c
+Author: wx5575 <wx5575@163.com>
+Date:   Tue May 17 19:52:50 2016 +0800
+
+    更改工程名字为CS99XX.uvproj
+    2016年5月177日
+
+commit 89989fe637ac7b3fb1d5d929cdb5ad55116cab22
+Author: wx5575 <wx5575@163.com>
+Date:   Tue May 17 19:42:07 2016 +0800
+
+    create project [master] 2016
+    年 5月18日

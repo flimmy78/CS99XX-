@@ -1,0 +1,97 @@
+---- BBD Matches (96 in 20 files) ----
+Cs99xx_collect.c (app\cs99xx):    if((cur_mode == ACW && cur_real_cur) || cur_mode == BBD)
+Cs99xx_collect.c (app\cs99xx):		case BBD:
+Cs99xx_collect.c (app\cs99xx):	else if(test_flag.gradation == STAGE_TEST && (g_test_time>2 || cur_mode==BBD || cur_mode==CC))
+Cs99xx_collect.c (app\cs99xx):			case BBD:
+Cs99xx_for_comm.c (comm_app):        case BBD:
+Cs99xx_for_comm.c (comm_app):		case BBD:
+Cs99xx_for_comm.c (comm_app):			mode = BBD;
+Cs99xx_for_comm.c (comm_app):	if(p->com.mode != mode || p->com.mode != BBD)
+Cs99xx_for_comm.c (comm_app):	if(p->com.mode != mode && p->com.mode != BBD)
+Cs99xx_for_comm.c (comm_app):	if(p->com.mode != mode || p->com.mode != BBD)
+Cs99xx_for_comm.c (comm_app):	if(p->com.mode != mode && p->com.mode != BBD)
+Cs99xx_for_comm.c (comm_app):		case BBD:
+Cs99xx_for_comm.c (comm_app):		case BBD:
+Cs99xx_for_comm.c (comm_app):		case BBD:
+Cs99xx_for_comm.c (comm_app):        case BBD:
+Cs99xx_for_comm.c (comm_app):        case BBD:
+Cs99xx_for_comm.c (comm_app):        case BBD:
+Cs99xx_for_comm.c (comm_app):        case BBD:
+Cs99xx_it.c (app\cs99xx):		case BBD:
+Cs99xx_mem_api.c (app\cs99xx):		case BBD:
+Cs99xx_mem_api.c (app\cs99xx):			case BBD:
+Cs99xx_offset.c (app\cs99xx):				/* 判断一下当前步的模式是否是IR BBD CC */
+Cs99xx_offset.c (app\cs99xx):				if(cur_mode == IR || cur_mode == BBD || cur_mode == CC)
+Cs99xx_osc.c (app\cs99xx):    if(cur_mode == BBD)
+Cs99xx_osc.c (app\cs99xx):		GUI_DispStringAt("BBD specification", 50, 0);
+Cs99xx_osc.c (app\cs99xx):					GUI_DispStringAt("2.Press start key to perform BBD.", 5, 32);
+Cs99xx_osc.c (app\cs99xx):					GUI_DispStringAt("3.Press stop key to stop BBD.", 5, 46);
+Cs99xx_osc.c (app\cs99xx):	if(p->com.mode == BBD)
+Cs99xx_osc.c (app\cs99xx):		if(g_cur_step->one_step.com.mode == BBD)
+Cs99xx_osc.c (app\cs99xx):				if(cur_mode != BBD)
+Cs99xx_osc.c (app\cs99xx):						if(cur_mode != BBD)
+Cs99xx_parameter.c (app\cs99xx):		case BBD:
+Cs99xx_par_com.c (app\cs99xx):		mode_buf[++k] = mode_pool[GR_VOL_DROP_EN][BBD];
+Cs99xx_par_com.c (app\cs99xx):		flag[k] = BBD;
+Cs99xx_par_com.c (app\cs99xx):		case BBD:
+Cs99xx_relay_motion.c (app\cs99xx):    if(cur_mode == BBD || cur_mode == CC)
+Cs99xx_relay_motion.c (app\cs99xx):    if(cur_mode == BBD || cur_mode == CC)
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):// 				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):				shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):	shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):		case BBD:
+Cs99xx_relay_motion.c (app\cs99xx):				MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR/BBD 置1，DCW/IR置0 */
+Cs99xx_relay_motion.c (app\cs99xx):		case BBD:
+Cs99xx_relay_motion.c (app\cs99xx):			MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR/BBD 置1，DCW/IR置0 */
+Cs99xx_relay_motion.c (app\cs99xx):			MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR/BBD */
+Cs99xx_relay_motion.c (app\cs99xx):			MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR/BBD */
+Cs99xx_relay_motion.c (app\cs99xx):			shift_cur_gear(BBD);
+Cs99xx_relay_motion.c (app\cs99xx):    if(cur_mode != BBD)
+Cs99xx_result.c (app\cs99xx):		case BBD:
+Cs99xx_result.c (app\cs99xx):		case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_result.c (app\cs99xx):    if(res->mode + 1 == BBD)
+Cs99xx_result.c (app\cs99xx):		if((p->result==0) && (mode >= ACW) && (mode <= BBD))
+Cs99xx_result.c (app\cs99xx):			case BBD:
+Cs99xx_result.c (app\cs99xx):        case BBD:
+Cs99xx_set_par_path.c (app\cs99xx):	menu_par[GUI_COM_MODE].unit[0] = mode_pool[GR_VOL_DROP_EN][BBD];
+Cs99xx_set_par_path.c (app\cs99xx):	menu_par[GUI_COM_MODE].unit[1] = mode_pool[GR_VOL_DROP_EN][BBD];
+Cs99xx_set_par_path.c (app\cs99xx):		case BBD:
+Cs99xx_struct.c (app\cs99xx):	l_bbd.mode = BBD;
+Cs99xx_type.c (app\cs99xx):	{"CS9927LB"   ,	VERSION_NUMBER, CS9927LB    , config_CS9927LB       },/* 特点 BBD 50-500V */
+Cs99xx_type.c (app\cs99xx): * 描述  ：找到当前机型下的首个模式 优先顺序：ACW DCW IR GR BBD
+Cs99xx_type.c (app\cs99xx):		mode = BBD;
+Cs99xx_type.h (app\cs99xx):CS9912BX_L,/* 没有生产的临时备用与CS9912BX + BBD */
+Cs99xx_type.h (app\cs99xx):	uint8_t mode_en;/* 模式使能标志 第1-5位分别表示ACW DCW IR GR BBD 的使能位 第0位没有用 */
+Cs99xx_type.h (app\cs99xx):/*************** BBD ***********************/
+Cs99xx_vref.c (app\cs99xx):		case BBD:
+GUI_Draw.c (app):	{"", "ACW", "DCW", "IR ", "GR ", "BBD", "CC"},
+GUI_Draw.c (app):	{"", "ACW", "DCW", "IR ", "DV ", "BBD", "CC"},
+GUI_Draw.c (app):		1,0,{"测试模式","Mode"},{"","ACW","DCW","IR","GR","BBD"},set_mode,0/*no_dis_bits*/,GUI_COM_MODE,UDRB,
+GUI_Draw.c (app):	/************* BBD************/
+GUI_Draw.c (app):                if(type_spe.dcw_big_cap_en == DISABLE && cur_mode != BBD)
+GUI_Draw.c (app):		case BBD:
+GUI_Draw.h (app):	/********** BBD 3 39 ************/
+GUI_Draw.h (app):    BBD     = 5,
+Irq.c (app\cs99xx):        case BBD:
+Serve_test.c (app\cs99xx):    if(cur_mode != BBD)
+Serve_test.c (app\cs99xx):    else if(mode == BBD && OFFSET_BBD == 0)
+Serve_test.c (app\cs99xx):		case BBD:
+Serve_test.c (app\cs99xx): * 描述  ：将ACW DCW IR CC BBD ...电压转换为字符串
+Serve_test.c (app\cs99xx):		case BBD:
+Serve_test.c (app\cs99xx):        case BBD:
+Serve_test.c (app\cs99xx):        case BBD:
+Serve_test.c (app\cs99xx):		case BBD:
+Serve_test.h (app\cs99xx):    TEST_BBD    = 2,/* BBD GETC测试标记 */

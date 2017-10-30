@@ -539,7 +539,7 @@ void count_dis_value(void)
  * 输出  ：无
  * 返回  ：错误码 cur_status
  */
-static uint8_t judge_vol_exception(void)
+uint8_t judge_vol_exception(void)
 {
 	/* 电压上升 阶段 缓变阶段 */
 	if(test_flag.gradation == STAGE_RISE || test_flag.gradation == STAGE_CHANGE)

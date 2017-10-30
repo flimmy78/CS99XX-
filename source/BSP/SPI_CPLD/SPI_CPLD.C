@@ -2,7 +2,7 @@
 #include "SPI_CPLD.H"
 #include "BSP_config.h"
 #include "string.h"
-#include 	<math.h>
+#include <math.h>
 
 
 #define     CPLD_DELAY      1

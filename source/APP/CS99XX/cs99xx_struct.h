@@ -458,6 +458,25 @@ typedef struct{
     uint16_t pass_res_num;		/* 合格的数 用于统计结果 */
     uint16_t res_str_size;      /* 存放结果信息结构体大小 */
 }RESULT_INFO_T;
+
+
+typedef struct{
+    uint16_t sample_vol_ad;///<电压采样AD
+    uint16_t sample_cur_ad;///<电流采样AD
+    float vol_value;///<电压显示值
+    float cur_value;///<电流显示值
+    float real_value;///<真实电流显示值
+    float res_value;///<电阻显示值
+    uint8_t vol_segment;///<电压段
+    float vol_adc_k;///<电压AD校准k值
+    float vol_adc_b;///<电压AD校准b值
+    float cur_adc_k;///<电流AD校准k值
+    uint8_t fail_num;///<异常码
+    uint8_t test_over_fail;///<测试时间到异常码
+    uint8_t test_status;///<测试状态
+    uint16_t test_time;///<测试时间
+    uint16_t dis_time;///<显示时间
+}TEST_DATA_STRUCT;
 /******************* 全局变量声明 *********************/
 #ifdef   _99xxSTR_GLOBALS
 #define  _99xxSTR_EXT

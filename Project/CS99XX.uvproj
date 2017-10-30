@@ -840,6 +840,11 @@
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_test.c</FilePath>
             </File>
+            <File>
+              <FileName>acw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1820,7 +1825,7 @@
               <MiscControls></MiscControls>
               <Define>BOOT_LOADER,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\SPI_FLASH;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\Project;..\source\BSP\USART_Config</IncludePath>
+              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\SPI_FLASH;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\Project;..\source\BSP\USART_Config;..\source\APP\ACW</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2297,6 +2302,11 @@
               <FileName>acw_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -88,6 +88,7 @@ typedef struct {
     uint32_t low_max;/* 下限最大值 */
     uint32_t low_min;/* 下限最小值 */
     uint8_t decs;/* 小数点位数 */
+    uint8_t comm;///<通信档位
 }GEAR_STR;
 extern GEAR_STR ac_gear[];
 extern GEAR_STR dc_gear[];

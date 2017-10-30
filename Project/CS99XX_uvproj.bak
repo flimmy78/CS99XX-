@@ -828,6 +828,26 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>ACW</GroupName>
+          <Files>
+            <File>
+              <FileName>acw_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Auto_cal</GroupName>
           <Files>
             <File>
@@ -2267,6 +2287,26 @@
               <FileName>cs99xx_bbd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_bbd.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ACW</GroupName>
+          <Files>
+            <File>
+              <FileName>acw_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
             </File>
           </Files>
         </Group>

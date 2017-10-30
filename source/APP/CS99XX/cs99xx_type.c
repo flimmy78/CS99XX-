@@ -18,7 +18,7 @@ static void init_speciality(void);
 #include    "cs99xx_mem_api.h"
 #include 	"serve_test.h"
 #include    "cs99xx_struct.h"
-#include	"cs99xx_type.h" 
+#include	"cs99xx_type.h"
 #include    "cs99xx_type_config.h"
 #include	"calibration.h"
 

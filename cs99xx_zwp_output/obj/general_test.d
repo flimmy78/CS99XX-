@@ -79,3 +79,4 @@
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_plc.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_led.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_collect.h
+..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\ACW\acw_test.h

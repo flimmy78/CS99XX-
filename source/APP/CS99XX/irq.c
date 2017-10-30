@@ -163,7 +163,7 @@ static void offset_res_f(const int8_t res)
 	}
 }
 
-static void serve_test_over(void)
+void serve_test_over(void)
 {
     HIGH = 0;
     close_test_timer();
@@ -208,7 +208,7 @@ static void serve_test_over(void)
     }
 }
 
-static void sever_offset_test_over(void)
+void sever_offset_test_over(void)
 {
     /* 连续模式 */
     if(app_flag.offset_mode == OFFSET_CON)

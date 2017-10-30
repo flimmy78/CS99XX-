@@ -6,21 +6,9 @@
 #include "MC14094.h"
 #include "app.h"
 
-
-void acw_into_test_relay_ready(void)
+static void shift_acw_cur_gear(uint8_t gear)
 {
-    MC14094_CMD(MC14094_C, MC14094_C_GR, RELAY_OFF);/* ACW DCW IR */
-    MC14094_CMD(MC14094_A, MC14094_A_VOL_SEL, !vol_segment);
-    
-    g_short_delay = 10;
-    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
-    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY2, RELAY_OFF);/* 功放开关 */
-    MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR 置1，DCW/IR置0 */
-    MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR */
-    MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR */
-    MC14094_CMD(MC14094_A, MC14094_PRO_CHANGE, RELAY_ON);/* 限幅保护电路 ACW DCW IR 为1; GR为0 */
-    
-    switch(cur_gear)
+    switch(gear)
     {
         case AC_2uA:
             mc14094_set_gear(MC14094_C_2uA);
@@ -51,8 +39,36 @@ void acw_into_test_relay_ready(void)
             break;
     }
 }
-
-void acw_exit_test_relay_ready(void)
+void acw_into_test_relay_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
+    MC14094_CMD(MC14094_C, MC14094_C_GR, RELAY_OFF);/* ACW DCW IR */
+    MC14094_CMD(MC14094_A, MC14094_A_VOL_SEL, !test_data->vol_segment);
     
+    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY2, RELAY_OFF);/* 功放开关 */
+    MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR 置1，DCW/IR置0 */
+    MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR */
+    MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR */
+    MC14094_CMD(MC14094_A, MC14094_PRO_CHANGE, RELAY_ON);/* 限幅保护电路 ACW DCW IR 为1; GR为0 */
+    
+    shift_acw_cur_gear(acw_par->gear_i);
 }
+
+void acw_exit_test_relay_motion(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
+{
+    MC14094_CMD(MC14094_C, MC14094_C_GR, RELAY_OFF);/* ACW DCW IR */
+    
+    MC14094_CMD(MC14094_A, MC14094_A_VOL_SEL, !test_data->vol_segment);
+    
+    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY1, RELAY_OFF);/* 功放开关 */
+    MC14094_CMD(MC14094_B, MC14094_AMP_RELAY2, RELAY_OFF);/* 功放开关 */
+    MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);/* ACW/GR 置1，DCW/IR置0 */
+    MC14094_CMD(MC14094_B, MC14094_AC_DC, RELAY_OFF);/* 耐压绝缘测试交直流切换 1 直流DCW/IR 0交流 ACW/GR */
+    MC14094_CMD(MC14094_B, MC14094_GR_W, RELAY_OFF);/* 切换高压与接地测试用的继电器 1 接地测试，0 ACW/DCW/IR */
+    
+    MC14094_CMD(MC14094_A, MC14094_PRO_CHANGE, RELAY_ON);/* 限幅保护电路 ACW DCW IR 为1; GR为0 */
+    
+    shift_acw_cur_gear(acw_par->gear_i);
+}
+
+/******************* (C) COPYRIGHT 2017 长盛仪器 *****END OF FILE****/

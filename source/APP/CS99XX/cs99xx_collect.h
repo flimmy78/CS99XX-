@@ -21,6 +21,7 @@ extern uint8_t get_dc_gr_open_err(void);
 extern void set_dc_gr_amp_err(void);
 extern uint8_t get_dc_gr_amp_err(void);
 extern void clear_slither_data(void);
+extern uint8_t judge_vol_exception(void);
 
 #endif //__CS99XX_COLLECT_H__
 

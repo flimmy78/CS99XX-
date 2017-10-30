@@ -29,9 +29,9 @@
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\cs99xx_struct.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\cs99xx_config.h
+..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\serve_test.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\BSP\GPIO_Config\STM32_GPIO_Config.h
 ..\cs99xx_zwp_output\obj\acw_relay.o: ..\source\APP\CS99XX\cs99xx_parameter.h

@@ -480,4 +480,168 @@ void exception_handling(int8_t errnum)
     ERR_NUM_OVER = ERR_NONE;
 }
 
+void exception_handlingx(int8_t status)
+{
+    #define ARRAY_SIZE(arr) (sizeof(arr)/sizeof(arr[0]))
+	int8_t l_err_num = status;
+    int32_t i = 0;
+    uint8_t num = 0;
+	
+	uint8_t err_status_bool[]=
+	{
+        ST_ERR_H, ST_ERR_L, ST_ERR_REAL, ST_ERR_CHAR, ST_ERR_FAIL,
+        ST_ERR_SHORT, ST_ERR_ARC, ST_ERR_GFI, ST_ERR_AMP, ST_ERR_GEAR, ST_ERR_VOL_ABNORMAL,
+	};/* 给上位机发的错误状态 */
+	
+    num = ARRAY_SIZE(err_status_bool);
+    
+    for(i = 0; i < num; i++)
+    {
+        if(l_err_num == err_status_bool[i])
+        {
+            break;
+        }
+    }
+    
+    /* 没有发生异常 */
+    if(i == num)
+    {
+        return;
+    }
+    
+	irq_stop_relay_motion();
+    close_test_timer();/* 关定时器 */
+    
+	if(STOP)
+	{
+		return;
+	}
+    
+    
+    exit_test_relay_motion();/* 复位放电 */
+	res_ave = err_res_bak;
+    test_flag.vol_change_flag = 1;
+    test_dis();/* 更新数据 */
+    
+	CUR_FAIL = 1;/* 当前步测试失败 */
+    FAIL = 1;/* 测试失败 */
+	cur_result.err_num = l_err_num;
+    recover_exception_scene();
+    updata_result(cur_mode);
+    save_cur_result(&cur_result);/* 保存结果 */
+    
+    test_flag.judge_err_en == DISABLE;
+    
+	cur_status = err_status_bool[l_err_num%12];/* 给上位机发的错误状态 */
+    cur_cylinder_ctrl_stop();
+    
+    test_flag.test_led_flag = 0;
+	test_fail();
+    
+    updata_time(U_TEST_TIME, g_dis_time);
+	
+	if(OFFSET_BBD)
+	{
+		dis_exception_str(l_err_num, &GUI_FontHZ_SimSun_12);
+	}
+	else
+	{
+		dis_exception_str(l_err_num, &GUI_FontHZ_SimSun_16);
+	}
+    
+    if(cur_mode == DCW)
+    {
+        if(type_spe.dcw_big_cap_en == ENABLE)
+        {
+            STOP = 1;
+            /* 蜂鸣器长鸣 */
+            if(BUZZER_EN)
+            {
+                BUZZER = BUZZER_ON;/* 不受系统开关控制 */
+            }
+            
+            ERR_NUM = ERR_NONE;
+            ERR_NUM_OVER = ERR_NONE;
+            return;
+        }
+    }
+    
+	if(OFFSET_BBD)
+	{
+		goto l;
+	}
+    
+	if(cur_mode == BBD)
+	{
+		if(l_err_num == ERR_SHORT)
+		{
+			cur_plc_err_st = PLC_HIGH_FAIL;
+		}
+		else if(l_err_num == ERR_OPEN)
+		{
+			cur_plc_err_st = PLC_LOW_FAIL;
+		}
+	}
+	else
+	{
+		if(l_err_num == ERR_HIGH)
+		{
+			cur_plc_err_st = PLC_HIGH_FAIL;
+		}
+		else if(l_err_num == ERR_LOW)
+		{
+			cur_plc_err_st = PLC_LOW_FAIL;
+		}
+	}
+	
+    if(cur_mode == CC)
+    {
+        if(FAIL_MODE_CON == sys_par.fail_mode)
+        {
+            if(l_err_num == ERR_OPEN)
+            {
+                app_flag.buzzer_flicker_en = 1;
+            }
+            goto l;
+        }
+        else if(FAIL_MODE_CON != sys_par.fail_mode && FAIL_MODE_FPDFC != sys_par.fail_mode)
+        {
+            if(l_err_num == ERR_OPEN)
+            {
+                app_flag.buzzer_flicker_en = 1;
+            }
+        }
+    }
+	
+    switch(sys_par.fail_mode)
+    {
+        case FAIL_MODE_STOP:
+    l:
+            fail_mode_stop_dispose();
+            break;
+        case FAIL_MODE_HALT:
+            if(l_err_num == ERR_OPEN)
+            {
+                app_flag.buzzer_flicker_en = 1;
+            }
+            fail_mode_halt_dispose();
+            break;
+        case FAIL_MODE_CON:
+            fail_mode_con_dispose();
+            break;
+        case FAIL_MODE_RESTART:
+            fail_mode_restart_dispose();
+            break;
+        case FAIL_MODE_NEXT:
+            fail_mode_next_dispose();
+            break;
+        case FAIL_MODE_FPDFC:
+            fail_mode_fpdfc_dispose();
+            break;
+    }
+    
+    app_flag.buzzer_flicker_en = 0;
+	ERR_NUM = ERR_NONE;
+    ERR_NUM_OVER = ERR_NONE;
+}
 /******************* (C) COPYRIGHT 2014 长盛仪器 *****END OF FILE****/

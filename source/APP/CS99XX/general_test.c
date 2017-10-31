@@ -1793,7 +1793,58 @@ void testing_process_control(uint8_t *st)
 //                cs99xx_test_fun();/* 进入测试程序 */
 //            }
             
-            run_acw_test(g_cur_file, &g_cur_step->one_step.acw, &test_data);
+            run_acw_test(g_cur_file, g_cur_step, &test_data);
+            cur_status = test_data.test_status;
+            
+            if(test_data.fail_num == ERR_NONE)
+            {
+                exception_handling(test_data.fail_num);
+                *st = TEST_QUIT_CONTROL;
+                return;
+            }
+            
+            /* 测试结束 */
+            if(test_data.test_over == 1)
+            {
+                /* 测试合格 */
+                if(test_data.fail_num == ERR_NONE)
+                {
+                    *st = TEST_PASS_CONTROL;
+                    return;
+                }
+                /* 测试失败 */
+                else
+                {
+                     *st = TEST_EXCEPTION_CONTROL;
+                    return;
+                }
+            }
+            
+            /* 在间隔等待阶段，要判断是否要跑间隔等待 */
+            if(test_data.test_status == ST_INTER_WAIT)
+            {
+                if(test_data.fail_num == ERR_NONE)
+                {
+//                    cur_status = ST_PASS;
+                }
+                
+                if(sys_par.fail_mode == FAIL_MODE_FPDFC && cur_step == 1)
+                {
+                    if(test_data.fail_num == ERR_NONE)
+                    {
+                        *st = TEST_PASS_CONTROL;
+                        return;
+                    }
+                }
+                /* 测试到最后一步并且测试过程中发生过异常 */
+                else if(FAIL && g_cur_step->next == NULL)
+                {
+                     *st = TEST_EXCEPTION_CONTROL;
+                    return;
+                }
+            }
+            
+            /* 断续测试 */
             *st = TEST_TESTING_CONTROL;
             break;
         }

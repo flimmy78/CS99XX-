@@ -515,6 +515,7 @@ extern void bbd_auto_select_gear(void);
 extern void bbd_load_gear(void);
 extern void shift_cur_gear(uint8_t mode);
 extern void exception_handling(int8_t errnum);
+extern void exception_handlingx(int8_t status);
 
 extern void init_sys_flag(void);
 extern void count_dis_value(void);

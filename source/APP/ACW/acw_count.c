@@ -101,6 +101,7 @@ void count_acw_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
             acw_test_flag.judge_err_en == DISABLE;
             irq_stop_relay_motion();///<关闭高压
             record_exception_scene();/* 记录异常现场 */
+            test_data->test_over = 1;
         }
     }
 }

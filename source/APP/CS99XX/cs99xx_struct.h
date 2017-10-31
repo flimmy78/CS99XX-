@@ -476,6 +476,7 @@ typedef struct{
     uint8_t test_status;///<测试状态
     uint16_t test_time;///<测试时间
     uint16_t dis_time;///<显示时间
+    uint8_t test_over;///<测试结束
 }TEST_DATA_STRUCT;
 /******************* 全局变量声明 *********************/
 #ifdef   _99xxSTR_GLOBALS

@@ -211,19 +211,10 @@ void acw_test_irq(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUCT *t
 	/* 第四阶段 间隔等待 */
 	else if(test_data->test_time <= acw_for_t)
 	{
-		if(sys_par.fail_mode == FAIL_MODE_FPDFC && acw_par->step == 1)
-		{
-			if(!CUR_FAIL)
-			{
-                acw_test_flag.test_over = 1;
-				return;
-			}
-		}
-        
 		/* 步间连续关闭 */
 		if(!acw_par->steps_cont)
 		{
-            acw_test_flag.test_over = 1;
+            test_data->test_over = 1;
             return;
 		}
         
@@ -234,7 +225,7 @@ void acw_test_irq(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUCT *t
 	/* 当前步测试结束 */
 	else
 	{
-        acw_test_flag.test_over = 1;
+        test_data->test_over = 1;
 	}
 }
 
@@ -246,6 +237,7 @@ void acw_test_details(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUC
         {
             acw_test_flag.testing = 1;
             test_data->test_status = ST_WAIT;
+            test_data->fail_num = ERR_NONE;//默认初始化为合格
             break;
         }
 		case STAGE_RISE:/* 第一阶段 电压上升 */
@@ -283,8 +275,10 @@ void acw_test_details(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUC
 	}
 }
 
-void run_acw_test(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
+void run_acw_test(TEST_FILE *test_file, NODE_STEP *step, TEST_DATA_STRUCT *test_data)
 {
+    ACW_STRUCT *acw_par = &step->one_step.acw;
+    
     acw_test_details(test_file, acw_par, test_data);
     count_acw_dis_value(acw_par, test_data);
 }

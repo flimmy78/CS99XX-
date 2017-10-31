@@ -21,7 +21,8 @@ typedef struct{
 #endif
 
 _ACW_TEST __IO ACW_TEST_FLAG	acw_test_flag;
-extern void run_acw_test(TEST_FILE *test_file, ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data);
+extern void run_acw_test(TEST_FILE *test_file, NODE_STEP *step, TEST_DATA_STRUCT *test_data);
+
 #endif //__ACW_TEST_H__
 
 /******************* (C) COPYRIGHT 2017 ³¤Ê¢ÒÇÆ÷ *****END OF FILE****/

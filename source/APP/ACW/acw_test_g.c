@@ -1,12 +1,12 @@
 
 #include "acw_test_g.h"
 #include "acw_relay.h"
+#include "acw_count.h"
+#include "acw_test.h"
 #include "cs99xx_relay_motion.h"
 #include "cs99xx_vref.h"
 #include "test_com.h"
-#include "acw_count.h"
 #include "DAC_VREF.h"
-#include "acw_test.h"
 
 static uint16_t acw_g_zeo_t;///< 第〇阶段的累计时间
 static uint16_t acw_g_one_t;///< 第一阶段的累计时间
@@ -83,11 +83,12 @@ void acw_count_vol_step_value_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, T
 
 void acw_g_mode_next_step(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STRUCT *test_data)
 {
-    close_test_timer();/* 关定时器 */
-    acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);
-    test_data->gradation = STAGE_RE_READY;
-    test_data->danger = 0;
+    close_test_timer();// 关定时器
+    acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);//计算缓变数据
+    test_data->gradation = STAGE_RE_READY;//切换到再次就绪状态
+    test_data->ready_ok = 0;//清
 }
+
 /*
  * 函数名：test_irq
  * 描述  ：测试时钟控制，被调度任务调用
@@ -101,7 +102,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
 	if(0 == acw_par->testing_time)
 	{
 		/* 如果当前测试正在进行 即处于第二阶段的话就一直保持 */
-		if(acw_test_flag.testing)
+		if(acw_test_flag.forever_testing)
 		{
 			test_data->dis_time = test_data->test_time % 10000;
             
@@ -128,7 +129,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
             
             if(test_data->dis_time == 1)
             {
-                acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);
+                acw_count_vol_ch_step(acw_par, test_data);
             }
 			return;
 		}
@@ -140,25 +141,9 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
         
 		if(test_data->fail_num != ST_ERR_NONE)
 		{
-			if(test_data->test_time < acw_g_for_t)
-			{
-				/* 步间连续关闭 */
-				if(!acw_par->steps_cont)
-				{
-                    acw_exit_test_relay_motion(acw_par, test_data);
-                    test_data->test_over = 1;
-                    return;
-				}
-				test_data->dis_time = test_data->test_time - acw_g_thr_t + 1;
-				test_data->gradation = STAGE_INTER;
-				return;
-			}
-			else
-			{
-                acw_exit_test_relay_motion(acw_par, test_data);
-                test_data->test_over = 1;
-                return;
-			}
+            acw_exit_test_relay_motion(acw_par, test_data);
+            test_data->test_over = 1;
+            return;
 		}
 		
 		acw_test_flag.vol_change_flag = 0;
@@ -168,7 +153,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
 		if(test_data->dis_time >= 9999)
 		{
             test_data->test_time = 0;
-			acw_test_flag.testing = 1;/* 在启动时被清空 */
+			acw_test_flag.forever_testing = 1;/* 在启动时被清空 */
 		}
 		return;
 	}
@@ -189,7 +174,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
         
         if(test_data->dis_time == 1)
         {
-            acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);
+            acw_count_vol_ch_step(acw_par, test_data);
         }
 	}
 	/* 进入第二阶段 电压缓变 */
@@ -220,7 +205,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
         
         if(test_data->dis_time == 1)
         {
-            acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);
+            acw_count_vol_ch_step(acw_par, test_data);
         }
 	}
 	/* 当前步测试结束 */
@@ -265,7 +250,6 @@ void acw_test_ready_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_S
     test_data->dis_time = 0;
     test_data->test_status = ST_WAIT;
     test_data->fail_num = ST_ERR_NONE;//默认初始化为合格
-    test_data->danger = 1;//高压危险标记
     
     open_test_timer();/* 开定时器 */
 }
@@ -276,8 +260,9 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
 	{
 		case STAGE_READY:/* 第〇阶段 */
         {
-            if(test_data->danger == 0)
+            if(test_data->ready_ok == 0)
             {
+                test_data->ready_ok = 1;//标记
                 load_acw_data_g(acw_par, next_acw_par, test_data);
                 acw_test_ready_g(acw_par, next_acw_par, test_data);
             }
@@ -285,8 +270,9 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
         }
         case STAGE_RE_READY:
         {
-            if(test_data->danger == 0)
+            if(test_data->ready_ok == 0)
             {
+                test_data->ready_ok = 1;//标记
                 load_acw_data_g(acw_par, next_acw_par, test_data);
                 shift_acw_cur_gear(acw_par->gear_i);
                 test_vref(acw_par->upper_limit);/* 输出各基准 */
@@ -295,7 +281,6 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
                 test_data->test_time = acw_g_zeo_t;/* 跳过第1阶段 */
                 test_data->gradation = STAGE_CHANGE;/* 进入电压缓变阶段 这个很重要 */
                 open_test_timer();/* 开定时器 */
-                test_data->danger = 1;//高压危险标记
             }
             break;
         }
@@ -319,7 +304,7 @@ void run_acw_test_g(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *tes
     ACW_STRUCT *acw_par = &step->one_step.acw;
     ACW_STRUCT *next_acw_par = &next_step->one_step.acw;
     
-    if(test_data->danger == 1)
+    if(test_data->ready_ok == 1)
     {
         acw_test_irq_g(acw_par, next_acw_par, test_data);
     }

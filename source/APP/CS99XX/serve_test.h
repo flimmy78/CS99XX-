@@ -312,6 +312,7 @@ _SERVE_TEST uint32_t g_ir_dly;           /* ir换档延时 */
 _SERVE_TEST uint16_t g_plc_dly;          /* PLC延时关闭 */
 _SERVE_TEST void (*test_irq_fun) (void);
 _SERVE_TEST void (*cs99xx_test_fun) (void);
+_SERVE_TEST void (*run_cs99xx_test_fun)(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_data);
 
 _SERVE_TEST uint32_t uart_err_num;       /* 出口通信失败的次数 */ //load_data
 

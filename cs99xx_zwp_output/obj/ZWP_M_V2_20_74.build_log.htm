@@ -4,19 +4,19 @@
 <h1>礦ision Build Log</h1>
 <h2>Project:</h2>
 F:\CS99XX\CS99XX_ZWP_M -改进\Project\CS99XX.uvproj
-Project File Date:  10/31/2017
+Project File Date:  11/01/2017
 
 <h2>Output:</h2>
 Build target '不支持bootloader'
 Before Build - User command #1: .\1.bat
-F:\CS99XX\CS99XX_ZWP_M -改进\Project>echo /*2017/11/01 周三 19:53:20.50*/ 1>>.\cs99xx_update.h 
+F:\CS99XX\CS99XX_ZWP_M -改进\Project>echo /*2017/11/02 周四 15:52:31.10*/ 1>>.\cs99xx_update.h 
 compiling system_stm32f10x.c...
 compiling app.c...
 compiling cs99xx_parameter.c...
-compiling general_test.c...
+compiling serve_test.c...
 compiling BSP_config.c...
 linking...
-Program Size: Code=325192 RO-data=76956 RW-data=12668 ZI-data=38396  
+Program Size: Code=325208 RO-data=76956 RW-data=12668 ZI-data=38396  
 FromELF: creating hex file...
 After Build - User command #1: xcopy.exe ..\cs99xx_zwp_output\obj\*.hex ..\ /Y
 ..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.hex
@@ -24,6 +24,14 @@ After Build - User command #1: xcopy.exe ..\cs99xx_zwp_output\obj\*.hex ..\ /Y
 After Build - User command #2: .\del_hex.bat
 F:\CS99XX\CS99XX_ZWP_M -改进\Project>del ..\cs99xx_zwp_output\obj\*.hex 
 "..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>
+g(s).
+件
+After Build - User command #2: .\del_hex.bat
+F:\CS99XX\CS99XX_ZWP_M -改进\Project>del ..\cs99xx_zwp_output\obj\*.hex 
+"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 0 Error(s), 1 Warning(s).
 Load "..\\cs99xx_zwp_output\\obj\\ZWP_M_V2_20_74.axf" 
 Set JLink Project File to "F:\CS99XX\CS99XX_ZWP_M -改进\Project\JLinkSettings.ini"
 * JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
@@ -47,7 +55,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103ZE
-VTarget = 3.267V
+VTarget = 3.274V
 State of Pins: 
 TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -59,16 +67,7 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-</pre>
-</body>
-</html>
-ut never referenced
-        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
-..\source\APP\CS99XX\cs99xx_par_com.c: 4 warnings, 0 errors
-compiling cs99xx_par_dcw.c...
-compiling cs99xx_par_gr.c...
-compiling cs99xx_parameter.c...
-compiling cs99xx_plc.c...
+ing cs99xx_plc.c...
 compiling cs99xx_pw.c...
 compiling cs99xx_result.c...
 compiling cs99xx_set_par_path.c...
@@ -85,6 +84,7 @@ compiling cs99xx_custom.c...
 compiling cs99xx_bbd.c...
 compiling cs99xx_relay_motion.c...
 compiling cs99xx_vref.c...
+compiling acw_test_g.c...
 compiling auto_cal_comm.c...
 compiling auto_cal_server.c...
 compiling auto_calibration.c...
@@ -105,7 +105,7 @@ compiling dc_module.c...
 compiling mb_dc_module.c...
 compiling module.c...
 linking...
-Program Size: Code=325192 RO-data=76956 RW-data=12668 ZI-data=38396  
+Program Size: Code=325180 RO-data=76952 RW-data=12668 ZI-data=38396  
 FromELF: creating hex file...
 After Build - User command #1: xcopy.exe ..\cs99xx_zwp_output\obj\*.hex ..\ /Y
 ..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.hex
@@ -113,105 +113,19 @@ After Build - User command #1: xcopy.exe ..\cs99xx_zwp_output\obj\*.hex ..\ /Y
 After Build - User command #2: .\del_hex.bat
 F:\CS99XX\CS99XX_ZWP_M -改进\Project>del ..\cs99xx_zwp_output\obj\*.hex 
 "..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 0 Error(s), 8 Warning(s).
-X\serve_test.c(2498): error:  #20: identifier "test_data" is undefined
-      float one_step_vol = test_data.vol_ch_step / 20.0;
-..\source\APP\CS99XX\serve_test.c: 0 warnings, 2 errors
-compiling cs99xx_custom.c...
-compiling cs99xx_bbd.c...
-compiling cs99xx_relay_motion.c...
-compiling cs99xx_vref.c...
-compiling acw_relay.c...
-compiling acw_test.c...
-compiling acw_count.c...
-compiling acw_test_g.c...
-compiling auto_cal_comm.c...
-compiling auto_cal_server.c...
-compiling auto_calibration.c...
-compiling BSP_config.c...
-compiling RTC_Config.c...
-compiling Timer_Config.c...
-..\source\BSP\Timer_Config\Timer_Config.c(106): error:  #20: identifier "test_data" is undefined
-              test_data.test_time++;
-..\source\BSP\Timer_Config\Timer_Config.c(110): error:  #20: identifier "test_data" is undefined
-          if(test_data.gradation == STAGE_RISE //上升
-..\source\BSP\Timer_Config\Timer_Config.c: 0 warnings, 2 errors
-compiling keyboard.c...
-compiling STM32_ADC.c...
-compiling ADC_DMA.c...
-compiling uart.c...
-compiling GUI_Draw.c...
-compiling cs99xx_for_comm.c...
-..\source\Comm_app\cs99xx_for_comm.c(3280): warning:  #550-D: variable "node" was set but never used
-      NODE_STEP *node;
-..\source\Comm_app\cs99xx_for_comm.c: 1 warning, 0 errors
-compiling mb_interface.c...
-compiling mb_master.c...
-compiling mb_server.c...
-compiling mbfuncholding.c...
-compiling mbfunccoils_m.c...
-compiling mbfuncholding_m.c...
-compiling mb_m.c...
-compiling dc_module.c...
-compiling dc_module_bridge.c...
-compiling mb_dc_module.c...
-compiling module.c...
-"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 8 Error(s), 9 Warning(s).
-Target not created
-), 18 Warning(s).
-..
-compiling dc_module.c...
-compiling dc_module_bridge.c...
-compiling mb_dc_module.c...
-compiling module.c...
-"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 7 Error(s), 13 Warning(s).
-Target not created
-g mb_m.c...
-compiling dc_module.c...
-compiling dc_module_bridge.c...
-compiling mb_dc_module.c...
-compiling module.c...
-"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 10 Error(s), 13 Warning(s).
-Target not created
-ay_motion();///<关闭高压
-..\source\APP\ACW\acw_count.c(24): warning:  #177-D: variable "temp_res" was declared but never referenced
-        float temp_res = 0.0;
-..\source\APP\ACW\acw_count.c(119): warning:  #223-D: function "irq_stop_relay_motion" declared implicitly
-                  irq_stop_relay_motion();
-..\source\APP\ACW\acw_count.c(137): warning:  #223-D: function "irq_stop_relay_motion" declared implicitly
-                  irq_stop_relay_motion();
-..\source\APP\ACW\acw_count.c(207): error:  #20: identifier "g_dis_time" is undefined
-              if(acw_par->testing_time && g_dis_time + 1 >= acw_par->testing_time)
-..\source\APP\ACW\acw_count.c: 4 warnings, 1 error
-compiling auto_cal_comm.c...
-compiling auto_cal_server.c...
-compiling auto_calibration.c...
-compiling BSP_config.c...
-compiling RTC_Config.c...
-compiling Timer_Config.c...
-..\source\BSP\Timer_Config\Timer_Config.c(110): error:  #20: identifier "STAGE_RISE" is undefined
-          if(test_data.gradation == STAGE_RISE //上升
-..\source\BSP\Timer_Config\Timer_Config.c(111): error:  #20: identifier "STAGE_FALL" is undefined
-              || test_data.gradation == STAGE_FALL //下降
-..\source\BSP\Timer_Config\Timer_Config.c(112): error:  #20: identifier "STAGE_CHARGE" is undefined
-              || test_data.gradation == STAGE_CHARGE //充电
-..\source\BSP\Timer_Config\Timer_Config.c(113): error:  #20: identifier "STAGE_CHANGE" is undefined
-              || test_data.gradation == STAGE_CHANGE) //缓变
-..\source\BSP\Timer_Config\Timer_Config.c: 0 warnings, 4 errors
-compiling keyboard.c...
-compiling STM32_ADC.c...
-compiling ADC_DMA.c...
-compiling GUI_Draw.c...
-compiling cs99xx_for_comm.c...
-..\source\Comm_app\cs99xx_for_comm.c(3280): warning:  #550-D: variable "node" was set but never used
-      NODE_STEP *node;
-..\source\Comm_app\cs99xx_for_comm.c: 1 warning, 0 errors
-compiling mb_interface.c...
-compiling mb_server.c...
-compiling dc_module.c...
-compiling mb_dc_module.c...
-compiling module.c...
-"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 22 Error(s), 13 Warning(s).
-Target not created
+Load "..\\cs99xx_zwp_output\\obj\\ZWP_M_V2_20_74.axf" 
+Set JLink Project File to "F:\CS99XX\CS99XX_ZWP_M -改进\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
 * JLink Info: TotalIRLen = 9, IRPrint = 0x0011
 * JLink Info: Found Cortex-M3 r1p1, Little endian.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
@@ -234,272 +148,8 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-uA:
-..\source\APP\CS99XX\calibration.c(1891): error:  #20: identifier "DC_200uA" is undefined
-                                case DC_200uA:
-..\source\APP\CS99XX\calibration.c(1908): error:  #20: identifier "DC_2mA" is undefined
-                                case DC_2mA:
-..\source\APP\CS99XX\calibration.c(1912): error:  #20: identifier "DC_10mA" is undefined
-                                case DC_10mA:
-..\source\APP\CS99XX\calibration.c: 0 warnings, 30 errors
-compiling cs99xx.c...
-compiling cs99xx_buzzer.c...
-compiling cs99xx_collect.c...
-..\source\APP\CS99XX\cs99xx_collect.c(296): error:  #20: identifier "AC_200uA" is undefined
-                          case AC_200uA:
-..\source\APP\CS99XX\cs99xx_collect.c(299): error:  #20: identifier "AC_2mA" is undefined
-                          case AC_2mA:
-..\source\APP\CS99XX\cs99xx_collect.c(302): error:  #20: identifier "AC_10mA" is undefined
-                          case AC_10mA:
-..\source\APP\CS99XX\cs99xx_collect.c(303): error:  #20: identifier "AC_20mA" is undefined
-                          case AC_20mA:
-..\source\APP\CS99XX\cs99xx_collect.c(304): error:  #20: identifier "AC_50mA" is undefined
-                          case AC_50mA:
-..\source\APP\CS99XX\cs99xx_collect.c(307): error:  #20: identifier "AC_100mA" is undefined
-                          case AC_100mA:
-..\source\APP\CS99XX\cs99xx_collect.c(438): error:  #20: identifier "AC_200uA" is undefined
-                      case AC_200uA:
-..\source\APP\CS99XX\cs99xx_collect.c(441): error:  #20: identifier "AC_2mA" is undefined
-                      case AC_2mA:
-..\source\APP\CS99XX\cs99xx_collect.c(444): error:  #20: identifier "AC_20mA" is undefined
-                      case AC_20mA:
-..\source\APP\CS99XX\cs99xx_collect.c: 0 warnings, 9 errors
-compiling cs99xx_eep_manage.c...
-compiling cs99xx_exception.c...
-compiling cs99xx_interface.c...
-compiling cs99xx_ir_shift_gear.c...
-..\source\APP\CS99XX\cs99xx_ir_shift_gear.c(493): warning:  #223-D: function "clear_slither_data" declared implicitly
-        clear_slither_data();/* 换挡后要清空滤波缓冲区 */
-..\source\APP\CS99XX\cs99xx_ir_shift_gear.c: 1 warning, 0 errors
-compiling cs99xx_it.c...
-compiling cs99xx_lock_key.c...
-compiling cs99xx_mem_api.c...
-..\source\APP\CS99XX\cs99xx_mem_api.c(215): error:  #20: identifier "AC_200uA" is undefined
-                                case AC_200uA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(216): error:  #20: identifier "AC_2mA" is undefined
-                                case AC_2mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(217): error:  #20: identifier "AC_20mA" is undefined
-                                case AC_20mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(218): error:  #20: identifier "AC_200mA" is undefined
-                                case AC_200mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(220): error:  #20: identifier "AC_10mA" is undefined
-                                case AC_10mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(221): error:  #20: identifier "AC_100mA" is undefined
-                                case AC_100mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(223): error:  #20: identifier "AC_50mA" is undefined
-                                case AC_50mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(230): error:  #20: identifier "DC_2uA" is undefined
-                                case DC_2uA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(231): error:  #20: identifier "DC_20uA" is undefined
-                                case DC_20uA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(232): error:  #20: identifier "DC_200uA" is undefined
-                                case DC_200uA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(233): error:  #20: identifier "DC_2mA" is undefined
-                                case DC_2mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(234): error:  #20: identifier "DC_20mA" is undefined
-                                case DC_20mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(236): error:  #20: identifier "DC_10mA" is undefined
-                                case DC_10mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(237): error:  #20: identifier "DC_100mA" is undefined
-                                case DC_100mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c(239): error:  #20: identifier "DC_50mA" is undefined
-                                case DC_50mA:
-..\source\APP\CS99XX\cs99xx_mem_api.c: 0 warnings, 15 errors
-compiling cs99xx_memory.c...
-compiling cs99xx_offset.c...
-compiling cs99xx_par_acw.c...
-..\source\APP\CS99XX\cs99xx_par_acw.c(22): error:  #20: identifier "AC_GEAR_END" is undefined
-      gear %= AC_GEAR_END;
-..\source\APP\CS99XX\cs99xx_par_acw.c: 0 warnings, 1 error
-compiling cs99xx_par_com.c...
-..\source\APP\CS99XX\cs99xx_par_com.c(1374): warning:  #177-D: variable "p" was declared but never referenced
-        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
-..\source\APP\CS99XX\cs99xx_par_com.c(1695): warning:  #177-D: variable "p" was declared but never referenced
-        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
-..\source\APP\CS99XX\cs99xx_par_com.c(1813): warning:  #177-D: variable "p" was declared but never referenced
-        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
-..\source\APP\CS99XX\cs99xx_par_com.c(2196): warning:  #177-D: variable "p" was declared but never referenced
-        UN_STRUCT *p = &((NODE_STEP *)p_node)->one_step;
-..\source\APP\CS99XX\cs99xx_par_com.c: 4 warnings, 0 errors
-compiling cs99xx_par_dcw.c...
-..\source\APP\CS99XX\cs99xx_par_dcw.c(22): error:  #20: identifier "DC_GEAR_END" is undefined
-      gear %= DC_GEAR_END;
-..\source\APP\CS99XX\cs99xx_par_dcw.c: 0 warnings, 1 error
-compiling cs99xx_par_gr.c...
-compiling cs99xx_parameter.c...
-..\source\APP\CS99XX\cs99xx_parameter.c(30): error:  #20: identifier "AC_0_GEAR_COMM" is undefined
-      {"2~A"   , "2.000~A", "0.000~A", CUR_U_uA, 2000, 1, 2000, 0, 3, AC_0_GEAR_COMM},//2uA
-..\source\APP\CS99XX\cs99xx_parameter.c(33): error:  #20: identifier "AC_1_GEAR_COMM" is undefined
-      {"2mA"   , "2.000mA", "0.000mA", CUR_U_mA, 2000, 1, 2000, 0, 3, AC_1_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c(34): error:  #20: identifier "AC_2_GEAR_COMM" is undefined
-      {"10mA"  , "10.00mA", "00.00mA", CUR_U_mA, 1000, 1, 1000, 0, 2, AC_2_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c(36): error:  #20: identifier "AC_3_GEAR_COMM" is undefined
-      {"50mA"  , "50.00mA", "00.00mA", CUR_U_mA, 5000, 1, 5000, 0, 2, AC_3_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c(44): error:  #20: identifier "DC_0_GEAR_COMM" is undefined
-      {"2~A"   , "2.000~A", "0.000~A", CUR_U_uA, 2000, 1, 2000, 0, 3, DC_0_GEAR_COMM},//2uA
-..\source\APP\CS99XX\cs99xx_parameter.c(45): error:  #20: identifier "DC_1_GEAR_COMM" is undefined
-      {"20~A"  , "20.00~A", "00.00~A", CUR_U_uA, 2000, 1, 2000, 0, 2, DC_1_GEAR_COMM},//20uA
-..\source\APP\CS99XX\cs99xx_parameter.c(46): error:  #20: identifier "DC_2_GEAR_COMM" is undefined
-      {"200~A" , "200.0~A", "000.0~A", CUR_U_uA, 2000, 1, 2000, 0, 1, DC_2_GEAR_COMM},//200uA
-..\source\APP\CS99XX\cs99xx_parameter.c(47): error:  #20: identifier "DC_3_GEAR_COMM" is undefined
-      {"2mA"   , "2.000mA", "0.000mA", CUR_U_mA, 2000, 1, 2000, 0, 3, DC_3_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c(48): error:  #20: identifier "DC_4_GEAR_COMM" is undefined
-      {"10mA"  , "10.00mA", "00.00mA", CUR_U_mA, 1000, 1, 1000, 0, 2, DC_4_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c(50): error:  #20: identifier "DC_5_GEAR_COMM" is undefined
-      {"50mA"  , "50.00mA", "00.00mA", CUR_U_mA, 5000, 1, 5000, 0, 2, DC_5_GEAR_COMM},
-..\source\APP\CS99XX\cs99xx_parameter.c: 0 warnings, 10 errors
-compiling cs99xx_plc.c...
-compiling cs99xx_pw.c...
-compiling cs99xx_result.c...
-..\source\APP\CS99XX\cs99xx_result.c(31): error:  #20: identifier "IR_3_GEAR_COMM" is undefined
-      if(res->un.ir.gear <= IR_3_GEAR_COMM)
-..\source\APP\CS99XX\cs99xx_result.c(59): error:  #20: identifier "IR_1_GEAR_COMM" is undefined
-          case IR_1_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(71): error:  #20: identifier "IR_2_GEAR_COMM" is undefined
-          case IR_2_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(83): error:  #20: identifier "IR_3_GEAR_COMM" is undefined
-          case IR_3_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(95): error:  #20: identifier "IR_4_GEAR_COMM" is undefined
-          case IR_4_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(107): error:  #20: identifier "IR_5_GEAR_COMM" is undefined
-          case IR_5_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(135): error:  #20: identifier "IR_1_GEAR_COMM" is undefined
-          case IR_1_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(139): error:  #20: identifier "IR_2_GEAR_COMM" is undefined
-          case IR_2_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(143): error:  #20: identifier "IR_3_GEAR_COMM" is undefined
-          case IR_3_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(147): error:  #20: identifier "IR_4_GEAR_COMM" is undefined
-          case IR_4_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(164): error:  #20: identifier "IR_5_GEAR_COMM" is undefined
-          case IR_5_GEAR_COMM:
-..\source\APP\CS99XX\cs99xx_result.c(379): error:  #20: identifier "AC_200uA" is undefined
-                  case AC_200uA:
-..\source\APP\CS99XX\cs99xx_result.c(383): error:  #20: identifier "AC_2mA" is undefined
-                  case AC_2mA:
-..\source\APP\CS99XX\cs99xx_result.c(387): error:  #20: identifier "AC_10mA" is undefined
-                  case AC_10mA:
-..\source\APP\CS99XX\cs99xx_result.c(388): error:  #20: identifier "AC_20mA" is undefined
-                  case AC_20mA:
-..\source\APP\CS99XX\cs99xx_result.c(389): error:  #20: identifier "AC_50mA" is undefined
-                  case AC_50mA:
-..\source\APP\CS99XX\cs99xx_result.c(393): error:  #20: identifier "AC_100mA" is undefined
-                  case AC_100mA:
-..\source\APP\CS99XX\cs99xx_result.c(394): error:  #20: identifier "AC_200mA" is undefined
-                  case AC_200mA:
-..\source\APP\CS99XX\cs99xx_result.c(411): error:  #20: identifier "DC_2uA" is undefined
-                  case DC_2uA:
-..\source\APP\CS99XX\cs99xx_result.c(414): error:  #20: identifier "DC_20uA" is undefined
-                  case DC_20uA:
-..\source\APP\CS99XX\cs99xx_result.c(417): error:  #20: identifier "DC_200uA" is undefined
-                  case DC_200uA:
-..\source\APP\CS99XX\cs99xx_result.c(420): error:  #20: identifier "DC_2mA" is undefined
-                  case DC_2mA:
-..\source\APP\CS99XX\cs99xx_result.c(423): error:  #20: identifier "DC_10mA" is undefined
-                  case DC_10mA:
-..\source\APP\CS99XX\cs99xx_result.c(424): error:  #20: identifier "DC_20mA" is undefined
-                  case DC_20mA:
-..\source\APP\CS99XX\cs99xx_result.c(425): error:  #20: identifier "DC_50mA" is undefined
-                  case DC_50mA:
-..\source\APP\CS99XX\cs99xx_result.c(428): error:  #20: identifier "DC_100mA" is undefined
-                  case DC_100mA:
-..\source\APP\CS99XX\cs99xx_result.c(470): error:  #20: identifier "DC_GR_20mV" is undefined
-                                case DC_GR_20mV:
-..\source\APP\CS99XX\cs99xx_result.c(472): error:  #20: identifier "DC_GR_200mV" is undefined
-                                case DC_GR_200mV:
-..\source\APP\CS99XX\cs99xx_result.c(474): error:  #20: identifier "DC_GR_2000mV" is undefined
-                                case DC_GR_2000mV:
-..\source\APP\CS99XX\cs99xx_result.c(476): error:  #20: identifier "DC_GR_12V" is undefined
-                                case DC_GR_12V:
-..\source\APP\CS99XX\cs99xx_result.c: 0 warnings, 30 errors
-compiling cs99xx_set_par_path.c...
-..\source\APP\CS99XX\cs99xx_set_par_path.c(1065): warning:  #177-D: function "bbd_set_par_way_2" was declared but never referenced
-  static void bbd_set_par_way_2(UN_STRUCT *pun)
-..\source\APP\CS99XX\cs99xx_set_par_path.c: 1 warning, 0 errors
-compiling cs99xx_struct.c...
-..\source\APP\CS99XX\cs99xx_struct.c(637): error:  #20: identifier "AC_20mA" is undefined
-        l_bbd.gear = AC_20mA;
-..\source\APP\CS99XX\cs99xx_struct.c: 0 warnings, 1 error
-compiling cs99xx_sys.c...
-compiling cs99xx_time.c...
-compiling general_test.c...
-compiling irq.c...
-compiling serve_test.c...
-..\source\APP\CS99XX\serve_test.c(1609): warning:  #223-D: function "ADC_WatchdogConfig" declared implicitly
-                                ADC_WatchdogConfig(g_ad_dog);
-..\source\APP\CS99XX\serve_test.c(1744): warning:  #223-D: function "ADC_WatchdogConfig" declared implicitly
-                                ADC_WatchdogConfig(g_ad_dog);
-..\source\APP\CS99XX\serve_test.c: 2 warnings, 0 errors
-compiling cs99xx_custom.c...
-compiling cs99xx_bbd.c...
-..\source\APP\CS99XX\cs99xx_bbd.c(516): error:  #20: identifier "AC_20mA" is undefined
-                                        cur_gear = AC_20mA;
-..\source\APP\CS99XX\cs99xx_bbd.c(625): error:  #20: identifier "AC_20mA" is undefined
-                                                        cur_gear = AC_20mA;
-..\source\APP\CS99XX\cs99xx_bbd.c(638): error:  #20: identifier "AC_20mA" is undefined
-                              cur_gear = AC_20mA;
-..\source\APP\CS99XX\cs99xx_bbd.c: 0 warnings, 3 errors
-compiling cs99xx_relay_motion.c...
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(575): error:  #20: identifier "IR_10MOHM" is undefined
-                case IR_10MOHM:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(578): error:  #20: identifier "IR_100MOHM" is undefined
-                case IR_100MOHM:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(581): error:  #20: identifier "IR_1GOHM" is undefined
-                case IR_1GOHM:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(584): error:  #20: identifier "IR_10GOHM" is undefined
-                case IR_10GOHM:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(587): error:  #20: identifier "IR_100GOHM" is undefined
-                case IR_100GOHM:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(634): error:  #20: identifier "AC_2uA" is undefined
-                case AC_2uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(640): error:  #20: identifier "AC_20uA" is undefined
-                                cur_gear = AC_20uA;
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(652): error:  #20: identifier "AC_20uA" is undefined
-                case AC_20uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(668): error:  #20: identifier "AC_200uA" is undefined
-                                cur_gear = AC_200uA;
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(680): error:  #20: identifier "AC_200uA" is undefined
-                case AC_200uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(697): error:  #20: identifier "AC_2mA" is undefined
-                                cur_gear = AC_2mA;
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(709): error:  #20: identifier "AC_2mA" is undefined
-                case AC_2mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(726): error:  #20: identifier "AC_20mA" is undefined
-                                cur_gear = AC_20mA;
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(738): error:  #20: identifier "AC_20mA" is undefined
-                case AC_20mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(796): error:  #20: identifier "AC_2uA" is undefined
-                                case AC_2uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(800): error:  #20: identifier "AC_20uA" is undefined
-                                case AC_20uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(804): error:  #20: identifier "AC_200uA" is undefined
-                                case AC_200uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(808): error:  #20: identifier "AC_2mA" is undefined
-                                case AC_2mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(812): error:  #20: identifier "AC_10mA" is undefined
-                                case AC_10mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(813): error:  #20: identifier "AC_20mA" is undefined
-                                case AC_20mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(817): error:  #20: identifier "AC_50mA" is undefined
-                                case AC_50mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(818): error:  #20: identifier "AC_100mA" is undefined
-                                case AC_100mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(819): error:  #20: identifier "AC_200mA" is undefined
-                                case AC_200mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(830): error:  #20: identifier "DC_2uA" is undefined
-                                case DC_2uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(834): error:  #20: identifier "DC_20uA" is undefined
-                                case DC_20uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(838): error:  #20: identifier "DC_200uA" is undefined
-                                case DC_200uA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(842): error:  #20: identifier "DC_2mA" is undefined
-                                case DC_2mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(846): error:  #20: identifier "DC_10mA" is undefined
-                                case DC_10mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(847): error:  #20: identifier "DC_20mA" is undefined
-                                case DC_20mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c(851): error:  #20: identifier "DC_50mA" is undefined
-                                case DC_50mA:
-..\source\APP\TEST_COMM\cs99xx_relay_motion.c: 0 warnings, 30 errors
-"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 160 Error(s), 8 Warning(s).
-Project build/rebuild aborted.
+idge.c...
+compiling mb_dc_module.c...
+compiling module.c...
+"..\cs99xx_zwp_output\obj\ZWP_M_V2_20_74.axf" - 7 Error(s), 8 Warning(s).
+Target not created

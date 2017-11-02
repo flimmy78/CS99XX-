@@ -77,7 +77,7 @@ void test_pass(void)
 	LED_FAIL = LED_OFF;
 	LED_TEST = LED_OFF;
     
-	if(steps_pass)
+	if(steps_pass || g_cur_step->next == NULL)
 	{
 		LED_PASS = LED_ON;
 	}

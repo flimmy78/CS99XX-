@@ -49,12 +49,12 @@
  */
 void record_exception_scene(void)
 {
-    err_vol_bak = vol_ave;
-    err_cur_bak = cur_ave;
-    err_res_bak = res_ave;
+    err_vol_bak = g_test_data.vol_value;
+    err_cur_bak = g_test_data.cur_value;
+    err_res_bak = g_test_data.res_value;
     
-    err_real_bak = real_ave;
-    err_cap_bak  = cap_ave;
+    err_real_bak = g_test_data.real_value;
+    err_cap_bak  = g_test_data.cap_value;
 }
 /*
  * 函数名：record_exception_scene
@@ -65,12 +65,11 @@ void record_exception_scene(void)
  */
 void recover_exception_scene(void)
 {
-    vol_ave = err_vol_bak;
-    cur_ave = err_cur_bak;
-    res_ave = err_res_bak;
-    
-    real_ave = err_real_bak;
-    cap_ave = err_cap_bak;
+    g_test_data.vol_value = err_vol_bak;
+    g_test_data.cur_value = err_cur_bak;
+    g_test_data.res_value = err_res_bak;
+    g_test_data.real_value = err_real_bak;
+    g_test_data.cap_value = err_cap_bak;
 }
 
 /*
@@ -1538,6 +1537,11 @@ void load_data(void)
 	{
 		case ACW:
         {
+			tes_t = pun->acw.testing_time;
+            ris_t = pun->acw.rise_time;
+            fal_t = pun->acw.fall_time;
+            int_t = pun->acw.interval_time;
+            
 			steps_con = pun->acw.steps_cont;
 			steps_pass = pun->acw.steps_pass;
 			
@@ -1601,7 +1605,6 @@ void load_data(void)
 			if(cur_adc_cur_k != 0)
 			{
 				g_ad_dog = (cur_high + 1) / cur_adc_cur_k;
-//				ADC_WatchdogConfig(g_ad_dog);
 			}
 			break;
 		}
@@ -2080,6 +2083,19 @@ void install_test_irq_fun(void)
         test_irq_fun = test_g_irq;
 		cs99xx_test_fun = cs99xx_g_test;
 	}
+    
+    
+    switch(cur_mode)
+    {
+        case ACW:
+            break;
+        case DCW:
+            break;
+        case IR:
+            break;
+        case GR:
+            break;
+    }
 }
 
 /*
@@ -2815,7 +2831,12 @@ void startup(void)
     uint8_t err = 0;
 	
 	clear_par();/* 清空全局变量的值 */
-	FAIL = fail_bak;/* 恢复测试失败标志 */
+    
+    if(cur_step != 1)
+    {
+        FAIL = fail_bak;/* 恢复测试失败标志 */
+    }
+    
 	LED_ALL = LED_OFF;
 	BUZZER = BUZZER_OFF;
 	g_test_time = 0;/* 清空定时器 */

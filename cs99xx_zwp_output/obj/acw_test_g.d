@@ -32,9 +32,9 @@
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\CS99XX\cs99xx_struct.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\CS99XX\cs99xx_config.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\ACW\acw_relay.h
+..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\ACW\acw_count.h
+..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\ACW\acw_test.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\TEST_COM\test_com.h
-..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\ACW\acw_count.h
 ..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\BSP\DAC\DAC_VREF.h
-..\cs99xx_zwp_output\obj\acw_test_g.o: ..\source\APP\ACW\acw_test.h

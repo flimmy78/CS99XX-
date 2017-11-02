@@ -482,12 +482,12 @@ typedef struct{
     uint16_t dis_time;///<显示时间
     uint8_t test_over;///<测试结束
     uint8_t gradation;///<测试阶段
-    uint8_t danger;///<高压标记
+    uint8_t ready_ok;///<就绪完成标记
     uint8_t cont;///<继续测试标记
     uint8_t vol_err_count;///<电压异常计数
     uint8_t low_err_count;///<下限报警计数
     uint32_t vol_rise_step_t;///<电压上升/下降阶段时间计数
-    uint8_t err_real;///< acw 真实电流报警标记 
+    uint8_t err_real;///< acw 真实电流报警标记
     float vol_ch_step;///< 电压缓变步进值
     float vol_ch_base;///< 电压变化的起始值
     float vol_ch_target;///< 电压变化的目标

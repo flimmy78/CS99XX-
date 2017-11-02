@@ -1209,14 +1209,24 @@ void uninstall_test_irq_fun(void)
 	test_irq_fun = NULL;
 	cs99xx_test_fun = NULL;
 }
-void (*run_cs99xx_test_fun)(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_data);
 #include "acw_test.h"
 void install_run_test_fun(void)
 {
+    run_cs99xx_test_fun = NULL;
+    
     switch(cur_mode)
     {
         case ACW:
-            run_cs99xx_test_fun = run_acw_test;
+            /* 当是G模式时 */
+            if(g_cur_file->work_mode == G_MODE)
+            {
+                run_cs99xx_test_fun = run_acw_test_g;
+            }
+            /* N模式 */
+            else
+            {
+                run_cs99xx_test_fun = run_acw_test;
+            }
             break;
         case DCW:
             break;
@@ -1397,9 +1407,15 @@ void testing_process_control(uint8_t *st)
             }
             
             install_test_irq_fun();/* 安装测试状态机 */
+            install_run_test_fun();
             
             /* 检查数据如果为空就退出 */
             if(cs99xx_test_fun == NULL)
+            {
+                return;
+            }
+            
+            if(run_cs99xx_test_fun == NULL)
             {
                 return;
             }
@@ -1409,14 +1425,14 @@ void testing_process_control(uint8_t *st)
             
             g_test_data.gradation = STAGE_READY;
             g_test_data.test_time = 0;
-            g_test_data.danger = 0;//高压危险标记
+            g_test_data.ready_ok = 0;//标记
             g_test_data.fail_num = ST_ERR_NONE;//初始化
             *st = TEST_TESTING_CONTROL;
             break;
         }
         case TEST_TESTING_CONTROL:/* 测试控制 */
         {
-            run_acw_test_g(g_cur_step, g_cur_step->next, &g_test_data);
+            run_cs99xx_test_fun(g_cur_step, g_cur_step->next, &g_test_data);
             cur_status = g_test_data.test_status;
             get_test_dis_status(&g_test_data);
             
@@ -1433,7 +1449,7 @@ void testing_process_control(uint8_t *st)
             if(g_test_data.fail_num != ST_ERR_NONE)
             {
                 exception_handling(g_test_data.fail_num);
-                *st = TEST_QUIT_CONTROL;
+                *st = TEST_EXCEPTION_CONTROL;
                 return;
             }
             
@@ -1470,11 +1486,6 @@ void testing_process_control(uint8_t *st)
             /* 在间隔等待阶段，要判断是否要跑间隔等待 */
             if(g_test_data.test_status == ST_INTER_WAIT)
             {
-                if(g_test_data.fail_num == ERR_NONE)
-                {
-//                    cur_status = ST_PASS;
-                }
-                
                 if(sys_par.fail_mode == FAIL_MODE_FPDFC && cur_step == 1)
                 {
                     if(g_test_data.fail_num == ERR_NONE)
@@ -1489,6 +1500,9 @@ void testing_process_control(uint8_t *st)
                      *st = TEST_EXCEPTION_CONTROL;
                     return;
                 }
+                
+                test_pass();
+                save_cur_result(&cur_result);
             }
             
             /* 断续测试 */
@@ -1627,9 +1641,9 @@ void testing_process_control(uint8_t *st)
                 *st = TEST_TESTING_CONTROL;
             }
             /* 允许继续测试下一步 N模式 没有停止测试 */
-            else if(CONT && g_cur_file->work_mode == N_MODE && !STOP)
+            else if(g_test_data.cont && g_cur_file->work_mode == N_MODE && !STOP)
             {
-                CONT = 0;
+                g_test_data.cont = 0;
                 save_cur_result(&cur_result);
                 stop_test();/* 停止测试 */
                 

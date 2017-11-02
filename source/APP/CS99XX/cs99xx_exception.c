@@ -337,13 +337,7 @@ static void fail_mode_fpdfc_dispose(void)
 void exception_handling(int8_t errnum)
 {
 	int8_t l_err_num = errnum;
-	
-	uint8_t err_status_bool[12]=
-	{
-		0            , ST_ERR_H   , ST_ERR_L   , ST_ERR_REAL , ST_ERR_CHAR , ST_ERR_FAIL         ,
-        ST_ERR_SHORT , ST_ERR_ARC , ST_ERR_GFI , ST_ERR_AMP  , ST_ERR_GEAR , ST_ERR_VOL_ABNORMAL ,
-	};/* 给上位机发的错误状态 */
-	
+    
 	irq_stop_relay_motion();
     close_test_timer();/* 关定时器 */
     
@@ -352,36 +346,35 @@ void exception_handling(int8_t errnum)
 		return;
 	}
     
-    
-    exit_test_relay_motion();/* 复位放电 */
-	res_ave = err_res_bak;
-    test_flag.vol_change_flag = 1;
-    test_dis();/* 更新数据 */
+    exit_test_relay_motion();
+//	res_ave = err_res_bak;
+//    test_flag.vol_change_flag = 1;
+//    test_dis();/* 更新数据 */
     
 	CUR_FAIL = 1;/* 当前步测试失败 */
     FAIL = 1;/* 测试失败 */
-	cur_result.err_num = l_err_num;
+	cur_result.err_num = test_flag.dis_status;
     recover_exception_scene();
     updata_result(cur_mode);
     save_cur_result(&cur_result);/* 保存结果 */
     
     test_flag.judge_err_en == DISABLE;
     
-	cur_status = err_status_bool[l_err_num%12];/* 给上位机发的错误状态 */
+	cur_status = l_err_num;/* 给上位机发的错误状态 */
     cur_cylinder_ctrl_stop();
     
     test_flag.test_led_flag = 0;
 	test_fail();
     
-    updata_time(U_TEST_TIME, g_dis_time);
+//    updata_time(U_TEST_TIME, g_dis_time);
 	
 	if(OFFSET_BBD)
 	{
-		dis_exception_str(l_err_num, &GUI_FontHZ_SimSun_12);
+		dis_exception_str(test_flag.dis_status, &GUI_FontHZ_SimSun_12);
 	}
 	else
 	{
-		dis_exception_str(l_err_num, &GUI_FontHZ_SimSun_16);
+		dis_exception_str(test_flag.dis_status, &GUI_FontHZ_SimSun_16);
 	}
     
     if(cur_mode == DCW)

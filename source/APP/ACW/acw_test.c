@@ -107,7 +107,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	if(0 == acw_par->testing_time)
 	{
 		/* 如果当前测试正在进行 即处于第二阶段的话就一直保持 */
-		if(acw_test_flag.testing)
+		if(acw_test_flag.forever_testing)
 		{
 			test_data->dis_time = test_data->test_time % 10000;
             
@@ -174,7 +174,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 		if(test_data->dis_time >= 9999)
 		{
             test_data->test_time = 0;
-			acw_test_flag.testing = 1;/* 在启动时被清空 */
+			acw_test_flag.forever_testing = 1;/* 在启动时被清空 */
 		}
 		return;
 	}
@@ -227,6 +227,13 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	{
         clear_test_data_fall_time_timeout(acw_par, test_data);
         
+        /* 关高压 */
+        if(acw_test_flag.testing == 1)
+        {
+            acw_test_flag.testing = 0;
+            acw_exit_test_relay_motion(acw_par, test_data);
+        }
+        
 		/* 步间连续关闭 */
 		if(!acw_par->steps_cont)
 		{
@@ -242,7 +249,22 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	else
 	{
         clear_test_data_fall_time_timeout(acw_par, test_data);
-        acw_exit_test_relay_motion(acw_par, test_data);
+        
+        /* 关高压 */
+        if(acw_test_flag.testing == 1)
+        {
+            acw_test_flag.testing = 0;
+            acw_exit_test_relay_motion(acw_par, test_data);
+        }
+        
+        /* 步间连续打开 */
+		if(acw_par->steps_cont)
+		{
+            g_test_data.cont = 1;
+            return;
+        }
+        
+        /* 结束测试 */
         test_data->test_over = 1;
 	}
 }
@@ -258,23 +280,21 @@ void acw_test_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     
     acw_relay_ready();//开电子开关
     
+    open_sine(acw_par->output_freq);/* 开正弦波 */
+    
     if(acw_par->rise_time == 0)
     {
         acw_set_da_value(acw_par, test_data);//送基准
     }
     
-    open_sine(acw_par->output_freq);/* 开正弦波 */
+    open_test_timer();/* 开定时器 */
     
 	test_data->err_real = 0;/* acw 真实电流报警  */
-    
-    acw_test_flag.testing = 1;
+    acw_test_flag.forever_testing = 0;
     test_data->test_over = 0;
     test_data->dis_time = 0;
     test_data->test_status = ST_WAIT;
     test_data->fail_num = ST_ERR_NONE;//默认初始化为合格
-    test_data->danger = 1;//高压危险标记
-    
-    open_test_timer();/* 开定时器 */
 }
 
 void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
@@ -283,8 +303,11 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	{
 		case STAGE_READY:/* 第〇阶段 */
         {
-            if(test_data->danger == 0)
+            if(test_data->ready_ok == 0)
             {
+                test_data->ready_ok = 1;//标记
+                acw_test_flag.testing = 1;//正在测试标记
+                acw_test_flag.judge_err_en = ENABLE;
                 load_acw_data(acw_par, test_data);
                 acw_test_ready(acw_par, test_data);
             }
@@ -302,12 +325,6 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 		case STAGE_INTER:/* 第四阶段 间隔等待 */
         {
             test_data->test_status = ST_INTER_WAIT;
-			
-			if(acw_test_flag.testing == 1)
-			{
-				acw_test_flag.testing = 0;
-				acw_exit_test_relay_motion(acw_par, test_data);
-			}
 			break;
         }
 	}
@@ -317,16 +334,22 @@ void run_acw_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_
 {
     ACW_STRUCT *acw_par = &step->one_step.acw;
     
-    if(test_data->danger == 1)
+    /* 准备就绪完成后在计算测试阶段 */
+    if(test_data->ready_ok == 1)
     {
         acw_test_irq(acw_par, test_data);
     }
     
     acw_test_details(acw_par, test_data);
     
+    /* 出现报警不再进行采样 测试结束不再进行采样 */
     if(test_data->fail_num == ST_ERR_NONE && test_data->test_over == 0)
     {
-        acw_count_dis_value(acw_par, test_data);
+        /* 间隔阶段不进行采样 */
+        if(test_data->gradation != STAGE_INTER)
+        {
+            acw_count_dis_value(acw_par, test_data);
+        }
     }
 }
 

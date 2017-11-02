@@ -172,7 +172,7 @@ int8_t acw_judge_err(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         err = judge_acw_vol_exception(acw_par, test_data);
 	}
 	/* ≤‚ ‘Ω◊∂Œ */
-	else if(test_data->gradation == STAGE_TEST)
+	else if(test_data->gradation == STAGE_TEST && test_data->dis_time > 2)
 	{
         /* µÁ—π“Ï≥£≈–∂œ */
         err = judge_acw_vol_exception(acw_par, test_data);

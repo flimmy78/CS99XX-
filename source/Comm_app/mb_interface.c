@@ -14,6 +14,7 @@
 #include    "cs99xx_for_comm.h"
 #include    "serve_test.h"
 #include    "auto_cal_comm_interface.h"
+#include    "test_com.h"
 
 
 
@@ -124,7 +125,6 @@ void m_control_test_button_dispose(uint16_t cmd, uint16_t *data)
                 
                 test_flag.start_comm = 1;
                 cur_status = ST_TESTING;
-                cur_cylinder_ctrl_status = CY_TESTING;
             }
         }
         /* ¸´Î»¼ü */
@@ -1103,7 +1103,7 @@ void m_usb_connect_status_dispose(uint16_t cmd, uint16_t *data)
 
 void m_cylinder_ctrl_status_dispose(uint16_t cmd, uint16_t *data)
 {
-    data[0] = cur_cylinder_ctrl_status;
+//    data[0] = cur_cylinder_ctrl_status;
 }
 
 void m_auto_cal_dispose(uint16_t cmd, uint16_t *data)

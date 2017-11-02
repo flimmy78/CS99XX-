@@ -46,69 +46,6 @@
 
         
         
-/* 程序中各种档位定义 */
-enum{
-	/* 交流档位 */
-	AC_2uA		= 0X1,
-	AC_20uA		= 0X2,
-	AC_200uA	= 0X3,
-	AC_2mA		= 0X4,
-	AC_10mA		= 0X5,
-	AC_20mA		= 0X6,
-	AC_50mA		= 0x7,
-	AC_100mA	= 0X8,
-	AC_200mA	= 0X9,
-    AC_GEAR_END,
-	
-	/* 直流电流档位 */
-	DC_2uA		= 0X1,
-	DC_20uA		= 0x2,
-	DC_200uA	= 0X3,
-	DC_2mA		= 0x4,
-	DC_10mA		= 0X5,
-	DC_20mA		= 0X6,
-	DC_50mA		= 0X7,
-	DC_100mA	= 0X8,
-    DC_GEAR_END,
-	
-	/* 绝缘电阻档位 */
-	IR_10MOHM	= 0X01,
-	IR_100MOHM	= 0X02,
-	IR_1GOHM	= 0x03,
-	IR_10GOHM	= 0X04,
-	IR_100GOHM	= 0X05,
-	
-	/* 直流接地电阻档位 */
-	DC_GR_20mV	= 0x2,
-	DC_GR_200mV	= 0x3,
-	DC_GR_2000mV= 0X4,
-	DC_GR_12V	= 0X5,
-	DC_GR_12V_100mA  = 0x6,
-	DC_GR_12V_1000mA = 0x7,
-	
-	/* 通信时档位分为4个 */
-	AC_0_GEAR_COMM	= 0X0,
-	AC_1_GEAR_COMM	= 0X1,
-	AC_2_GEAR_COMM	= 0X2,
-	AC_3_GEAR_COMM	= 0X3,
-	
-	/* 通信时档位分为6个 */
-	DC_0_GEAR_COMM	= 0X0,
-	DC_1_GEAR_COMM	= 0X1,
-	DC_2_GEAR_COMM	= 0X2,
-	DC_3_GEAR_COMM	= 0X3,
-	DC_4_GEAR_COMM	= 0X4,
-	DC_5_GEAR_COMM	= 0X5,
-	
-	/* 通信时IR档位分为6个 */
-	IR_1_GEAR_COMM	= 0X1,
-	IR_2_GEAR_COMM	= 0X2,
-	IR_3_GEAR_COMM	= 0X3,
-	IR_4_GEAR_COMM	= 0X4,
-	IR_5_GEAR_COMM	= 0X5,
-	IR_6_GEAR_COMM	= 0X6,
-};
-
 /* 程序中标志状态 */
 enum{
     /* DC_GR运行状态 */
@@ -150,17 +87,6 @@ typedef enum err_num_enum{
     ERR_VOL         = 11,   /* 电压异常 */
 }ERR_NUM_ENUM;
 
-typedef enum{
-    STAGE_READY     = 0,    /* 预备阶段 */
-    STAGE_RISE      = 1,    /* 上升阶段 */
-    STAGE_TEST      = 2,    /* 测试阶段 */
-    STAGE_FALL      = 3,    /* 下降阶段 */
-    STAGE_CHANGE    = 4,    /* 缓变阶段 */
-    STAGE_CHARGE    = 5,    /* 充电阶段 */
-    STAGE_DIS_CHA   = 6,    /* 放电阶段 */
-    STAGE_INTER     = 7,    /* 间隔阶段 */
-    STAGE_STAB      = 8,    /* 稳压阶段 */
-}TEST_STAGE;
 
 /************************************************/
 
@@ -414,7 +340,6 @@ _SERVE_TEST uint8_t cur_offset_result;   /* 当前步的偏移结果 */
 _SERVE_TEST uint8_t cur_getc_result;     /* 当前步的获取电容结果 */
 _SERVE_TEST uint8_t cur_t_time;          /* 测试时间 */
 _SERVE_TEST uint8_t cur_status;          /* 当前状态 */
-_SERVE_TEST uint8_t cur_cylinder_ctrl_status;          /* 当前气缸控制状态定制机专用 */
 _SERVE_TEST uint8_t cur_status_plc;      /* 当前状态 */
 _SERVE_TEST uint8_t cur_plc_err_st;		 /* PLC报警状态 */
 _SERVE_TEST uint8_t cur_comm_bps;        /* 当前的通信波特率 */
@@ -493,8 +418,6 @@ extern int32_t dis_charge_remain_vol(void);
 extern void record_exception_scene(void);
 extern void recover_exception_scene(void);
 extern void recover_exception_scene(void);
-extern void close_test_timer(void);
-extern void open_test_timer(void);
 extern void install_test_irq_fun(void);
 extern void count_vol_step_value(void);
 extern void test_g_details(void);
@@ -544,6 +467,8 @@ extern u32 smoothing_filtering(const u8 sf_n,const u32 val);
 extern void de_reset(void);
 extern void test_reset(void);
 extern void transform_test_vol_string(void);
+extern void transform_test_vol_to_str(TEST_DATA_STRUCT *test_data);
+extern void transform_test_loop_to_str(TEST_DATA_STRUCT *test_data);
 extern void transform_test_loop_string(void);
 extern void transform_test_time_string(uint16_t time);
 extern void count_fall_vol_step_value(void);
@@ -567,9 +492,10 @@ extern void test_irq(void);
 extern void test_big_cap_irq(void);
 extern void test_g_irq(void);
 
-extern void open_hv(void);
+extern void set_da_value(void);
 extern void close_hv(void);
 
+extern void update_test_data(TEST_DATA_STRUCT *test_data);
 extern void dis_test_data(const GUI_FONT * pNewFont);
 extern void dis_test_vol1(const GUI_FONT * pNewFont);
 extern int32_t check_test_mode(NODE_STEP * p);

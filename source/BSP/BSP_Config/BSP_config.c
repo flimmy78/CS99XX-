@@ -53,17 +53,6 @@ void init_gpio_switch_hv(void)
 	GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 /*
- * 函数名：on_switch_hv
- * 描述  ：打开高压开关
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
-void on_switch_hv(void)
-{
-    GPIO_SetBits(GPIOC, GPIO_Pin_0);
-}
-/*
  * 函数名：off_switch_hv
  * 描述  ：关闭高压开关
  * 输入  ：无
@@ -173,34 +162,6 @@ void CRC_Config(void)
     RCC_AHBPeriphClockCmd(RCC_AHBPeriph_CRC, ENABLE);
 }
 
-/*
- * 函数名：soft_delay_us
- * 描述  ：软件阻塞延时10us 个数
- * 输入  ：dly_us 个数
- * 输出  ：无
- * 返回  ：无
- */
-void cs_delay_us(int time)
-{
-	u16 i = 0;
-	
-	while(time--)
-	{
-		i = 10; //自己定义
-		
-		while(i--);
-	}
-}
-void cs_delay_ms(u16 time)
-{
-	u16 i = 0;
-	
-	while(time--)
-	{
-		i = 12000;  //自己定义
-		while(i--);
-	}
-}
 //void soft_delay_us(u32 dly_us)
 //{
 //	unsigned int dly_i;

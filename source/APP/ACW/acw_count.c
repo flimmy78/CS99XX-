@@ -1,28 +1,25 @@
 
-#include "acw_relay.h"
+#include "SPI_CPLD.H"
 #include "cs99xx_relay_motion.h"
 #include "cs99xx_struct.h"
-#include "serve_test.h"
-#include "MC14094.h"
-#include "app.h"
-#include "calibration.h"
+#include "acw_relay.h"
 #include "acw_count.h"
 #include "acw_test.h"
+#include "test_com.h"
 
 
 
 static int8_t acw_judge_err(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data);
 
-void count_acw_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
+void acw_count_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	double cos_val = 0.0;
 	double sin_val = 0.0;
 	uint16_t temp_cur = 0;
 	uint16_t temp_vol = 0;
-	float temp_res = 0.0;
     
     /* 计算相位角的正弦值和余弦值 */
-    if(acw_par->ac_real_cur)
+    if(acw_par->ac_real_cur > 0)
     {
         cpld_count_angle(&sin_val, &cos_val);
     }
@@ -40,7 +37,7 @@ void count_acw_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     }
     
     /* 测试阶段 */
-    if(acw_test_flag.gradation == STAGE_TEST)
+    if(test_data->gradation == STAGE_TEST)
     {
         //对电压小于设定值10个字的电压进行修正 2017.6.28
         if(test_data->vol_value <= acw_par->testing_voltage)
@@ -96,79 +93,124 @@ void count_acw_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     {
         test_data->fail_num = acw_judge_err(acw_par, test_data);
         
-        if(test_data->fail_num != ERR_NONE)
+        if(test_data->fail_num != ST_ERR_NONE)
         {
             acw_test_flag.judge_err_en == DISABLE;
             irq_stop_relay_motion();///<关闭高压
-            record_exception_scene();/* 记录异常现场 */
             test_data->test_over = 1;
         }
     }
 }
 
+uint8_t judge_acw_vol_exception(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
+{
+	/* 电压上升 阶段 缓变阶段 */
+	if(test_data->gradation == STAGE_RISE || test_data->gradation == STAGE_CHANGE)
+    {
+        if(test_data->vol_value > (acw_par->testing_voltage * 11 / 10 + 10))
+        {
+            if(++test_data->vol_err_count > 2)
+            {
+                return ST_ERR_VOL_ABNORMAL;
+            }
+        }
+        else
+        {
+            test_data->vol_err_count = 0;
+            return ST_ERR_NONE;/* 测试时间到报警 */
+        }
+    }
+    /* 测试阶段 */
+    else if(test_data->gradation == STAGE_TEST)
+    {
+        if(test_data->dis_time >= 5 || test_data->dis_time == acw_par->testing_time)
+        {
+            /* 电压低于1V */
+            if(test_data->vol_value < 1)
+            {
+                return ST_ERR_SHORT;
+            }
+        }
+        
+        /* 测试时间到 */
+        if(acw_par->testing_time > 0 && test_data->dis_time + 1 >= acw_par->testing_time)
+        {
+            return ST_ERR_NONE;
+        }
+        
+        if((test_data->vol_value < acw_par->testing_voltage / 2
+            || test_data->vol_value > (acw_par->testing_voltage * 11 / 10 + 10)))
+        {
+            return ST_ERR_VOL_ABNORMAL;
+        }
+        else
+        {
+            return ST_ERR_NONE;/* 测试时间到报警 */
+        }
+    }
+    
+    return ST_ERR_NONE;
+}
+
 int8_t acw_judge_err(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
-    int8_t err = ERR_NONE;
-    static int low_times = 0;/* 记录下限报警次数 */
+    int8_t err = ST_ERR_NONE;
 	
     /* 判断真实电流 */
     if(test_data->real_value > acw_par->ac_real_cur && acw_par->ac_real_cur > 0)
     {
-        err = ERR_REAL;
+        err = ST_ERR_REAL;
     }
     /* 当电流值大于上限值时就将电流值强行改为上限值并设置上限报警 */
-    else if(test_data->cur_value > acw_par->upper_limit && app_flag.calibration == 0)
+    else if(test_data->cur_value > acw_par->upper_limit)
     {
-        set_high_err();
-        test_flag.judge_err_en == DISABLE;
-        err = ERR_HIGH;
+        err = ST_ERR_H;
     }
 	/* 电压上升 阶段 缓变阶段 */
-    else if(acw_test_flag.gradation == STAGE_RISE || acw_test_flag.gradation == STAGE_CHANGE)
+    else if(test_data->gradation == STAGE_RISE || test_data->gradation == STAGE_CHANGE)
 	{
-        err = judge_vol_exception();
+        err = judge_acw_vol_exception(acw_par, test_data);
 	}
 	/* 测试阶段 */
-	else if(acw_test_flag.gradation == STAGE_TEST)
+	else if(test_data->gradation == STAGE_TEST)
 	{
         /* 电压异常判断 */
-        err = judge_vol_exception();
+        err = judge_acw_vol_exception(acw_par, test_data);
         
-        if(ERR_NONE == err)
+        if(ST_ERR_NONE == err)
         {
             /* 电流下限报警 */
             if(test_data->cur_value < acw_par->lower_limit)
             {
                 /* 下限报警判断三次 */
-                if(++low_times >= 2)
+                if(++test_data->low_err_count >= 2)
                 {
-                    record_exception_scene();/* 记录异常现场 */
-                    err = ERR_LOW;
-                    result_acw();
-                    low_times = 0;
+                    err = ST_ERR_L;
                 }
+            }
+            else
+            {
+                test_data->low_err_count = 0;
             }
         }
         
-        if(ERR_NONE == err)
+        if(ST_ERR_NONE == err)
         {
             /* 测试时间到 */
-            if(acw_par->testing_time && g_dis_time + 1 >= acw_par->testing_time)
+            if(acw_par->testing_time && test_data->dis_time + 1 >= acw_par->testing_time)
             {
                 /* 电流下限报警 */
                 if(test_data->cur_value < acw_par->lower_limit)
                 {
-                    record_exception_scene();/* 记录异常现场 */
-                    test_data->test_over_fail = ERR_LOW;
-                    result_acw();
+                    test_data->test_over_fail = ST_ERR_L;
                 }
                 else
                 {
-                    test_data->test_over_fail = ERR_NONE;
+                    test_data->test_over_fail = ST_ERR_NONE;
                 }
             }
         }
-	}//end if(test_flag.gradation == STAGE_TEST)
+	}
 	
 	return err;
 }

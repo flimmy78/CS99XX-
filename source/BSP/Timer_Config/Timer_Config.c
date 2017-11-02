@@ -18,7 +18,7 @@
 #include	"Timer_Config.h"
 #include 	"app.h"
 #include 	"serve_test.h"
-
+#include    "test_com.h"
 #include 	"SysTemConfig.h"
 #include 	"cs99xx_type.h"
 #include    "irq.h"
@@ -103,18 +103,17 @@ void TIM2_IRQHandler(void)
         if(++c >= 20)
         {
             c = 0;
-            g_test_time++;
-            
+            g_test_data.test_time++;
             OSSemPost(ScheduleSem);
         }
         
-        if(test_flag.gradation == STAGE_RISE //上升
-            || test_flag.gradation == STAGE_FALL //下降
-            || test_flag.gradation == STAGE_CHARGE //充电
-            || test_flag.gradation == STAGE_CHANGE) //缓变
+        if(g_test_data.gradation == STAGE_RISE //上升
+            || g_test_data.gradation == STAGE_FALL //下降
+            || g_test_data.gradation == STAGE_CHARGE //充电
+            || g_test_data.gradation == STAGE_CHANGE) //缓变
         {
-            test_flag.vol_rise_step_t++;
-            vol_change_200hz(test_flag.vol_rise_step_t);
+            g_test_data.vol_rise_step_t++;
+            vol_change_200hz(g_test_data.vol_rise_step_t);
 //             vol_change_1000hz(test_flag.vol_rise_step_t);
         }
 	}

@@ -1,4 +1,4 @@
-..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\CS99XX\cs99xx_vref.c
+..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\TEST_COM\cs99xx_vref.c
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: D:\Keil\ARM\ARMCC\bin\..\include\math.h
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\Libraries\CMSIS\stm32f10x.h
@@ -56,5 +56,6 @@
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\uCGUI\GUI_LIB\LCD24064.H
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\BSP\EE_I2C\i2c_ee.h
-..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\CS99XX\cs99xx_vref.h
+..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\BSP\DAC\DAC_VREF.h
+..\cs99xx_zwp_output\obj\cs99xx_vref.o: ..\source\APP\TEST_COM\test_com.h

@@ -16,7 +16,7 @@
 #include	"cs99xx_relay_motion.h"
 #include 	"mb_server.h"
 #include	"cs99xx_type.h"
-#include 	"SysTemConfig.h"
+#include    "test_com.h"
 #include    "cs99xx_it.h"
 
 
@@ -56,12 +56,12 @@ void gfi_cycle_clear_count(void)
 void stop_irq(void)
 {
 	irq_stop_relay_motion();/* 关闭电子开关 高压 */
-    close_hv();/* 关闭高压基准 */
+    
 	STOP = 1;	/* 置位测试标志 */
     FAIL = 0;/* 按下复位键后清空测试失败标记 */
     TERMINATE = 1;/* 终止测试标记置位 */
 	cur_status = ST_STOP;
-    CYLINDER_CTRL(1000);
+//    CYLINDER_CTRL(1000);
     
     clear_keyboard();/* 清空键盘 */
     STOP_INT(DISABLE);/* 关闭中断 */
@@ -202,7 +202,6 @@ void serve_test_over(void)
             if(cur_step == g_cur_file->total)
             {
                 OVER = 1;/* 测试步全部完成 */
-                cur_cylinder_ctrl_status = CY_OVER;
             }
         }
     }
@@ -310,7 +309,7 @@ void test_irq(void)
 		
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
         
 		if(CUR_FAIL)
@@ -383,7 +382,7 @@ void test_irq(void)
 		
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
 	}
 	/* 第三阶段 电压下降 */
@@ -505,7 +504,7 @@ void test_big_cap_irq(void)
 		
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
         
 		if(CUR_FAIL)
@@ -574,7 +573,7 @@ void test_big_cap_irq(void)
         
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
 	}
 	/* 进入第三阶段 测试 */
@@ -592,7 +591,7 @@ void test_big_cap_irq(void)
 		
         if(g_test_time == two_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
 	}
 	/* 第四阶段 电压下降 */
@@ -727,7 +726,7 @@ void test_g_irq(void)
 		
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
         
 		test_flag.gradation = STAGE_TEST;
@@ -786,7 +785,7 @@ void test_g_irq(void)
         
         if(g_test_time == one_t + 1)
         {
-            open_hv();
+            set_da_value();
         }
 	}
 	/* 进入第4阶段 电压下降*/

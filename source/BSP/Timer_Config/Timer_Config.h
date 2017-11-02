@@ -13,6 +13,8 @@
 #ifndef __TIMER_CONFIG_H__
 #define __TIMER_CONFIG_H__
 
+#include "stm32f10x.h"
+
 #ifdef   _TIM_CONF_GLOBALS
 #define  _TIM_EXT
 #else

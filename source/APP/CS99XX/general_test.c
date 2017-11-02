@@ -27,6 +27,9 @@
 #include    "cs99xx_plc.h"
 #include    "cs99xx_led.h"
 #include    "cs99xx_collect.h"
+#include    "test_com.h"
+#include    "acw_test_g.h"
+#include    "acw_test.h"
 
 
 
@@ -1047,7 +1050,7 @@ int32_t dis_charge_remain_vol(void)
 
 void cur_cylinder_ctrl_over(void)
 {
-    CYLINDER_CTRL(2000);
+//    CYLINDER_CTRL(2000);
 }
 
 void clear_test_falg(void)
@@ -1057,37 +1060,19 @@ void clear_test_falg(void)
 
 static void g_mode_next_step(void)
 {
-    test_flag.judge_err_en = 0;
-    
-    close_test_timer();/* 关定时器 */
     save_cur_result(&cur_result);
     test_pass();
     
-    count_vol_step_value();/* 计算电压步进值 */
     load_steps_to_list(g_cur_step->one_step.com.step);
     g_cur_step = list_99xx.head->next;/* 进入下一步 */
     
     /* 画出当前步的测试数据 */
     load_data();
-    dis_test_ui(); /* 画出当前步的测试数据 */
-    
-    shift_gear(cur_mode);/* 切换档位继电器 */
-    OSTimeDlyHMSM(0,0,0,50);
-    exit_sw();/* 开外部中断 */
-    test_vref(cur_high);/* 输出各基准 */
+    dis_test_ui_x(); /* 画出当前步的测试数据 */
     save_result(&cur_result, INIT_RESULT);/* 初始化保存步 */
-    
     test_flag.save_only_one = 0;/* 清除保存一次标志 */
-    g_test_time = zeo_t;/* 跳过第1阶段 */
-    test_flag.gradation = STAGE_CHANGE;/* 进入电压缓变阶段 这个很重要 */
-    test_flag.dis_status = TEST_TEST_INDEX;
-    DIS_SPEED = 0;/* 显示速度控制标志清零 */
+    
     LED_PASS = LED_OFF;/* 关闭LED灯 */
-    g_dis_time = 0;
-    test_flag.judge_err_en = 1;
-    test_flag.pass_only_one = 0;
-    test_flag.vol_rise_step_t = 0;
-    open_test_timer();/* 开定时器 */
 }
 
 void re_draw_test_ui(void)
@@ -1224,428 +1209,7 @@ void uninstall_test_irq_fun(void)
 	test_irq_fun = NULL;
 	cs99xx_test_fun = NULL;
 }
-/*
- * 函数名：testing_process_control
- * 描述  ：测试过程控制
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
-void testing_process_controlx(uint8_t *st)
-{
-    uint8_t state = 0;
-    
-    if(st == NULL)
-    {
-        return;
-    }
-    
-    state = *st;
-    *st = TEST_NULL_CONTROL;
-    
-    /* 退出状态机 */
-    if(STOP)
-    {
-        *st = TEST_STOP_CONTROL;//TEST_QUIT_CONTROL;
-    }
-    
-    switch(state)
-    {
-        case TEST_START_CONTROL:/* 启动控制 */
-        {
-			cur_status = ST_TESTING;
-            serve_count(KEY_START_COUNT);/* 功放计数 */
-            
-            /* 如果下一步标记置位就加载新的测试步 */
-            if(NEXT)
-            {
-                /* 如果当前步不是最后一步 就加载下一步 */
-                if(g_cur_step->next != NULL)
-                {
-                    load_steps_to_list(g_cur_step->next->one_step.com.step);
-                    g_cur_step = list_99xx.head;
-                }
-                /* 否则就加载第一步 */
-                else
-                {
-                    load_steps_to_list(1);
-                    g_cur_step = list_99xx.head;
-                }
-            }
-            
-            /* 当是G模式时每次测试只能从第一步开始 */
-            if(g_cur_file->work_mode == G_MODE)
-            {
-                load_steps_to_list(1);
-                g_cur_step = list_99xx.head;
-            }
-            
-            /* 画出当前步的测试数据 */
-            load_data();
-            dis_test_ui(); /* 画出当前步的测试数据 */
-            
-            /* 如果是大电容测试需要先进行放电 */
-            if(type_spe.dcw_big_cap_en == ENABLE && cur_mode == DCW)
-            {
-                /* 如果放电过程中按下了复位键就要停止测试 */
-                if(-1 == dis_charge_remain_vol())
-                {
-                   *st = TEST_QUIT_CONTROL;
-                    return;
-                }
-            }
-            
-            LCD_REFRESH();
-            
-			uninstall_test_irq_fun();/* 卸载测试状态机 */
-            /* 当前步是第一步并且输出延时时间不为零 */
-            if(cur_step == 1 && sys_par.output_delay > 0)
-            {
-                test_flag.dis_status = TEST_OUTPUT_DELAY;
-                g_test_time = 0;
-                open_test_timer();/* 开定时器 */
-                cur_status = ST_OUTPUT_DELAY;
-				plc_signal_cmd(PLC_SIG_TESTING);
-            
-                if(-1 == into_output_delay())/* 进入输出延时 */
-				{
-					*st = TEST_QUIT_CONTROL;
-                    cur_status = ST_WAIT;
-                    close_test_timer();/* 关定时器 */
-                    plc_signal_cmd(PLC_SIG_RESET);
-					return;
-				}
-                close_test_timer();/* 关定时器 */
-            }
-            
-            install_test_irq_fun();/* 安装测试状态机 */
-            
-            /* 检查数据如果为空就退出 */
-            if(cs99xx_test_fun == NULL)
-            {
-                return;
-            }
-            
-            startup();/* 启动测试 */
-            *st = TEST_TESTING_CONTROL;
-            break;
-        }
-        case TEST_TESTING_CONTROL:/* 测试控制 */
-        {
-            /* 计算显示值 */
-            if(test_flag.sample_task_en && ERR_NUM == ERR_NONE)
-            {
-                count_dis_value();
-            }
-            
-            /* 每次失败只处理一次 && !CUR_FAIL */
-            if(ERR_NUM && !CUR_FAIL)
-            {
-                test_flag.vol_change_flag = 1;/* 取保调用test_dis()能成功刷新数据 */
-                
-                /* 压降测试仪 */
-                if(GR_VOL_DROP_EN)
-                {
-                    if(g_dis_time >= 4)
-                    {
-                        exception_handling(ERR_NUM);
-                    }
-                }
-                else
-                {
-                    exception_handling(ERR_NUM);
-                }
-            }
-            else
-            {
-                cs99xx_test_fun();/* 进入测试程序 */
-            }
-            
-            /* 测试时间到 */ // read_stop_pin()
-            if(test_flag.gradation == STAGE_TEST)
-            if(tes_t && g_dis_time == tes_t && test_flag.err_once == 0)
-            {
-                test_flag.err_once = 1;/* 确保时间到报警只执行一次 */
-                /* 测试时间到了后再次检查测试数据 */
-                ERR_NUM = judge_err();
-                /* 测试时间到检查异常 标志 */
-                if(ERR_NUM_OVER != ERR_NONE)
-                {
-                    exception_handling(ERR_NUM_OVER);
-                }
-                else if(ERR_NUM != ERR_NONE)
-                {
-                    exception_handling(ERR_NUM);
-                }
-                
-                open_test_timer();//定时器在测试时间到时被irq程序关闭这里要再次打开继续下面的测试
-            }
-            
-            /* 测试结束后 通知通信口 信号要保持一段时间保证被接口板获取到 */
-            if(OVER)
-            {
-                cur_cylinder_ctrl_over();
-            }
-            /* 期间有失败步  && 所有步测试完成 && 综合判断打开 && 失败继续允许
-               显示测试失败
-            */
-            if( FAIL && OVER && sys_par.plc_signal != EACH_STEP
-                && (sys_par.fail_mode == FAIL_MODE_CON 
-                || sys_par.fail_mode == FAIL_MODE_HALT
-                || sys_par.fail_mode == FAIL_MODE_CON
-                || sys_par.fail_mode == FAIL_MODE_RESTART
-                || sys_par.fail_mode == FAIL_MODE_NEXT
-                || sys_par.fail_mode == FAIL_MODE_FPDFC
-                    ))
-            {
-                *st = TEST_EXCEPTION_CONTROL;
-            }
-            /* (当前步结束 并且 不需要继续测试) 或者 (所有步测试完毕 并且 步间连续条件不成立) 
-               以上条件满足就需要停止测试 
-            */
-            else if((CUR_OVER && !CONT) || (OVER && !(CONT && int_t)))
-            {
-                /* 当前步PASS 并且 未发生异常 */
-                if(!CUR_FAIL && !ERR_NUM_OVER)
-                {
-                    /* 未按下复位键 */
-                    if(!TERMINATE)
-                    {
-                        PASS = 1;/* 当不再进行测试时就将pass标志写1 */
-                        *st = TEST_PASS_CONTROL;
-                    }
-                    /* 按下了复位键 */
-                    else
-                    {
-                        STOP = 1;
-                        *st = TEST_STOP_CONTROL;
-                    }
-                }
-                /* 发生异常 */
-                else
-                {
-                    *st = TEST_EXCEPTION_CONTROL;
-                }
-            }
-            /* 要求退出测试 */
-            else if(STOP)
-            {
-                *st = TEST_STOP_CONTROL;
-            }
-            /* 失败后按下启动键并且允许的情况下是可以从第一步开始启动的 */
-            else if(FAIL_RE_START)
-            {
-                *st = TEST_FAIL_RE_START_CONTROL;
-            }
-            /* 继续下一步测试 */
-            else if(CONT)
-            {
-                *st = TEST_CONT_TEST_CONTROL;
-            }
-            /* 大电容测试并且放电结束 */
-            else if(type_spe.dcw_big_cap_en == ENABLE && cur_mode == DCW
-                    && test_flag.dis_charge_end == 1 && tes_t == 0)
-            {
-                *st = TEST_STOP_CONTROL;//TEST_QUIT_CONTROL;
-            }
-            /* 普通测试 */
-            else
-            {
-                *st = TEST_TESTING_CONTROL;
-            }
-            break;
-        }
-        case TEST_FAIL_RE_START_CONTROL:/* 测试失败重启控制 */
-        {
-            switch(FAIL_RE_START)
-            {
-                /* 重启从第一步开始 */
-                case FAIL_RE_START_FIRST:
-                {
-                    load_steps_to_list(1);
-                    g_cur_step = list_99xx.head;
-                    clear_test_falg();/* 清空标志位 */
-                    *st = TEST_START_CONTROL;
-                    break;
-                }
-                /* 重启从下一步开始 */
-                case FAIL_RE_START_NEXT:
-                {
-                    NEXT = 1;
-                    *st = TEST_START_CONTROL;
-                    break;
-                }
-                default:
-                {
-                    *st = TEST_QUIT_CONTROL;
-                    break;
-                }
-            }
-            break;
-        }
-        case TEST_EXCEPTION_CONTROL:/* 异常处理 */
-        {
-            save_cur_result(&cur_result);
-            
-            /* 大电容测试等待电容发电完成 */
-            if(type_spe.dcw_big_cap_en == ENABLE && cur_mode == DCW
-                && test_flag.dis_charge_end == 0)
-            {
-                dis_charge_remain_vol();
-            }
-            
-            app_ctrl_exit_sw(EXIT_STOP, DISABLE);/* 关闭复位中断 */
-            dis_fail();
-            clear_keyboard();
-            *st = TEST_QUIT_CONTROL;
-//             else if(CONT)
-//             {
-//                 CONT = 0;
-//                 *st = TEST_TESTING_CONTROL;
-//             }
-            break;
-        }
-        case TEST_PASS_CONTROL:
-        {
-            test_pass();
-            save_cur_result(&cur_result);
-            cur_status = ST_PASS;/* 当前状态为pass */
-            dis_pass();
-            
-            NEXT = 1;
-            
-            if(sys_par.fail_mode == FAIL_MODE_FPDFC && cur_step == 1)
-            {
-                NEXT = 0;
-            }
-            
-            /* 退出测试 */
-            if(test_flag.g_stop)
-            {
-                dis_stop();
-                LCD_REFRESH();
-                app_ctrl_exit_sw(EXIT_STOP, DISABLE);	/* 关闭复位中断 */
-                clear_keyboard();
-                *st = TEST_QUIT_CONTROL;
-            }
-            /* 启动测试 */
-            else if(test_flag.g_start)
-            {
-                clear_keyboard();
-                *st = TEST_START_CONTROL;
-            }
-			/* 退出测试 */
-            else
-            {
-//                 dis_stop();
-//                 LCD_REFRESH();
-//                 app_ctrl_exit_sw(EXIT_STOP, DISABLE);	/* 关闭复位中断 */
-//                 clear_keyboard();
-                *st = TEST_QUIT_CONTROL;
-            }
-            break;
-        }
-        case TEST_STOP_CONTROL:
-        {
-            plc_signal_cmd(PLC_SIG_RESET);
-            
-            /* 大电容测试等待电容发电完成 */
-            if(type_spe.dcw_big_cap_en == ENABLE && cur_mode == DCW
-                && test_flag.dis_charge_end == 0)
-            {
-                STOP = 0;
-                
-				disable_stop_exit();/* 关闭复位中断 */
-                g_test_time = for_t + 1;
-                on_sample_task();
-                open_test_timer();/* 开定时器 */
-                enable_stop_exit();
-                ERR_NUM = ERR_NONE;
-                test_flag.judge_err_en = 0;
-                *st = TEST_TESTING_CONTROL;
-            }
-            /* 正常测试停止 */
-            else
-            {
-                app_ctrl_exit_sw(EXIT_STOP, DISABLE);	/* 关闭复位中断 */
-                stop_server_for_comm();
-                dis_stop();
-                clear_keyboard();
-                TERMINATE = 0;
-                *st = TEST_QUIT_CONTROL;/* 退出测试 */
-            }
-            break;
-        }
-        case TEST_CONT_TEST_CONTROL:
-        {
-            /* 允许继续测试下一步 G模式 没有停止测试 */
-            if(CONT && g_cur_file->work_mode == G_MODE && !STOP)
-            {
-                CONT = 0;
-                g_mode_next_step();
-                *st = TEST_TESTING_CONTROL;
-            }
-            /* 允许继续测试下一步 N模式 没有停止测试 */
-            else if(CONT && g_cur_file->work_mode == N_MODE && !STOP)
-            {
-                CONT = 0;
-                save_cur_result(&cur_result);
-                stop_test();/* 停止测试 */
-                
-                /* 当前步不是最后一步 */
-                if(g_cur_step->next != NULL)
-                {
-                    /* 当前步没有发生异常 */
-                    if(!CUR_FAIL)
-                    {
-                        test_pass();
-                    }
-                    
-                    /* 加载下一步 */
-                    load_steps_to_list(g_cur_step->one_step.com.step + 1);
-                    g_cur_step = list_99xx.head;
-                }
-                /* 当前步是最后一步 */
-                else
-                {
-                    /* 间隔时间为0 */
-                    if(int_t == 0)
-                    {
-                        /* 当前步没有发生异常 结束测试退出 */
-                        if(!CUR_FAIL)
-                        {
-                            PASS = 1;/* 当不再进行测试时就将pass标志写1 */
-                            *st = TEST_PASS_CONTROL;
-                            break;
-                        }
-                    }
-                    /* 加载第一步 */
-                    load_steps_to_list(1);
-                    g_cur_step = list_99xx.head;
-                }
-                
-                load_data();/* 加载数据 */
-                update_info();/* 更新界面 */
-                
-                OSTimeDlyHMSM(0,0,0,5);/* 延时 */
-                
-                /* 如果按下了复位键就停止测试 */
-                if(TERMINATE)
-                {
-                    *st = TEST_STOP_CONTROL;
-                }
-                /* 启动测试 */
-                else
-                {
-                    *st = TEST_START_CONTROL;
-                }
-            }
-            break;
-        }
-    }
-}
-static TEST_DATA_STRUCT test_data;
-void (*run_cs99xx_test_fun)(void*file,void*par,void*test_data);
+void (*run_cs99xx_test_fun)(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_data);
 #include "acw_test.h"
 void install_run_test_fun(void)
 {
@@ -1663,6 +1227,88 @@ void install_run_test_fun(void)
     }
 }
 
+void get_test_dis_status(TEST_DATA_STRUCT *test_data)
+{
+    switch(test_data->test_status)
+    {
+        case ST_CHANGE:
+            test_flag.dis_status = TEST_CHANGE_INDEX;
+            break;
+        case ST_CHARGE:
+            test_flag.dis_status = TEST_CHARGE_INDEX;
+            break;
+        case ST_STAB:
+            test_flag.dis_status = TEST_STAB_INDEX;
+            break;
+        case ST_DISCHARGE:
+            test_flag.dis_status = TEST_DISCHARGE_INDEX;
+            break;
+        case ST_DISCHARGE_OVER:
+            test_flag.dis_status = TEST_DISCHARGE_OVER_INDEX;
+            break;
+        case ST_VOL_RISE:
+            test_flag.dis_status = TEST_RISE_INDEX;
+            break;
+        case ST_TESTING:
+            test_flag.dis_status = TEST_TEST_INDEX;
+            break;
+        case ST_VOL_FALL:
+            test_flag.dis_status = TEST_FALL_INDEX;
+            break;
+        case ST_INTER_WAIT:
+            test_flag.dis_status = TEST_INTER_INDEX;
+            break;
+        case ST_WAIT:
+            test_flag.dis_status = TEST_WAIT_INDEX;
+            break;
+        case ST_PASS:
+            test_flag.dis_status = TEST_PASS_INDEX;
+            break;
+        case ST_STOP:
+            test_flag.dis_status = TEST_WAIT_INDEX;
+            break;
+        case ST_ERR_FAIL:
+            test_flag.dis_status = TEST_FAIL_INDEX;
+            break;
+        case ST_OUTPUT_DELAY:
+            test_flag.dis_status = TEST_OUTPUT_DELAY;
+            break;
+        
+        case ST_ERR_H:
+            test_flag.dis_status = ERR_HIGH;
+            break;
+        case ST_ERR_L:
+            test_flag.dis_status = ERR_LOW;
+            break;
+        case ST_ERR_SHORT:
+            test_flag.dis_status = ERR_SHORT;
+            break;
+        case ST_ERR_VOL_ABNORMAL:
+            test_flag.dis_status = ERR_VOL;
+            break;
+        case ST_ERR_ARC:
+            test_flag.dis_status = ERR_ARC;
+            break;
+        case ST_ERR_GFI:
+            test_flag.dis_status = ERR_GFI;
+            break;
+        case ST_ERR_REAL:
+            test_flag.dis_status = ERR_REAL;
+            break;
+        case ST_ERR_CHAR:
+            test_flag.dis_status = ERR_CHARGE;
+            break;
+        case ST_ERR_GEAR:
+            test_flag.dis_status = ERR_GEAR;
+            break;
+        case ST_ERR_AMP:
+            test_flag.dis_status = ERR_AMP;
+            break;
+        case ST_ERR_OPEN:
+            test_flag.dis_status = ERR_OPEN;
+            break;
+    }
+}
 void testing_process_control(uint8_t *st)
 {
     uint8_t state = 0;
@@ -1759,55 +1405,50 @@ void testing_process_control(uint8_t *st)
             }
             
             startup();/* 启动测试 */
+            serve_count(AMP_COUNT);/* 功放继电器吸合次数更新 */
+            
+            g_test_data.gradation = STAGE_READY;
+            g_test_data.test_time = 0;
+            g_test_data.danger = 0;//高压危险标记
+            g_test_data.fail_num = ST_ERR_NONE;//初始化
             *st = TEST_TESTING_CONTROL;
             break;
         }
         case TEST_TESTING_CONTROL:/* 测试控制 */
         {
-//            /* 计算显示值 */
-//            if(test_flag.sample_task_en && ERR_NUM == ERR_NONE)
-//            {
-//                count_dis_value();
-//            }
-//            
-//            /* 每次失败只处理一次 && !CUR_FAIL */
-//            if(ERR_NUM && !CUR_FAIL)
-//            {
-//                test_flag.vol_change_flag = 1;/* 取保调用test_dis()能成功刷新数据 */
-//                
-//                /* 压降测试仪 */
-//                if(GR_VOL_DROP_EN)
-//                {
-//                    if(g_dis_time >= 4)
-//                    {
-//                        exception_handling(ERR_NUM);
-//                    }
-//                }
-//                else
-//                {
-//                    exception_handling(ERR_NUM);
-//                }
-//            }
-//            else
-//            {
-//                cs99xx_test_fun();/* 进入测试程序 */
-//            }
+            run_acw_test_g(g_cur_step, g_cur_step->next, &g_test_data);
+            cur_status = g_test_data.test_status;
+            get_test_dis_status(&g_test_data);
             
-            run_acw_test(g_cur_file, g_cur_step, &test_data);
-            cur_status = test_data.test_status;
+            /* 显示测试状态 */
+            test_status_dis();
             
-            if(test_data.fail_num == ERR_NONE)
+            /* 显示测试数据 */
+            update_test_data(&g_test_data);
+            
+            /* 更新时间 */
+            updata_time(U_TEST_TIME, g_test_data.dis_time);
+            
+            /* 测试过程出现异常 */
+            if(g_test_data.fail_num != ST_ERR_NONE)
             {
-                exception_handling(test_data.fail_num);
+                exception_handling(g_test_data.fail_num);
+                *st = TEST_QUIT_CONTROL;
+                return;
+            }
+            
+            /* 复位打断测试 */
+            if(TERMINATE)
+            {
                 *st = TEST_QUIT_CONTROL;
                 return;
             }
             
             /* 测试结束 */
-            if(test_data.test_over == 1)
+            if(g_test_data.test_over == 1)
             {
                 /* 测试合格 */
-                if(test_data.fail_num == ERR_NONE)
+                if(g_test_data.fail_num == ST_ERR_NONE)
                 {
                     *st = TEST_PASS_CONTROL;
                     return;
@@ -1815,22 +1456,28 @@ void testing_process_control(uint8_t *st)
                 /* 测试失败 */
                 else
                 {
-                     *st = TEST_EXCEPTION_CONTROL;
+                    *st = TEST_EXCEPTION_CONTROL;
                     return;
                 }
             }
+            /* 继续下一步测试 */
+            else if(g_test_data.cont == 1)
+            {
+                *st = TEST_CONT_TEST_CONTROL;
+                return;
+            }
             
             /* 在间隔等待阶段，要判断是否要跑间隔等待 */
-            if(test_data.test_status == ST_INTER_WAIT)
+            if(g_test_data.test_status == ST_INTER_WAIT)
             {
-                if(test_data.fail_num == ERR_NONE)
+                if(g_test_data.fail_num == ERR_NONE)
                 {
 //                    cur_status = ST_PASS;
                 }
                 
                 if(sys_par.fail_mode == FAIL_MODE_FPDFC && cur_step == 1)
                 {
-                    if(test_data.fail_num == ERR_NONE)
+                    if(g_test_data.fail_num == ERR_NONE)
                     {
                         *st = TEST_PASS_CONTROL;
                         return;
@@ -1850,6 +1497,7 @@ void testing_process_control(uint8_t *st)
         }
         case TEST_FAIL_RE_START_CONTROL:/* 测试失败重启控制 */
         {
+            /* 失败重启 */
             switch(FAIL_RE_START)
             {
                 /* 重启从第一步开始 */
@@ -1972,9 +1620,9 @@ void testing_process_control(uint8_t *st)
         case TEST_CONT_TEST_CONTROL:
         {
             /* 允许继续测试下一步 G模式 没有停止测试 */
-            if(CONT && g_cur_file->work_mode == G_MODE && !STOP)
+            if(g_test_data.cont == 1 && g_cur_file->work_mode == G_MODE && !STOP)
             {
-                CONT = 0;
+                g_test_data.cont = 0;
                 g_mode_next_step();
                 *st = TEST_TESTING_CONTROL;
             }

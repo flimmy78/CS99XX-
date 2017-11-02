@@ -68,7 +68,6 @@
 ..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\FreeModbus\port\user_mb_app.h
 ..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\FreeModbus\modbus\include\mbframe.h
 ..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\FreeModbus\modbus\include\mbutils.h
-..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\USER\SysTemConfig.h
-..\cs99xx_zwp_output\obj\cs99xx_exception.o: D:\Keil\ARM\RV31\INC\stdint.h
+..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\APP\TEST_COM\test_com.h
 ..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\APP\CS99XX\cs99xx_result.h
 ..\cs99xx_zwp_output\obj\cs99xx_exception.o: ..\source\APP\CS99XX\cs99xx_plc.h

@@ -21,7 +21,8 @@
 extern void shift_gear(uint8_t mode);
 extern void ir_auto_find_gear(void);
 extern void ir_auto_shift_gear(void);
-
+extern void irq_stop_relay_motion(void);
+extern void on_switch_hv(void);
 extern void reset_ports(void);
 extern void updata_port(TEST_PORT *p);
 extern void set_sine_hz(const int8_t n);
@@ -30,11 +31,14 @@ extern void close_sine(void);
 extern void amp_relay_ctrl_on(void);
 extern void amp_relay_ctrl_off(void);
 extern void on_dc_gr_control_relay(void);
-
+extern void open_sine(float freq);
+extern void close_sine(void);
 extern void dcw_big_cap_start_charge(void);
 extern void dcw_big_cap_stop_charge(void);
 extern void no_dcw_big_cap_stop_charge(void);
-
+extern void updata_port(TEST_PORT *p);
+extern void amp_relay_ctrl_on(void);
+extern void amp_relay_ctrl_off(void);
 extern void dcw_big_cap_stop_dis_charge(void);
 extern void dcw_big_cap_keep_dis_charge(void);
 extern void dcw_big_cap_execute_dis_charge(void);

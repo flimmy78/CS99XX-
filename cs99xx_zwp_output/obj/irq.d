@@ -29,7 +29,7 @@
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\CS99XX\cs99xx_vref.h
+..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\app.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\uCOSII\core\ucos_ii.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\USER\app_cfg.h
@@ -51,7 +51,7 @@
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\uCGUI\GUI_LIB\LCD24064.H
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\BSP\EE_I2C\i2c_ee.h
-..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\Comm_app\mb_server.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\FreeModbus\modbus\include\mb.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\FreeModbus\port\port.h
@@ -64,6 +64,5 @@
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\FreeModbus\port\user_mb_app.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\FreeModbus\modbus\include\mbframe.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\FreeModbus\modbus\include\mbutils.h
-..\cs99xx_zwp_output\obj\irq.o: ..\source\USER\SysTemConfig.h
-..\cs99xx_zwp_output\obj\irq.o: D:\Keil\ARM\RV31\INC\stdint.h
+..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\TEST_COM\test_com.h
 ..\cs99xx_zwp_output\obj\irq.o: ..\source\APP\CS99XX\cs99xx_it.h

@@ -29,6 +29,7 @@
 #include    "cs99xx_plc.h"
 #include    "dc_module.h"
 #include    "cs99xx_ir_shift_gear.h"
+#include    "test_com.h"
 
 
 /*
@@ -151,6 +152,18 @@ void relay_ready(void)
     
     MC14094_Updata();/* 向4094发送数据 更新继电器状态 */
 }
+
+/*
+ * 函数名：on_switch_hv
+ * 描述  ：打开高压开关
+ * 输入  ：无
+ * 输出  ：无
+ * 返回  ：无
+ */
+void on_switch_hv(void)
+{
+    GPIO_SetBits(GPIOC, GPIO_Pin_0);
+}
 /*
  * 函数名：on_dc_gr_control_relay
  * 描述  ：开直流模块控制继电器
@@ -213,7 +226,7 @@ void test_ready(void)
     
     if(ris_t == 0 || cur_mode == BBD || cur_mode == CC)
     {
-        open_hv();//送基准
+        set_da_value();//送基准
     }
     
     relay_ready();//开电子开关
@@ -527,18 +540,25 @@ void amp_relay_ctrl_off(void)
  */
 void irq_stop_relay_motion(void)
 {
-    exit_off_all();//关闭中断
+    /* 1.关闭中断 */
+    exit_off_all();
+    
+    /* 2.关电子开关 */
 	MC14094_CMD(MC14094_A, MC14094_CD4053_A, RELAY_OFF);
 	MC14094_CMD(MC14094_A, MC14094_CD4053_B, RELAY_ON);
 	MC14094_CMD(MC14094_A, MC14094_CD4053_C, RELAY_ON);
     MC14094_Updata();
-    off_switch_hv();/* 关闭高压 */
-    HIGH = 0;
-    LED_TEST = LED_OFF;
-    test_flag.test_led_flag = 0;
+    /* 3.关闭高压开关 */
+    off_switch_hv();
+    
+    /* 4.关闭高压基准 */
+    close_hv();
+    /* 5.关闭正弦波 */
     close_sine();
+    /* 6.延时 10ms */
+    soft_delay_us(10 * 1000);
+    /* 7.关闭功放 */
     amp_relay_ctrl_off();
-    close_hv();/* 关闭高压基准 2017.5.13 */
 }
 
 /*
@@ -1630,9 +1650,8 @@ void open_sine(float freq)
 	
 	uint32_t temp_w = 0;
 	
-	temp_w = COUNT_SIN_FREQ_WORD(freq) + ROUND;
+	temp_w = COUNT_SIN_FREQ_WORD(freq / 10) + ROUND;
 	
-	cpld_base = COUNT_BASE(freq);
 	temp_w |= CPLD_W;
 	cpld_write(temp_w);
 	cpld_write(CPLD_START_SINEWAVE);

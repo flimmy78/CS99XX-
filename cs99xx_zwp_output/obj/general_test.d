@@ -1,5 +1,5 @@
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\general_test.c
-..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_vref.h
+..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\Libraries\CMSIS\stm32f10x.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\Libraries\CMSIS\core_cm3.h
 ..\cs99xx_zwp_output\obj\general_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
@@ -60,7 +60,7 @@
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\uCGUI\GUI_LIB\LCD24064.H
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\BSP\EE_I2C\i2c_ee.h
-..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_it.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\Comm_app\mb_server.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\FreeModbus\modbus\include\mb.h
@@ -79,4 +79,6 @@
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_plc.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_led.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\CS99XX\cs99xx_collect.h
+..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\TEST_COM\test_com.h
+..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\ACW\acw_test_g.h
 ..\cs99xx_zwp_output\obj\general_test.o: ..\source\APP\ACW\acw_test.h

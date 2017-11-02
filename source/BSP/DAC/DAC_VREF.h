@@ -34,6 +34,7 @@ extern 	u16		DAC_Vol[3];
 
 /******************* º¯ÊıÉùÃ÷ *********************/
 extern void dac_vref_init(void);
+extern void set_output_da_vref(uint16_t hv_da_value);
 
 /**************************************************/
 #if defined(__cplusplus)

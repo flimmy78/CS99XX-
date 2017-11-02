@@ -52,7 +52,7 @@
 ..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\BSP\EE_I2C\i2c_ee.h
 ..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\APP\CS99XX\cs99xx_collect.h
-..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\cs99xx.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
 ..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\module\DC_GR_MODULE\dc_module.h
 ..\cs99xx_zwp_output\obj\cs99xx.o: ..\source\module\module.h

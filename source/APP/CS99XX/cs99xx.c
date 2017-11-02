@@ -174,6 +174,16 @@ void updata_time(const int8_t n, uint16_t time)
 	}
 }
 
+void update_test_data(TEST_DATA_STRUCT *test_data)
+{
+    test_unit_dis(cur_mode, cur_gear, &GUI_FontHZ_SimSunF_15);
+    
+    transform_test_vol_to_str(test_data);
+    transform_test_loop_to_str(test_data);
+    dis_test_data(&GUI_FontHZ_SimSun_15);
+    
+	LCD_REFRESH();/* 刷新屏幕 */
+}
 /*
  * 函数名：test_dis
  * 描述  ：服务于测试程序
@@ -183,58 +193,58 @@ void updata_time(const int8_t n, uint16_t time)
  */
 void test_dis(void)
 {
-    /* IR自动换挡 */
-    if(cur_mode == IR)
-    {
-        ir_auto_find_gear();
-    }
-    
-    /* 更新结果 */
-    if(test_flag.gradation == STAGE_TEST)
-    {
-        if(tes_t && ((g_dis_time + 5) > tes_t))
-        {
-            updata_result(cur_mode);
-        }
-    }
-    
-    /* 显示限速 */
-    if(test_flag.vol_change_flag == 0)
-    {
-        /* 在刚开始的时候要快速显示数据不能限速 */
-        if(DIS_SPEED < 20)
-        {
-            DIS_SPEED++;
-        }
-        /* 控制显示的速度 */
-        else
-        {
-            if(++DIS_SPEED > 38)
-            {
-                DIS_SPEED = 28;
-            }
-            else
-            {
-                return;
-            }
-        }
-    }
-    
-	test_flag.re_times_per_second++;
-    
-    test_unit_dis(cur_mode, cur_gear, &GUI_FontHZ_SimSunF_15);
-    transform_test_vol_string();
-    transform_test_loop_string();
-    dis_test_data(&GUI_FontHZ_SimSun_15);
-    
-	LCD_REFRESH();/* 刷新屏幕 */
-    
-	if(ERR_NUM)
-	{
-        disable_sample_task();/* 关闭采样任务 */
-    }
-	
-	return;
+//    /* IR自动换挡 */
+//    if(cur_mode == IR)
+//    {
+//        ir_auto_find_gear();
+//    }
+//    
+//    /* 更新结果 */
+//    if(test_flag.gradation == STAGE_TEST)
+//    {
+//        if(tes_t && ((g_dis_time + 5) > tes_t))
+//        {
+//            updata_result(cur_mode);
+//        }
+//    }
+//    
+//    /* 显示限速 */
+//    if(test_flag.vol_change_flag == 0)
+//    {
+//        /* 在刚开始的时候要快速显示数据不能限速 */
+//        if(DIS_SPEED < 20)
+//        {
+//            DIS_SPEED++;
+//        }
+//        /* 控制显示的速度 */
+//        else
+//        {
+//            if(++DIS_SPEED > 38)
+//            {
+//                DIS_SPEED = 28;
+//            }
+//            else
+//            {
+//                return;
+//            }
+//        }
+//    }
+//    
+//	test_flag.re_times_per_second++;
+//    
+//    test_unit_dis(cur_mode, cur_gear, &GUI_FontHZ_SimSunF_15);
+//    transform_test_vol_string();
+//    transform_test_loop_string();
+//    dis_test_data(&GUI_FontHZ_SimSun_15);
+//    
+//	LCD_REFRESH();/* 刷新屏幕 */
+//    
+//	if(ERR_NUM)
+//	{
+//        disable_sample_task();/* 关闭采样任务 */
+//    }
+//	
+//	return;
 }
 
 /*
@@ -272,6 +282,22 @@ void dis_test_ui(void)
     updata_title_step(&g_cur_step->one_step);
     /* 设置数据显示 */
     dis_test_data(&GUI_FontHZ_SimSun_15);
+    /* 设置测试时间显示 */
+    updata_time(U_TEST_TIME, tes_t);
+	/* 刷屏 */
+	LCD_REFRESH();
+}
+
+void dis_test_ui_x(void)
+{
+    /* 显示单位 */
+    test_unit_dis(cur_mode, cur_gear, &GUI_FontHZ_SimSunF_15);
+    /* 多路端口显示 */
+	dis_port();
+    /* 标题栏 */
+    updata_title_step(&g_cur_step->one_step);
+    /* 设置数据显示 */
+//    dis_test_data(&GUI_FontHZ_SimSun_15);
     /* 设置测试时间显示 */
     updata_time(U_TEST_TIME, tes_t);
 	/* 刷屏 */

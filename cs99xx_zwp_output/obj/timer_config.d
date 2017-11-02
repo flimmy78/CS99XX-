@@ -51,6 +51,7 @@
 ..\cs99xx_zwp_output\obj\timer_config.o: ..\source\uCGUI\GUI_LIB\LCD24064.H
 ..\cs99xx_zwp_output\obj\timer_config.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\timer_config.o: ..\source\BSP\EE_I2C\i2c_ee.h
+..\cs99xx_zwp_output\obj\timer_config.o: ..\source\APP\TEST_COM\test_com.h
 ..\cs99xx_zwp_output\obj\timer_config.o: ..\source\USER\SysTemConfig.h
 ..\cs99xx_zwp_output\obj\timer_config.o: D:\Keil\ARM\RV31\INC\stdint.h
 ..\cs99xx_zwp_output\obj\timer_config.o: ..\source\APP\CS99XX\irq.h

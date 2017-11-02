@@ -88,3 +88,4 @@
 ..\cs99xx_zwp_output\obj\app.o: ..\source\module\DC_GR_MODULE\dc_module.h
 ..\cs99xx_zwp_output\obj\app.o: ..\source\module\module.h
 ..\cs99xx_zwp_output\obj\app.o: ..\source\BSP\SPI_FLASH\spi_flash.h
+..\cs99xx_zwp_output\obj\app.o: ..\source\APP\TEST_COM\test_com.h

@@ -1,5 +1,5 @@
-..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_relay_motion.c
-..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.c
+..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\Libraries\CMSIS\stm32f10x.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\Libraries\CMSIS\core_cm3.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
@@ -61,7 +61,7 @@
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_it.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\calibration.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_collect.h
-..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_vref.h
+..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_mem_api.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_eep_manage.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_flash_manage.h
@@ -71,3 +71,4 @@
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\module\DC_GR_MODULE\dc_module.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\module\module.h
 ..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\CS99XX\cs99xx_ir_shift_gear.h
+..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o: ..\source\APP\TEST_COM\test_com.h

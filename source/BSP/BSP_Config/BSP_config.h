@@ -61,8 +61,6 @@ extern void on_switch_hv(void);
 extern void off_switch_hv(void);
 
 extern void soft_delay_10us(u32 dly_us);
-extern void cs_delay_ms(u16 time);
-extern void cs_delay_us(int time);
 
 #endif //__BSP_CONFIG_H
 /******************* (C) COPYRIGHT 2014 ³¤Ê¢ÒÇÆ÷ *****END OF FILE****/

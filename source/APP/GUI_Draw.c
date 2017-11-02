@@ -56,7 +56,7 @@ const char *offset_res_buf[4]=
 	" ", "F", "P", "-"
 };
 
-const char* status_str[][2] = 
+const char* status_str[][2] =
 {
 	{"等待测试", "TestWait"},
 	{"电压上升", "  Rise  "},
@@ -532,12 +532,12 @@ DATA_INFO menu_par[]=
     
 	{//	19 档位保持
 		(void*)0/*pData*/,SX/*x*/,SY/*y*/,FLOAT_T/*type*/,5/*lon*/,3/*decs*/,4/*total*/,4/*cur*/,0/*ch_bit*/,2/*page*/,1/*bits*/,0,
-		9999,200,{"IR档位保持","IRGearHold"},{"s (0.2-9.999s)","s (0.2-9.999s)"},set_float_sys_par,0/*no_dis_bits*/, GUI_SYS_IR_GEAR_HOLD,UDRB,"(0.2-9.999s)","",SOX,SOY,
+		9999,200,{"IR档位保持","IRGearHold"},{"s (0.1-9.999s)","s (0.1-9.999s)"},set_float_sys_par,0/*no_dis_bits*/, GUI_SYS_IR_GEAR_HOLD,UDRB,"(0.1-9.999s)","",SOX,SOY,
 	},
     
 	{//	20 IR 测试速度
 		(void*)0/*pData*/,SX/*x*/,SY/*y*/,OPTION_T/*type*/,5/*lon*/,3/*decs*/,4/*total*/,4/*cur*/,0/*ch_bit*/,2/*page*/,0/*bits*/,0,
-		9999,200,{"IR测试速度","IR SPEED"},{"",""},set_option_par,0/*no_dis_bits*/, GUI_SYS_IR_SPEED,UDRB,"(0.2-9.999s)","",SOX,SOY,
+		9999,200,{"IR测试速度","IR SPEED"},{"",""},set_option_par,0/*no_dis_bits*/, GUI_SYS_IR_SPEED,UDRB,"(0.1-9.999s)","",SOX,SOY,
 	},
     
 	/************* CUSTOM(定制参数) ************/

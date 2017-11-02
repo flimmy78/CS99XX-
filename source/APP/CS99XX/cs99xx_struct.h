@@ -467,7 +467,11 @@ typedef struct{
     float cur_value;///<电流显示值
     float real_value;///<真实电流显示值
     float res_value;///<电阻显示值
+    float cap_value;///<电容显示值
     uint8_t vol_segment;///<电压段
+    uint16_t output_da;///<输出DA值
+    float out_da_k;///<电压/电流DA校准k值
+    float out_da_b;///<电压/电流DA校准b值
     float vol_adc_k;///<电压AD校准k值
     float vol_adc_b;///<电压AD校准b值
     float cur_adc_k;///<电流AD校准k值
@@ -477,7 +481,80 @@ typedef struct{
     uint16_t test_time;///<测试时间
     uint16_t dis_time;///<显示时间
     uint8_t test_over;///<测试结束
+    uint8_t gradation;///<测试阶段
+    uint8_t danger;///<高压标记
+    uint8_t cont;///<继续测试标记
+    uint8_t vol_err_count;///<电压异常计数
+    uint8_t low_err_count;///<下限报警计数
+    uint32_t vol_rise_step_t;///<电压上升/下降阶段时间计数
+    uint8_t err_real;///< acw 真实电流报警标记 
+    float vol_ch_step;///< 电压缓变步进值
+    float vol_ch_base;///< 电压变化的起始值
+    float vol_ch_target;///< 电压变化的目标
 }TEST_DATA_STRUCT;
+
+/* 程序中各种档位定义 */
+enum{
+	/* 交流档位 */
+	AC_2uA		= 0X1,
+	AC_20uA		= 0X2,
+	AC_200uA	= 0X3,
+	AC_2mA		= 0X4,
+	AC_10mA		= 0X5,
+	AC_20mA		= 0X6,
+	AC_50mA		= 0x7,
+	AC_100mA	= 0X8,
+	AC_200mA	= 0X9,
+    AC_GEAR_END,
+	
+	/* 直流电流档位 */
+	DC_2uA		= 0X1,
+	DC_20uA		= 0x2,
+	DC_200uA	= 0X3,
+	DC_2mA		= 0x4,
+	DC_10mA		= 0X5,
+	DC_20mA		= 0X6,
+	DC_50mA		= 0X7,
+	DC_100mA	= 0X8,
+    DC_GEAR_END,
+	
+	/* 绝缘电阻档位 */
+	IR_10MOHM	= 0X01,
+	IR_100MOHM	= 0X02,
+	IR_1GOHM	= 0x03,
+	IR_10GOHM	= 0X04,
+	IR_100GOHM	= 0X05,
+	
+	/* 直流接地电阻档位 */
+	DC_GR_20mV	= 0x2,
+	DC_GR_200mV	= 0x3,
+	DC_GR_2000mV= 0X4,
+	DC_GR_12V	= 0X5,
+	DC_GR_12V_100mA  = 0x6,
+	DC_GR_12V_1000mA = 0x7,
+	
+	/* 通信时档位分为4个 */
+	AC_0_GEAR_COMM	= 0X0,
+	AC_1_GEAR_COMM	= 0X1,
+	AC_2_GEAR_COMM	= 0X2,
+	AC_3_GEAR_COMM	= 0X3,
+	
+	/* 通信时档位分为6个 */
+	DC_0_GEAR_COMM	= 0X0,
+	DC_1_GEAR_COMM	= 0X1,
+	DC_2_GEAR_COMM	= 0X2,
+	DC_3_GEAR_COMM	= 0X3,
+	DC_4_GEAR_COMM	= 0X4,
+	DC_5_GEAR_COMM	= 0X5,
+	
+	/* 通信时IR档位分为6个 */
+	IR_1_GEAR_COMM	= 0X1,
+	IR_2_GEAR_COMM	= 0X2,
+	IR_3_GEAR_COMM	= 0X3,
+	IR_4_GEAR_COMM	= 0X4,
+	IR_5_GEAR_COMM	= 0X5,
+	IR_6_GEAR_COMM	= 0X6,
+};
 /******************* 全局变量声明 *********************/
 #ifdef   _99xxSTR_GLOBALS
 #define  _99xxSTR_EXT
@@ -485,7 +562,7 @@ typedef struct{
 #define  _99xxSTR_EXT  extern
 #endif
 
-
+_99xxSTR_EXT TEST_DATA_STRUCT g_test_data;
 _99xxSTR_EXT SYS_FLAG	sys_flag;       /* 定义全局标志给系统运行时使用 */
 _99xxSTR_EXT SYS_PAR 	sys_par;	    /* 存放系统参数 */
 

@@ -29,6 +29,7 @@
 #include    "stdio.h"
 #include    "cs99xx_result.h"
 #include 	"SysTemConfig.h"
+#include    "test_com.h"
 #include    "on_chip_flash_api.h"
 #include    "cs99xx_err_log.h"
 #include	"Timer_Config.h"
@@ -73,19 +74,14 @@ void recover_exception_scene(void)
 }
 
 /*
- * 函数名：open_hv
+ * 函数名：set_da_value
  * 描述  ：设置高压输出基准
  * 输入  ：无
  * 输出  ：无
  * 返回  ：无
  */
-void open_hv(void)
+void set_da_value(void)
 {
-    if(DC_GR_EN && (g_cur_step->one_step.com.mode==GR))
-    {
-        return;
-    }
-    
     DAC_Vol[0] =  (u16)(cur_vol * cur_dac_k + cur_dac_b);
 }
 
@@ -112,7 +108,7 @@ void close_hv(void)
 
 void cur_cylinder_ctrl_stop(void)
 {
-    CYLINDER_CTRL(2000);
+//    CYLINDER_CTRL(2000);
 }
 
 /*
@@ -1016,6 +1012,70 @@ void transform_test_vol_string(void)
 	}
 }
 
+void transform_test_vol_to_str(TEST_DATA_STRUCT *test_data)
+{
+	switch(cur_mode)
+	{
+		case ACW:
+		{
+			if(type_spe.acw_vol_range == ACW_20kV
+				|| type_spe.acw_vol_range == ACW_30kV)
+			{
+				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, test_data->vol_value / 10.0);
+			}
+			else
+			{
+				if(vol_ave < 10000)
+				{
+					mysprintf((uint8_t*)output_buf, NULL, 3 + 150, test_data->vol_value);
+				}
+				else
+				{
+					mysprintf((uint8_t*)output_buf, NULL, 2 + 150, test_data->vol_value/10.0);
+				}
+			}
+			break;
+		}
+		case DCW:
+		{
+			if(type_spe.dcw_vol_range == DCW_20kV)
+			{
+				mysprintf((uint8_t*)output_buf, NULL, 2 + 150, test_data->vol_value / 10.0);
+			}
+			else
+			{
+				if(vol_ave < 10000)
+				{
+					mysprintf((uint8_t*)output_buf, NULL, 3 + 150, test_data->vol_value);
+				}
+				else
+				{
+					mysprintf((uint8_t*)output_buf, NULL, 2 + 150, test_data->vol_value/10.0);
+				}
+			}
+			break;
+		}
+        case CC:
+		case IR:
+		case BBD:
+		{
+            if(vol_ave < 10000)
+            {
+                mysprintf((uint8_t*)output_buf, NULL, 3 + 150, test_data->vol_value);
+            }
+            else
+            {
+                mysprintf((uint8_t*)output_buf, NULL, 2 + 150, test_data->vol_value/10.0);
+            }
+			break;
+		}
+		case GR:
+		{
+			break;
+		}
+	}
+}
+
 /*
  * 函数名：transform_test_time_string
  * 描述  ：将测试时间转换为字符串
@@ -1107,6 +1167,83 @@ void transform_test_loop_string(void)
         case CC:
         {
             mysprintf((uint8_t*)loop_buf, NULL, ac_gear[cur_gear].decs + 150, cur_ave + ROUND);
+            break;
+        }
+    }
+}
+void transform_test_loop_to_str(TEST_DATA_STRUCT *test_data)
+{
+    if(OFFSET_BBD == 0)
+    {
+        real_buf[0] = 0;
+    }
+    else
+    {
+        strcpy((char*)real_buf, "-----");
+    }
+    
+    switch(cur_mode)
+    {
+        case ACW:
+        {
+            mysprintf((uint8_t*)loop_buf, NULL, ac_gear[cur_gear].decs + 150, test_data->cur_value + ROUND);
+            if(cur_real_cur > 0)
+            {
+                mysprintf((uint8_t*)real_buf, NULL, ac_gear[cur_gear].decs + 150, test_data->real_value + ROUND);
+            }
+            break;
+        }
+        case DCW:
+        {
+            mysprintf((uint8_t*)loop_buf, NULL, dc_gear[cur_gear].decs + 150, test_data->cur_value + ROUND);
+            break;
+        }
+        case IR:
+        {
+            if(OFFSET_BBD == 0)
+            {
+                transform_test_ir_res_loop();
+            }
+            else
+            {
+                strcpy((char*)loop_buf, "-----");
+            }
+            break;
+        }
+        case GR:
+        {
+            transform_test_gr_vol();
+            break;
+        }
+        case BBD:
+        {
+            /* nA/(v*2*PI*Hz) = nF */
+// 			cap_ave = cur_ave*1000/(vol_ave*2*PI*50);
+            
+            uint8_t temp = 0;
+            uint8_t temp1 = 0;
+            
+            temp = COUNT_FLOAT_DECS(test_data->cap_value);
+            temp1 = COUNT_FLOAT_DECS(cur_cap);
+            
+			if(ERR_NUM != ERR_NONE)
+			{
+				sprintf((char*)loop_buf, "----");
+			}
+			else
+			{
+				mysprintf((uint8_t*)loop_buf, NULL, temp + 150 , test_data->cap_value * pow(10, temp)  + ROUND);
+			}
+			
+            if(OFFSET_BBD == 0)
+            {
+                mysprintf((uint8_t*)real_buf, NULL, temp1 + 150, test_data->cap_value * pow(10, temp1) + ROUND);
+            }
+            break;
+        }
+        case CC:
+        {
+            mysprintf((uint8_t*)loop_buf, NULL, ac_gear[cur_gear].decs + 150, test_data->cur_value + ROUND);
             break;
         }
     }
@@ -1400,48 +1537,7 @@ void load_data(void)
 	switch(cur_mode)
 	{
 		case ACW:
-		{
-			if(g_cur_file->work_mode == N_MODE)
-			{
-				one_t = pun->acw.rise_time + zeo_t;
-				two_t = pun->acw.rise_time + pun->acw.testing_time + zeo_t;
-				thr_t = pun->acw.rise_time + pun->acw.testing_time + pun->acw.fall_time + zeo_t;
-				for_t = pun->acw.rise_time + pun->acw.testing_time + pun->acw.fall_time + pun->acw.interval_time + zeo_t;
-                
-                int_t = pun->acw.interval_time;
-                cha_t = 0;
-			}
-			else if(g_cur_file->work_mode == G_MODE)
-			{
-                if(cur_step == 1)
-                {
-                    one_t = pun->acw.rise_time + zeo_t;
-                }
-                else
-                {
-                    one_t = 0 + zeo_t;
-                }
-                
-				two_t = one_t + pun->acw.interval_time;/* 缓变时间 */
-				thr_t = two_t + pun->acw.testing_time;
-                
-                if(cur_step == g_cur_file->total)
-                {
-                    for_t = thr_t + pun->acw.fall_time;
-                }
-                else
-                {
-                    for_t = thr_t + 0;
-                }
-                
-                cha_t = pun->acw.interval_time;
-                int_t = cha_t;
-			}
-            
-            tes_t = pun->acw.testing_time;
-            ris_t = pun->acw.rise_time;
-            fal_t = pun->acw.fall_time;
-			
+        {
 			steps_con = pun->acw.steps_cont;
 			steps_pass = pun->acw.steps_pass;
 			
@@ -1492,32 +1588,20 @@ void load_data(void)
             }
             
             g_dis_time = tes_t;
-			
-            
-			switch(cur_gear)
-			{
-				case AC_200uA:
-					cur_gear_comm = AC_0_GEAR_COMM;
-					break;
-				case AC_2mA:
-					cur_gear_comm = AC_1_GEAR_COMM;
-					break;
-				case AC_10mA:
-				case AC_20mA:
-					cur_gear_comm = AC_2_GEAR_COMM;
-					break;
-				case AC_50mA:
-				case AC_100mA:
-					cur_gear_comm = AC_3_GEAR_COMM;
-					break;
-			}
+			cur_gear_comm = ac_gear[cur_gear].comm;
             
             confirm_vol_segment();/* 确定电压段 */
+            g_test_data.vol_segment = vol_segment;
+            g_test_data.vol_adc_k = ratio_acw.adc_v_k[vol_segment];
+            g_test_data.vol_adc_b = ratio_acw.adc_v_b[vol_segment];
+            g_test_data.cur_adc_k = ratio_acw.adc_cur_k[cur_gear];
+            g_test_data.out_da_k = ratio_acw.dac_k[vol_segment];
+            g_test_data.out_da_b = ratio_acw.dac_b[vol_segment];
 			
 			if(cur_adc_cur_k != 0)
 			{
 				g_ad_dog = (cur_high + 1) / cur_adc_cur_k;
-				ADC_WatchdogConfig(g_ad_dog);
+//				ADC_WatchdogConfig(g_ad_dog);
 			}
 			break;
 		}
@@ -1652,7 +1736,7 @@ void load_data(void)
 			if(cur_adc_cur_k != 0)
 			{
 				g_ad_dog = (cur_high + 1) / cur_adc_cur_k;
-				ADC_WatchdogConfig(g_ad_dog);
+//				ADC_WatchdogConfig(g_ad_dog);
 			}
 			break;
 		}
@@ -1953,7 +2037,6 @@ void load_data(void)
 	
 	cur_gear_bak = cur_gear;
     load_ratio(cur_mode);
-	
     
     transform_test_vol_string();
     transform_test_loop_string();
@@ -2028,7 +2111,7 @@ static void test_details(void)
 			break;
 		case STAGE_TEST:/* 第二阶段 正在测试 */
 			cur_status = ST_TESTING;
-            cur_cylinder_ctrl_status = CY_TESTING;
+//            cur_cylinder_ctrl_status = CY_TESTING;
 			test_dis();
 			break;
 		case STAGE_FALL:/* 第三阶段 电压下降 */
@@ -2107,7 +2190,7 @@ static void test_big_cap_details(void)
 		case STAGE_TEST:/* 测试 */
             test_vref(cur_high);	/* 输出各基准 */
 			cur_status = ST_TESTING;
-            cur_cylinder_ctrl_status = CY_TESTING;
+//            cur_cylinder_ctrl_status = CY_TESTING;
             
 			test_dis();
 			break;
@@ -2384,7 +2467,6 @@ void count_vol_ch_step(void)
  * 输出  ：无
  * 返回  ：无
  */
-uint16_t ddug_led = 0;
 void vol_change(void)
 {
     float temp_vol = 0.0;
@@ -2407,41 +2489,32 @@ void vol_change(void)
 	}
 	
 	DAC_Vol[0] = temp_vol * cur_dac_k + cur_dac_b;
-    if(DAC_Vol[0] < 300)
-    {
-        ddug_led = DAC_Vol[0];
-    }
 }
 
 void vol_change_200hz(uint32_t time)
 {
     float temp_vol = 0.0;
     
-    float one_step_vol = vol_ch_step / 20.0;
+    float one_step_vol = g_test_data.vol_ch_step / 20.0;
     
-	temp_vol = vol_ch_base + one_step_vol * time;
+	temp_vol = g_test_data.vol_ch_base + one_step_vol * time;
     
-	if(vol_ch_step > 0)
+	if(g_test_data.vol_ch_step > 0)
 	{
-		if(temp_vol > vol_ch_target)
+		if(temp_vol > g_test_data.vol_ch_target)
 		{
-			temp_vol = vol_ch_target;
+			temp_vol = g_test_data.vol_ch_target;
 		}
 	}
 	else
 	{
-		if(temp_vol < vol_ch_target)
+		if(temp_vol < g_test_data.vol_ch_target)
 		{
-			temp_vol = vol_ch_target;
+			temp_vol = g_test_data.vol_ch_target;
 		}
 	}
 	
 	DAC_Vol[0] = temp_vol * cur_dac_k + cur_dac_b;
-    
-    if(DAC_Vol[0] < 300)
-    {
-        ddug_led = DAC_Vol[0];
-    }
 }
 void vol_change_1000hz(uint32_t time)
 {
@@ -2467,11 +2540,6 @@ void vol_change_1000hz(uint32_t time)
 	}
 	
 	DAC_Vol[0] = temp_vol * cur_dac_k + cur_dac_b;
-    
-    if(DAC_Vol[0] < 300)
-    {
-        ddug_led = DAC_Vol[0];
-    }
 }
 /*
  * 函数名：test_g_details
@@ -2501,12 +2569,12 @@ void test_g_details(void)
 			break;
 		case STAGE_CHANGE:/* 第二阶段 电压缓变 */
 			cur_status = ST_INTER_WAIT;
-            cur_cylinder_ctrl_status = CY_TESTING;
+//            cur_cylinder_ctrl_status = CY_TESTING;
             test_dis();
 			break;
 		case STAGE_TEST:/* 第三阶段  正在测试 */
 			cur_status = ST_TESTING;
-            cur_cylinder_ctrl_status = CY_TESTING;
+//            cur_cylinder_ctrl_status = CY_TESTING;
             
             test_dis();
 			break;
@@ -2799,28 +2867,6 @@ void startup(void)
 }
 
 /*
- * 函数名：close_test_timer
- * 描述  ：关闭测试定时器
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
-void close_test_timer(void)
-{
-    bsp_tim2_close();/* 关定时器 */
-}
-/*
- * 函数名：open_test_timer
- * 描述  ：打开测试定时器
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
-void open_test_timer(void)
-{
-    bsp_tim2_open();/* 开定时器 */
-}
-/*
  * 函数名：stop_test
  * 描述  ：停止测试 无论是测试成功还是失败 需要停止时都会调用这个函数
  * 输入  ：无
@@ -2888,7 +2934,7 @@ void serve_test_poll_task(void)
     {
         if(0 == --g_cylinder_ctrl_t)
         {
-            cur_cylinder_ctrl_status = CY_WAIT;
+//            cur_cylinder_ctrl_status = CY_WAIT;
         }
     }
     

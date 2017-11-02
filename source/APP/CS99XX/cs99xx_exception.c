@@ -17,7 +17,7 @@
 #include	"cs99xx_type.h"
 #include	"cs99xx_it.h"
 #include 	"mb_server.h"
-#include 	"SysTemConfig.h"
+#include    "test_com.h"
 #include    "cs99xx_result.h"
 #include 	"cs99xx_plc.h"
 

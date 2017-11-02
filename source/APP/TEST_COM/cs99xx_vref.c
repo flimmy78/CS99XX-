@@ -19,6 +19,7 @@
 #include	"cs99xx_type.h"
 #include    "cs99xx_vref.h"
 #include 	"DAC_VREF.h"
+#include    "test_com.h"
 
 uint16_t dcw_5kv_short_vref(uint16_t cur_h)
 {

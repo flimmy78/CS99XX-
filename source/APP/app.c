@@ -39,6 +39,7 @@
 #include    "auto_calibration.h"
 #include    "dc_module.h"
 #include 	"spi_flash.h"
+#include    "test_com.h"
 
 
 /***************************全局变量*************************/

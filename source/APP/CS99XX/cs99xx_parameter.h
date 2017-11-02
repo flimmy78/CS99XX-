@@ -116,6 +116,7 @@ extern void help_subtask(void);
 extern void init_par_info(void);
 extern void init_test_ui_info(uint8_t whitch);
 extern void dis_test_ui(void);
+extern void dis_test_ui_x(void);
 extern void test_res_dis(void);
 extern void serve_count(const int8_t n);
 extern void set_contrast(const int8_t gear);

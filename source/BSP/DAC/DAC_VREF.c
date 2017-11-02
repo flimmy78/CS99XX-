@@ -127,6 +127,10 @@ static void TIM3_Int_Init(u16 arr,u16 psc)
 // 	DAC_VREF_Change++;
 // }
 
+void set_output_da_vref(uint16_t hv_da_value)
+{
+    DAC_Vol[0] = hv_da_value;
+}
 
 void vref_scan_fun(void)   /* TIM3ÖÐ¶Ï */
 {

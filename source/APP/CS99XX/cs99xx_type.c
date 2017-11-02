@@ -22,7 +22,7 @@ static void init_speciality(void);
 #include    "cs99xx_type_config.h"
 #include	"calibration.h"
 
-#define __TEST			0
+#define __TEST			1
 #define __TEST_TYPE		CS9929AX_CC//CS9929AX_CC //CS9927LB//TSK7630//CS9933ET_1//CS9922BX//CS9922BX_DZ//CS9917A_8//CS9950CX //CS9917CX_20//
 
 #define VERSION_NUMBER__    "2.20.74"	/* °æ±¾ºÅ */

@@ -25,6 +25,7 @@
 #include 	"STM32_ADC.H"
 #include    "dc_module.h"
 #include	"string.h"
+#include    "test_com.h"
 
 /*
  * º¯ÊýÃû£ºsmoothing_filtering
@@ -1337,6 +1338,9 @@ void adc_sample(void)
         }
     }
 	
+    g_test_data.sample_vol_ad = sample_vol;
+    g_test_data.sample_cur_ad = sample_cur;
+    
     if(app_flag.calibration == 1)
     {
         count_dis_value();

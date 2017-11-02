@@ -46,4 +46,4 @@
 ..\cs99xx_zwp_output\obj\cs99xx_plc.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\cs99xx_plc.o: ..\source\BSP\EE_I2C\i2c_ee.h
 ..\cs99xx_zwp_output\obj\cs99xx_plc.o: ..\source\BSP\MC14094\MC14094.h
-..\cs99xx_zwp_output\obj\cs99xx_plc.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\cs99xx_plc.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h

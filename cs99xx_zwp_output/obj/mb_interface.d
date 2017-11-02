@@ -77,4 +77,5 @@
 ..\cs99xx_zwp_output\obj\mb_interface.o: ..\source\FreeModbus\modbus\include\mbframe.h
 ..\cs99xx_zwp_output\obj\mb_interface.o: ..\source\FreeModbus\modbus\include\mbutils.h
 ..\cs99xx_zwp_output\obj\mb_interface.o: ..\source\APP\AutoCal\auto_cal_comm_interface.h
+..\cs99xx_zwp_output\obj\mb_interface.o: ..\source\APP\TEST_COM\test_com.h
 ..\cs99xx_zwp_output\obj\mb_interface.o: ..\source\module\module.h

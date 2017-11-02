@@ -58,7 +58,7 @@
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\uCGUI\GUI_LIB\LCD24064.H
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\cs99xx_type.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\BSP\EE_I2C\i2c_ee.h
-..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\cs99xx_relay_motion.h
+..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\TEST_COM\cs99xx_relay_motion.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\calibration.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\Comm_app\mb_server.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\FreeModbus\modbus\include\mb.h
@@ -72,7 +72,7 @@
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\FreeModbus\port\user_mb_app.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\FreeModbus\modbus\include\mbframe.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\FreeModbus\modbus\include\mbutils.h
-..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\cs99xx_vref.h
+..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\TEST_COM\cs99xx_vref.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\BSP\MC14094\MC14094.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\BSP\RTC_Config\RTC_Config.h
 ..\cs99xx_zwp_output\obj\serve_test.o: D:\Keil\ARM\ARMCC\bin\..\include\time.h
@@ -80,6 +80,7 @@
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\cs99xx_result.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\USER\SysTemConfig.h
 ..\cs99xx_zwp_output\obj\serve_test.o: D:\Keil\ARM\RV31\INC\stdint.h
+..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\TEST_COM\test_com.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\APP\CS99XX\cs99xx_err_log.h
 ..\cs99xx_zwp_output\obj\serve_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 ..\cs99xx_zwp_output\obj\serve_test.o: ..\source\BSP\Timer_Config\Timer_Config.h

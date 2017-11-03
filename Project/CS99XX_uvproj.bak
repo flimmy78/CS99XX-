@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\45PE16;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\source\BSP\SPI_FLASH;..\Project;..\source\APP\ACW</IncludePath>
+              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\45PE16;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\source\BSP\SPI_FLASH;..\Project;..\source\APP\ACW;..\source\APP\TEST_COM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -756,11 +756,6 @@
               <FilePath>..\source\APP\CS99XX\cs99xx_pw.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_relay_motion.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_relay_motion.c</FilePath>
-            </File>
-            <File>
               <FileName>cs99xx_result.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_result.c</FilePath>
@@ -784,11 +779,6 @@
               <FileName>cs99xx_time.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_time.c</FilePath>
-            </File>
-            <File>
-              <FileName>cs99xx_vref.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_vref.c</FilePath>
             </File>
             <File>
               <FileName>general_test.c</FileName>
@@ -828,6 +818,26 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>TEST_COM</GroupName>
+          <Files>
+            <File>
+              <FileName>cs99xx_relay_motion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\cs99xx_relay_motion.c</FilePath>
+            </File>
+            <File>
+              <FileName>cs99xx_vref.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\cs99xx_vref.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>ACW</GroupName>
           <Files>
             <File>
@@ -844,6 +854,11 @@
               <FileName>acw_count.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_test_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_test_g.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2219,11 +2234,6 @@
               <FilePath>..\source\APP\CS99XX\cs99xx_pw.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_relay_motion.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_relay_motion.c</FilePath>
-            </File>
-            <File>
               <FileName>cs99xx_result.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_result.c</FilePath>
@@ -2247,11 +2257,6 @@
               <FileName>cs99xx_time.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_time.c</FilePath>
-            </File>
-            <File>
-              <FileName>cs99xx_vref.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_vref.c</FilePath>
             </File>
             <File>
               <FileName>general_test.c</FileName>
@@ -2291,6 +2296,26 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>TEST_COM</GroupName>
+          <Files>
+            <File>
+              <FileName>cs99xx_relay_motion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\cs99xx_relay_motion.c</FilePath>
+            </File>
+            <File>
+              <FileName>cs99xx_vref.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\cs99xx_vref.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>ACW</GroupName>
           <Files>
             <File>
@@ -2307,6 +2332,11 @@
               <FileName>acw_count.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>acw_test_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\ACW\acw_test_g.c</FilePath>
             </File>
           </Files>
         </Group>

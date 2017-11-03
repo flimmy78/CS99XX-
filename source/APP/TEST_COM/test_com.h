@@ -48,6 +48,7 @@ typedef enum{
     STAGE_INTER     = 7,    /* ¼ä¸ô½×¶Î */
     STAGE_STAB      = 8,    /* ÎÈÑ¹½×¶Î */
     STAGE_RE_READY  = 9,    /* ÔÙ´ÎÔ¤±¸½×¶Î */
+    STAGE_FAIL_CONT = 10,   /* Ê§°Ü¼ÌÐø½×¶Î */
 }TEST_STAGE;
 
 extern void cs_delay_ms(int time);

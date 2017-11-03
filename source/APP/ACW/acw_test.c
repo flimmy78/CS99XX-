@@ -313,6 +313,13 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
             }
             break;
         }
+        case STAGE_FAIL_CONT:
+        {
+            test_data->test_time = acw_thr_t + 1;/* 跳过第1阶段 */
+            test_data->gradation = STAGE_INTER;/* 进入间隔等待 */
+            open_test_timer();/* 开定时器 */
+            break;
+        }
 		case STAGE_RISE:/* 第一阶段 电压上升 */
             test_data->test_status = ST_VOL_RISE;
 			break;
@@ -323,10 +330,8 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
             test_data->test_status = ST_VOL_FALL;
 			break;
 		case STAGE_INTER:/* 第四阶段 间隔等待 */
-        {
             test_data->test_status = ST_INTER_WAIT;
 			break;
-        }
 	}
 }
 

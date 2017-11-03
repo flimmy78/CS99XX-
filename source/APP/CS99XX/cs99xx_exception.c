@@ -195,52 +195,55 @@ static void fail_mode_con_dispose(void)
 	/* 失败继续并且 当前步打开了步间连续 工作模式为N */
 	if(g_cur_step->next != NULL && steps_con && (g_cur_file->work_mode == N_MODE))
 	{
-		if(tes_t == 0)
+//		if(tes_t == 0)
 		{
 			FAIL = 1;/* 测试失败 */
 			
 			BUZZER_SOUND(300);/* 蜂鸣300ms */
 			LED_FAIL = LED_ON;
             LED_TEST = LED_OFF;
-			
-            /* 当前步间隔时间为0 */
-			if(int_t == 0)
-			{
-				stop_test();
-				OSTimeDlyHMSM(0,0,0,800);
-				g_test_time = 0;
-                
-                CONT = 1;
-			}
-            /* 间隔时间不为0 进入间隔时间 */
-			else
-            {
-                close_test_timer();/* 关定时器 */
-                g_test_time = thr_t + 1;
-                open_test_timer();/* 开定时器 */
-            }
-			return;
-		}
-		else
-		{
-			FAIL = 1;/* 测试失败 */
-// 			if(g_cur_step->next == NULL)
-// 			{
-// 				OSTimeDlyHMSM(0,0,0,100);
-// 				OVER = 1;
-// 				return;
-// 			}
-			
-			close_test_timer();/* 关定时器 */
-			BUZZER_SOUND(100);/* 开机蜂鸣100ms */
-			LED_FAIL = LED_ON;
-			OSTimeDlyHMSM(0,0,0,800);
+            g_test_data.gradation = STAGE_FAIL_CONT;
+//            g_test_data.fail_cont = 1;
+//			CONT = 1;
             
-			g_test_time = thr_t + 1;/* 进入间隔等待 */
-			exit_sw();/* 打开外部中断 */
-			open_test_timer();/* 开定时器 */
+//            /* 当前步间隔时间为0 */
+//			if(int_t == 0)
+//			{
+//				stop_test();
+//				OSTimeDlyHMSM(0,0,0,800);
+//				g_test_time = 0;
+//                
+//                CONT = 1;
+//			}
+//            /* 间隔时间不为0 进入间隔时间 */
+//			else
+//            {
+//                close_test_timer();/* 关定时器 */
+//                g_test_time = thr_t + 1;
+//                open_test_timer();/* 开定时器 */
+//            }
 			return;
 		}
+//		else
+//		{
+//			FAIL = 1;/* 测试失败 */
+//// 			if(g_cur_step->next == NULL)
+//// 			{
+//// 				OSTimeDlyHMSM(0,0,0,100);
+//// 				OVER = 1;
+//// 				return;
+//// 			}
+//			
+//			close_test_timer();/* 关定时器 */
+//			BUZZER_SOUND(100);/* 开机蜂鸣100ms */
+//			LED_FAIL = LED_ON;
+//			OSTimeDlyHMSM(0,0,0,800);
+//            
+//			g_test_time = thr_t + 1;/* 进入间隔等待 */
+//			exit_sw();/* 打开外部中断 */
+//			open_test_timer();/* 开定时器 */
+//			return;
+//		}
 	}
     /* 停止测试 */
     else
@@ -338,8 +341,8 @@ void exception_handling(int8_t errnum)
 {
 	int8_t l_err_num = errnum;
     
-	irq_stop_relay_motion();
     close_test_timer();/* 关定时器 */
+	irq_stop_relay_motion();
     
 	if(STOP)
 	{

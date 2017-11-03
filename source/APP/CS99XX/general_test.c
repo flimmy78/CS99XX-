@@ -1449,7 +1449,17 @@ void testing_process_control(uint8_t *st)
             if(g_test_data.fail_num != ST_ERR_NONE)
             {
                 exception_handling(g_test_data.fail_num);
-                *st = TEST_EXCEPTION_CONTROL;
+                g_test_data.fail_num = ST_ERR_NONE;
+                g_test_data.test_over = 0;
+                
+                /* Âú×ãÊ§°Ü¼ÌÐøÌõ¼þ£¬¼ÌÐø²âÊÔ */
+                if(g_test_data.gradation == STAGE_FAIL_CONT)
+                {
+                    *st = TEST_TESTING_CONTROL;
+                    return;
+                }
+                
+                *st = TEST_QUIT_CONTROL;
                 return;
             }
             

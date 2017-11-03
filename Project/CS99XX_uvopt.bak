@@ -143,25 +143,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>1283</LineNumber>
+          <LineNumber>318</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134251972</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\CS99XX\calibration.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>265</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134432724</Address>
+          <Address>134432886</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -171,6 +155,86 @@
           <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\ACW\acw_test.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>238</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134432596</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\ACW\acw_test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>1449</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134395462</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\CS99XX\general_test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\ZWP_M_V2_20_74\../source/APP/CS99XX/general_test.c\1449</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>1451</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134395472</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\CS99XX\general_test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\ZWP_M_V2_20_74\../source/APP/CS99XX/general_test.c\1451</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>1453</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134395492</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\CS99XX\general_test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\ZWP_M_V2_20_74\../source/APP/CS99XX/general_test.c\1453</Expression>
+        </Bp>
+        <Bp>
+          <Number>5</Number>
+          <Type>0</Type>
+          <LineNumber>1435</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134395408</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>F:\CS99XX\CS99XX_ZWP_M -赂脛陆酶\source\APP\CS99XX\general_test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\ZWP_M_V2_20_74\../source/APP/CS99XX/general_test.c\1435</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -253,6 +317,16 @@
           <count>15</count>
           <WinNumber>1</WinNumber>
           <ItemText>acw_g_zeo_t</ItemText>
+        </Ww>
+        <Ww>
+          <count>16</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>g_test_data</ItemText>
+        </Ww>
+        <Ww>
+          <count>17</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>g_test_data.fail_num</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>
@@ -1080,10 +1154,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>23</ColumnNumber>
+      <ColumnNumber>25</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>175</TopLine>
-      <CurrentLine>187</CurrentLine>
+      <TopLine>183</TopLine>
+      <CurrentLine>188</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\USER\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -1120,9 +1194,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>59</ColumnNumber>
+      <ColumnNumber>65</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>173</TopLine>
+      <TopLine>175</TopLine>
       <CurrentLine>176</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx_type.c</PathWithFileName>
@@ -1192,10 +1266,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>28</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <TopLine>41</TopLine>
+      <CurrentLine>48</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\app.c</PathWithFileName>
       <FilenameWithoutPath>app.c</FilenameWithoutPath>
@@ -1224,10 +1298,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>274</TopLine>
-      <CurrentLine>275</CurrentLine>
+      <TopLine>171</TopLine>
+      <CurrentLine>177</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx.c</PathWithFileName>
       <FilenameWithoutPath>cs99xx.c</FilenameWithoutPath>
@@ -1258,7 +1332,7 @@
       <Focus>0</Focus>
       <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1330</TopLine>
+      <TopLine>1325</TopLine>
       <CurrentLine>1342</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx_collect.c</PathWithFileName>
@@ -1320,10 +1394,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2</TopLine>
-      <CurrentLine>20</CurrentLine>
+      <TopLine>441</TopLine>
+      <CurrentLine>447</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx_exception.c</PathWithFileName>
       <FilenameWithoutPath>cs99xx_exception.c</FilenameWithoutPath>
@@ -1514,7 +1588,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1358</TopLine>
+      <TopLine>1369</TopLine>
       <CurrentLine>1374</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx_par_com.c</PathWithFileName>
@@ -1658,7 +1732,7 @@
       <Focus>0</Focus>
       <ColumnNumber>17</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>53</TopLine>
+      <TopLine>55</TopLine>
       <CurrentLine>57</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\cs99xx_struct.c</PathWithFileName>
@@ -1704,10 +1778,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1058</TopLine>
-      <CurrentLine>1074</CurrentLine>
+      <TopLine>1458</TopLine>
+      <CurrentLine>1473</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\general_test.c</PathWithFileName>
       <FilenameWithoutPath>general_test.c</FilenameWithoutPath>
@@ -1720,10 +1794,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>3</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>653</TopLine>
-      <CurrentLine>686</CurrentLine>
+      <TopLine>684</TopLine>
+      <CurrentLine>685</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\irq.c</PathWithFileName>
       <FilenameWithoutPath>irq.c</FilenameWithoutPath>
@@ -1752,10 +1826,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>34</ColumnNumber>
+      <ColumnNumber>3</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2153</TopLine>
-      <CurrentLine>2513</CurrentLine>
+      <TopLine>64</TopLine>
+      <CurrentLine>65</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\CS99XX\serve_test.c</PathWithFileName>
       <FilenameWithoutPath>serve_test.c</FilenameWithoutPath>
@@ -1824,10 +1898,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>4</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>505</TopLine>
-      <CurrentLine>509</CurrentLine>
+      <TopLine>1639</TopLine>
+      <CurrentLine>1653</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\TEST_COM\cs99xx_relay_motion.c</PathWithFileName>
       <FilenameWithoutPath>cs99xx_relay_motion.c</FilenameWithoutPath>
@@ -1840,10 +1914,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>22</CurrentLine>
+      <TopLine>469</TopLine>
+      <CurrentLine>475</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\TEST_COM\cs99xx_vref.c</PathWithFileName>
       <FilenameWithoutPath>cs99xx_vref.c</FilenameWithoutPath>
@@ -1858,7 +1932,7 @@
       <Focus>0</Focus>
       <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>16</TopLine>
+      <TopLine>18</TopLine>
       <CurrentLine>22</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\TEST_COM\test_com.c</PathWithFileName>
@@ -1882,7 +1956,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
+      <TopLine>3</TopLine>
       <CurrentLine>6</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\ACW\acw_relay.c</PathWithFileName>
@@ -1898,8 +1972,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>77</TopLine>
-      <CurrentLine>91</CurrentLine>
+      <TopLine>342</TopLine>
+      <CurrentLine>356</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\ACW\acw_test.c</PathWithFileName>
       <FilenameWithoutPath>acw_test.c</FilenameWithoutPath>
@@ -1912,10 +1986,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>85</TopLine>
-      <CurrentLine>90</CurrentLine>
+      <TopLine>175</TopLine>
+      <CurrentLine>179</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\ACW\acw_count.c</PathWithFileName>
       <FilenameWithoutPath>acw_count.c</FilenameWithoutPath>
@@ -1928,10 +2002,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>28</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>289</TopLine>
-      <CurrentLine>316</CurrentLine>
+      <TopLine>243</TopLine>
+      <CurrentLine>271</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\ACW\acw_test_g.c</PathWithFileName>
       <FilenameWithoutPath>acw_test_g.c</FilenameWithoutPath>
@@ -2014,7 +2088,7 @@
 
   <Group>
     <GroupName>BSP</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -2026,7 +2100,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>10</TopLine>
+      <TopLine>12</TopLine>
       <CurrentLine>15</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\BSP\BSP_Config\BSP_config.c</PathWithFileName>
@@ -2154,7 +2228,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
+      <TopLine>6</TopLine>
       <CurrentLine>11</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\BSP\DAC\DAC_VREF.c</PathWithFileName>
@@ -2274,8 +2348,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1772</TopLine>
-      <CurrentLine>1776</CurrentLine>
+      <TopLine>1771</TopLine>
+      <CurrentLine>1773</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\uCOSII\core\os_core.c</PathWithFileName>
       <FilenameWithoutPath>os_core.c</FilenameWithoutPath>
@@ -2458,8 +2532,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>93</TopLine>
-      <CurrentLine>99</CurrentLine>
+      <TopLine>95</TopLine>
+      <CurrentLine>100</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\uCOSII\port\os_cpu_a.asm</PathWithFileName>
       <FilenameWithoutPath>os_cpu_a.asm</FilenameWithoutPath>
@@ -2474,8 +2548,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>156</TopLine>
-      <CurrentLine>157</CurrentLine>
+      <TopLine>153</TopLine>
+      <CurrentLine>159</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\uCOSII\port\os_cpu_c.c</PathWithFileName>
       <FilenameWithoutPath>os_cpu_c.c</FilenameWithoutPath>
@@ -2512,9 +2586,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>25</ColumnNumber>
+      <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>58</TopLine>
+      <TopLine>60</TopLine>
       <CurrentLine>65</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\APP\GUI_Draw.c</PathWithFileName>

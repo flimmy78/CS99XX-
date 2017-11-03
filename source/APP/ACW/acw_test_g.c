@@ -85,8 +85,6 @@ void acw_g_mode_next_step(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DA
 {
     close_test_timer();// 关定时器
     acw_count_vol_step_value_g(acw_par, next_acw_par, test_data);//计算缓变数据
-    test_data->gradation = STAGE_RE_READY;//切换到再次就绪状态
-    test_data->ready_ok = 0;//清
 }
 
 /*
@@ -216,6 +214,8 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
         {
             test_data->cont = 1;
             acw_g_mode_next_step(acw_par, next_acw_par, test_data);
+            test_data->gradation = STAGE_RE_READY;//切换到再次就绪状态
+            test_data->ready_ok = 0;//清
             return;
         }
         

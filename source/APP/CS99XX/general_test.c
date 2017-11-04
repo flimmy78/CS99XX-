@@ -1434,6 +1434,14 @@ void testing_process_control(uint8_t *st)
         {
             run_cs99xx_test_fun(g_cur_step, g_cur_step->next, &g_test_data);
             cur_status = g_test_data.test_status;
+            
+            /* 继续下一步测试 */
+            if(g_test_data.cont == 1)
+            {
+                *st = TEST_CONT_TEST_CONTROL;
+                return;
+            }
+            
             get_test_dis_status(&g_test_data);
             
             /* 显示测试状态 */
@@ -1485,12 +1493,6 @@ void testing_process_control(uint8_t *st)
                     *st = TEST_EXCEPTION_CONTROL;
                     return;
                 }
-            }
-            /* 继续下一步测试 */
-            else if(g_test_data.cont == 1)
-            {
-                *st = TEST_CONT_TEST_CONTROL;
-                return;
             }
             
             /* 在间隔等待阶段，要判断是否要跑间隔等待 */

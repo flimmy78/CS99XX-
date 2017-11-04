@@ -188,62 +188,18 @@ static void fail_mode_con_dispose(void)
         OVER = 1;
         if(sys_par.plc_signal != EACH_STEP)
         {
-            return;/* 返回去显示失败继续 */
+            return;/* 返回去显示测试失败 */
         }
     }
     
 	/* 失败继续并且 当前步打开了步间连续 工作模式为N */
 	if(g_cur_step->next != NULL && steps_con && (g_cur_file->work_mode == N_MODE))
 	{
-//		if(tes_t == 0)
-		{
-			FAIL = 1;/* 测试失败 */
-			
-			BUZZER_SOUND(300);/* 蜂鸣300ms */
-			LED_FAIL = LED_ON;
-            LED_TEST = LED_OFF;
-            g_test_data.gradation = STAGE_FAIL_CONT;
-//            g_test_data.fail_cont = 1;
-//			CONT = 1;
-            
-//            /* 当前步间隔时间为0 */
-//			if(int_t == 0)
-//			{
-//				stop_test();
-//				OSTimeDlyHMSM(0,0,0,800);
-//				g_test_time = 0;
-//                
-//                CONT = 1;
-//			}
-//            /* 间隔时间不为0 进入间隔时间 */
-//			else
-//            {
-//                close_test_timer();/* 关定时器 */
-//                g_test_time = thr_t + 1;
-//                open_test_timer();/* 开定时器 */
-//            }
-			return;
-		}
-//		else
-//		{
-//			FAIL = 1;/* 测试失败 */
-//// 			if(g_cur_step->next == NULL)
-//// 			{
-//// 				OSTimeDlyHMSM(0,0,0,100);
-//// 				OVER = 1;
-//// 				return;
-//// 			}
-//			
-//			close_test_timer();/* 关定时器 */
-//			BUZZER_SOUND(100);/* 开机蜂鸣100ms */
-//			LED_FAIL = LED_ON;
-//			OSTimeDlyHMSM(0,0,0,800);
-//            
-//			g_test_time = thr_t + 1;/* 进入间隔等待 */
-//			exit_sw();/* 打开外部中断 */
-//			open_test_timer();/* 开定时器 */
-//			return;
-//		}
+        BUZZER_SOUND(300);/* 蜂鸣300ms */
+        LED_FAIL = LED_ON;
+        LED_TEST = LED_OFF;
+        OSTimeDlyHMSM(0,0,0,500);
+        g_test_data.gradation = STAGE_FAIL_CONT;
 	}
     /* 停止测试 */
     else
@@ -350,9 +306,6 @@ void exception_handling(int8_t errnum)
 	}
     
     exit_test_relay_motion();
-//	res_ave = err_res_bak;
-//    test_flag.vol_change_flag = 1;
-//    test_dis();/* 更新数据 */
     
 	CUR_FAIL = 1;/* 当前步测试失败 */
     FAIL = 1;/* 测试失败 */
@@ -360,17 +313,11 @@ void exception_handling(int8_t errnum)
     recover_exception_scene();
     updata_result(cur_mode);
     save_cur_result(&cur_result);/* 保存结果 */
-    
-    test_flag.judge_err_en == DISABLE;
-    
 	cur_status = l_err_num;/* 给上位机发的错误状态 */
-    cur_cylinder_ctrl_stop();
     
     test_flag.test_led_flag = 0;
 	test_fail();
     
-//    updata_time(U_TEST_TIME, g_dis_time);
-	
 	if(OFFSET_BBD)
 	{
 		dis_exception_str(test_flag.dis_status, &GUI_FontHZ_SimSun_12);

@@ -260,7 +260,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         /* 步间连续打开 */
 		if(acw_par->steps_cont)
 		{
-            g_test_data.cont = 1;
+            test_data->cont = 1;
             return;
         }
         
@@ -315,9 +315,19 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         }
         case STAGE_FAIL_CONT:
         {
-            test_data->test_time = acw_thr_t + 1;/* 跳过第1阶段 */
-            test_data->gradation = STAGE_INTER;/* 进入间隔等待 */
-            open_test_timer();/* 开定时器 */
+            /* 间隔时间不为0就从间隔时间开始 */
+            if(acw_par->interval_time > 0)
+            {
+                test_data->ready_ok == 1;
+                test_data->test_time = acw_thr_t + 1;/* 跳过第1阶段 */
+                test_data->gradation = STAGE_INTER;/* 进入间隔等待 */
+                open_test_timer();/* 开定时器 */
+            }
+            /* 间隔时间为0就继续下一步测试 */
+            else
+            {
+                test_data->cont = 1;
+            }
             break;
         }
 		case STAGE_RISE:/* 第一阶段 电压上升 */
@@ -355,6 +365,11 @@ void run_acw_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_
         {
             acw_count_dis_value(acw_par, test_data);
         }
+    }
+    
+    if(test_data->fail_num != ST_ERR_NONE)
+    {
+        test_data->ready_ok = 0;
     }
 }
 

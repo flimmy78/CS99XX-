@@ -195,10 +195,23 @@ static void fail_mode_con_dispose(void)
 	/* 失败继续并且 当前步打开了步间连续 工作模式为N */
 	if(g_cur_step->next != NULL && steps_con && (g_cur_file->work_mode == N_MODE))
 	{
+        uint32_t time_out = 0;
+        
         BUZZER_SOUND(300);/* 蜂鸣300ms */
         LED_FAIL = LED_ON;
         LED_TEST = LED_OFF;
-        OSTimeDlyHMSM(0,0,0,500);
+        
+        while(++time_out < 50)
+        {
+            OSTimeDlyHMSM(0,0,0,10);
+            
+            if(RESET == STOP_PIN)
+            {
+                TERMINATE = 1;
+                return;
+            }
+        }
+        
         g_test_data.gradation = STAGE_FAIL_CONT;
 	}
     /* 停止测试 */
@@ -310,7 +323,6 @@ void exception_handling(int8_t errnum)
 	CUR_FAIL = 1;/* 当前步测试失败 */
     FAIL = 1;/* 测试失败 */
 	cur_result.err_num = test_flag.dis_status;
-    recover_exception_scene();
     updata_result(cur_mode);
     save_cur_result(&cur_result);/* 保存结果 */
 	cur_status = l_err_num;/* 给上位机发的错误状态 */

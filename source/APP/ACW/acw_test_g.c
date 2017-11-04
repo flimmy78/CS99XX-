@@ -262,7 +262,7 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
         {
             if(test_data->ready_ok == 0)
             {
-                test_data->ready_ok = 1;//标记
+                test_data->ready_ok = 1;//就绪标记
                 load_acw_data_g(acw_par, next_acw_par, test_data);
                 acw_test_ready_g(acw_par, next_acw_par, test_data);
             }
@@ -272,7 +272,7 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
         {
             if(test_data->ready_ok == 0)
             {
-                test_data->ready_ok = 1;//标记
+                test_data->ready_ok = 1;//就绪标记
                 load_acw_data_g(acw_par, next_acw_par, test_data);
                 shift_acw_cur_gear(acw_par->gear_i);
                 test_vref(acw_par->upper_limit);/* 输出各基准 */
@@ -304,17 +304,17 @@ void run_acw_test_g(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *tes
     ACW_STRUCT *acw_par = &step->one_step.acw;
     ACW_STRUCT *next_acw_par = &next_step->one_step.acw;
     
-    if(test_data->ready_ok == 1)
+    if(test_data->ready_ok)
     {
         acw_test_irq_g(acw_par, next_acw_par, test_data);
     }
     
-    if(test_data->cont == 0)
+    if(!test_data->cont)
     {
         acw_test_details_g(acw_par, next_acw_par, test_data);
     }
     
-    if(test_data->fail_num == ST_ERR_NONE && test_data->test_over == 0)
+    if((test_data->fail_num == ST_ERR_NONE) && (!test_data->test_over))
     {
         acw_count_dis_value(acw_par, test_data);
     }

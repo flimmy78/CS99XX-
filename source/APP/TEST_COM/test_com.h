@@ -2,6 +2,9 @@
 #ifndef __TEST_COM_H__
 #define __TEST_COM_H__
 
+#include "cs99xx_struct.h"
+#include "cs99xx_it.h"
+
 #ifndef NULL
 #define NULL 0
 #endif
@@ -55,6 +58,8 @@ extern void cs_delay_ms(int time);
 extern void cs_delay_us(int time);
 extern void close_test_timer(void);
 extern void open_test_timer(void);
-
+extern void init_com_test_env(TEST_DATA_STRUCT *test_data);
 
 #endif //__TEST_COM_H__
+
+/******************* (C) COPYRIGHT 2017 ³¤Ê¢ÒÇÆ÷ *****END OF FILE****/

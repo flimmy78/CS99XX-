@@ -1,12 +1,12 @@
 
 #define _ACW_TEST_GLOBALS
-#include "acw_test.h"
-#include "acw_relay.h"
 #include "cs99xx_relay_motion.h"
 #include "cs99xx_vref.h"
+#include "DAC_VREF.h"
 #include "test_com.h"
 #include "acw_count.h"
-#include "DAC_VREF.h"
+#include "acw_test.h"
+#include "acw_relay.h"
 
 static uint16_t acw_zeo_t;///< 第〇阶段的累计时间
 static uint16_t acw_one_t;///< 第一阶段的累计时间
@@ -228,7 +228,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         clear_test_data_fall_time_timeout(acw_par, test_data);
         
         /* 关高压 */
-        if(acw_test_flag.testing == 1)
+        if(acw_test_flag.testing)
         {
             acw_test_flag.testing = 0;
             acw_exit_test_relay_motion(acw_par, test_data);
@@ -251,7 +251,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         clear_test_data_fall_time_timeout(acw_par, test_data);
         
         /* 关高压 */
-        if(acw_test_flag.testing == 1)
+        if(acw_test_flag.testing)
         {
             acw_test_flag.testing = 0;
             acw_exit_test_relay_motion(acw_par, test_data);
@@ -307,6 +307,7 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
             {
                 test_data->ready_ok = 1;//标记
                 acw_test_flag.testing = 1;//正在测试标记
+                acw_test_flag.forever_testing = 0;
                 acw_test_flag.judge_err_en = ENABLE;
                 load_acw_data(acw_par, test_data);
                 acw_test_ready(acw_par, test_data);
@@ -318,9 +319,10 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
             /* 间隔时间不为0就从间隔时间开始 */
             if(acw_par->interval_time > 0)
             {
-                test_data->ready_ok == 1;
+                test_data->ready_ok = 1;
                 test_data->test_time = acw_thr_t + 1;/* 跳过第1阶段 */
                 test_data->gradation = STAGE_INTER;/* 进入间隔等待 */
+                exit_sw();//开中断
                 open_test_timer();/* 开定时器 */
             }
             /* 间隔时间为0就继续下一步测试 */
@@ -349,16 +351,17 @@ void run_acw_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_
 {
     ACW_STRUCT *acw_par = &step->one_step.acw;
     
-    /* 准备就绪完成后在计算测试阶段 */
-    if(test_data->ready_ok == 1)
+    /* 准备就绪完成后在计算测试状态 */
+    if(test_data->ready_ok)
     {
         acw_test_irq(acw_par, test_data);
     }
     
+    /* 测试状态机 */
     acw_test_details(acw_par, test_data);
     
     /* 出现报警不再进行采样 测试结束不再进行采样 */
-    if(test_data->fail_num == ST_ERR_NONE && test_data->test_over == 0)
+    if((test_data->fail_num) == ST_ERR_NONE && (!test_data->test_over))
     {
         /* 间隔阶段不进行采样 */
         if(test_data->gradation != STAGE_INTER)
@@ -367,6 +370,7 @@ void run_acw_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_
         }
     }
     
+    /* 测试出现异常后清除测试就绪标记 */
     if(test_data->fail_num != ST_ERR_NONE)
     {
         test_data->ready_ok = 0;

@@ -96,6 +96,7 @@ void acw_count_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         if(test_data->fail_num != ST_ERR_NONE)
         {
             acw_test_flag.judge_err_en == DISABLE;
+            close_test_timer();/* 关定时器 */
             irq_stop_relay_motion();///<关闭高压
             test_data->test_over = 1;
         }

@@ -14,6 +14,12 @@ static uint16_t acw_two_t;///< 第二阶段的累计时间
 static uint16_t acw_thr_t;///< 第三阶段的累计时间
 static uint16_t acw_for_t;///< 第四阶段的累计时间
 
+/**
+  * @brief  加载DCW测试时间信息
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void load_acw_data(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     /* 偏移测试无输出延时 */
@@ -25,13 +31,12 @@ void load_acw_data(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     acw_for_t = acw_par->rise_time + acw_par->testing_time + acw_par->fall_time + acw_par->interval_time + acw_zeo_t;
 }
 
-/*
- * 函数名：count_rise_vol_step_value
- * 描述  ：计算当前步电压上升的电压步进值
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
+/**
+  * @brief  计算ACW电压上升的电压步进值
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_count_rise_vol_step_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	test_data->vol_ch_base = 0;
@@ -43,13 +48,13 @@ void acw_count_rise_vol_step_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_d
             (float)(test_data->vol_ch_target - test_data->vol_ch_base) / acw_par->rise_time;
 	}
 }
-/*
- * 函数名：count_vol_step_value
- * 描述  ：计算当前步电压下降的电压步进值
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
+
+/**
+  * @brief  计算ACW电压下降的电压步进值
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_count_fall_vol_step_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	test_data->vol_ch_base = acw_par->testing_voltage;
@@ -62,6 +67,12 @@ void acw_count_fall_vol_step_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_d
 	}
 }
 
+/**
+  * @brief  计算ACW在测试过程中电压变化的步进值和开始值与目标值
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_count_vol_ch_step(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     test_data->vol_rise_step_t = 0;
@@ -78,7 +89,13 @@ void acw_count_vol_ch_step(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     }
 }
 
-void clear_test_data_fall_time_timeout(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
+/**
+  * @brief  当测试过程中下降时间到后要人为的清0测试数据
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
+void acw_clear_test_data_fall_time_timeout(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     /* 如果下降时间不为0就清0测试电压和电流 */
     if(acw_par->fall_time > 0)
@@ -89,22 +106,28 @@ void clear_test_data_fall_time_timeout(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *te
     }
 }
 
+/**
+  * @brief  ACW测试设置DA的输出值
+  * @param  [in] gr_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_set_da_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
-    test_data->output_da =  (u16)(acw_par->testing_voltage * test_data->out_da_k + test_data->out_da_b);
+    test_data->output_da =  (uint16_t)(acw_par->testing_voltage * test_data->out_da_k + test_data->out_da_b);
     set_output_da_vref(test_data->output_da);
 }
-/*
- * 函数名：test_irq
- * 描述  ：测试时钟控制，被调度任务调用
- * 输入  ：无
- * 输出  ：无
- * 返回  ：无
- */
+
+/**
+  * @brief  ACW测试状态机状态计算函数
+  * @param  [in] gr_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
-	/* 当测试时间为0时 测试时间无穷大 */
-	if(0 == acw_par->testing_time)
+	/* 当测试时间为0时 测试时间无穷大 当前没有发生失败继续 */
+	if(0 == acw_par->testing_time && (!acw_test_flag.fail_cont))
 	{
 		/* 如果当前测试正在进行 即处于第二阶段的话就一直保持 */
 		if(acw_test_flag.forever_testing)
@@ -225,7 +248,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	/* 第四阶段 间隔等待 */
 	else if(test_data->test_time <= acw_for_t)
 	{
-        clear_test_data_fall_time_timeout(acw_par, test_data);
+        acw_clear_test_data_fall_time_timeout(acw_par, test_data);
         
         /* 关高压 */
         if(acw_test_flag.testing)
@@ -248,7 +271,7 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	/* 当前步测试结束 */
 	else
 	{
-        clear_test_data_fall_time_timeout(acw_par, test_data);
+        acw_clear_test_data_fall_time_timeout(acw_par, test_data);
         
         /* 关高压 */
         if(acw_test_flag.testing)
@@ -269,6 +292,12 @@ void acw_test_irq(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 	}
 }
 
+/**
+  * @brief  ACW测试前的准备
+  * @param  [in] gr_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_test_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     test_vref(acw_par->upper_limit);	/* 输出各基准 */
@@ -289,14 +318,18 @@ void acw_test_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     
     open_test_timer();/* 开定时器 */
     
-	test_data->err_real = 0;/* acw 真实电流报警  */
-    acw_test_flag.forever_testing = 0;
     test_data->test_over = 0;
     test_data->dis_time = 0;
     test_data->test_status = ST_WAIT;
     test_data->fail_num = ST_ERR_NONE;//默认初始化为合格
 }
 
+/**
+  * @brief  运行ACW测试状态机
+  * @param  [in] gr_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	switch(test_data->gradation)
@@ -308,7 +341,9 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
                 test_data->ready_ok = 1;//标记
                 acw_test_flag.testing = 1;//正在测试标记
                 acw_test_flag.forever_testing = 0;
+                acw_test_flag.err_real = 0;/* acw 真实电流报警  */
                 acw_test_flag.judge_err_en = ENABLE;
+                acw_test_flag.fail_cont = 0;
                 load_acw_data(acw_par, test_data);
                 acw_test_ready(acw_par, test_data);
             }
@@ -316,6 +351,8 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
         }
         case STAGE_FAIL_CONT:
         {
+            acw_test_flag.fail_cont = 1;//发生失败继续把这个标记置1
+            
             /* 间隔时间不为0就从间隔时间开始 */
             if(acw_par->interval_time > 0)
             {
@@ -346,7 +383,13 @@ void acw_test_details(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 			break;
 	}
 }
-
+/**
+  * @brief  运行ACW测试
+  * @param  [in] step 当前步的设置数据
+  * @param  [in] next_step 下一步的设置数据 如果 为空说明当前测试的是最后一步
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void run_acw_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_data)
 {
     ACW_STRUCT *acw_par = &step->one_step.acw;

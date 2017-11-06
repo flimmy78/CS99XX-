@@ -504,7 +504,8 @@ void ir_auto_find_gear(void)
 	/* 如果档位保持开关打开 */
     if(g_custom_sys_par.ir_gear_hold == SYS_SW_ON)
 	{
-		if(g_dis_time * 100 < g_ir_gear_hold)
+        /* g_ir_gear_hold 单位是 ms; dis_time 单位是100ms */
+		if(g_test_data.dis_time * 100 < g_ir_gear_hold)
 		{
 			return;
 		}
@@ -515,7 +516,6 @@ void ir_auto_find_gear(void)
     {
         return;
     }
-    
     
     gear_base = gear_info[cur_gear - cur_gear_min].base;
     temp = gear_info[cur_gear-cur_gear_min].segments + 1;//用于索引数组中的元素

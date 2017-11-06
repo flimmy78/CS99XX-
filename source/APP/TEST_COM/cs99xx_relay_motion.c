@@ -601,7 +601,6 @@ void ir_set_gear(const uint8_t gear, uint8_t soft_gear)
     
     SAFE_FLOAT_VOLU_CAL(cur_res_k, temp); /* 进行浮点数安全赋值处理 */
 	
-    
     cur_gear_comm = gear;
 }
 /*

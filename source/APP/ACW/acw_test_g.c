@@ -219,7 +219,7 @@ void acw_test_irq_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_STR
             return;
         }
         
-        clear_test_data_fall_time_timeout(acw_par, test_data);
+        acw_clear_test_data_fall_time_timeout(acw_par, test_data);
         acw_exit_test_relay_motion(acw_par, test_data);
         test_data->test_over = 1;
 	}
@@ -243,9 +243,6 @@ void acw_test_ready_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA_S
     
     open_sine(acw_par->output_freq);/* 开正弦波 */
     
-	test_data->err_real = 0;/* acw 真实电流报警  */
-    
-    acw_test_flag.testing = 1;
     test_data->test_over = 0;
     test_data->dis_time = 0;
     test_data->test_status = ST_WAIT;
@@ -263,6 +260,9 @@ void acw_test_details_g(ACW_STRUCT *acw_par, ACW_STRUCT *next_acw_par, TEST_DATA
             if(test_data->ready_ok == 0)
             {
                 test_data->ready_ok = 1;//就绪标记
+                acw_test_flag.err_real = 0;/* acw 真实电流报警  */
+                acw_test_flag.testing = 1;
+                acw_test_flag.forever_testing = 0;
                 load_acw_data_g(acw_par, next_acw_par, test_data);
                 acw_test_ready_g(acw_par, next_acw_par, test_data);
             }

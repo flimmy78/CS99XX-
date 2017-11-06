@@ -475,6 +475,8 @@ typedef struct{
     float vol_adc_k;///<电压AD校准k值
     float vol_adc_b;///<电压AD校准b值
     float cur_adc_k;///<电流AD校准k值
+    float cur_adc_b;///<电流AD校准b值 //GR使用
+    float res_adc_k;///<电阻AD校准k值
     uint8_t fail_num;///<异常码
     uint8_t test_over_fail;///<测试时间到异常码
     uint8_t test_status;///<测试状态
@@ -487,7 +489,6 @@ typedef struct{
     uint8_t vol_err_count;///<电压异常计数
     uint8_t low_err_count;///<下限报警计数
     uint32_t vol_rise_step_t;///<电压上升/下降阶段时间计数
-    uint8_t err_real;///< acw 真实电流报警标记
     float vol_ch_step;///< 电压缓变步进值
     float vol_ch_base;///< 电压变化的起始值
     float vol_ch_target;///< 电压变化的目标

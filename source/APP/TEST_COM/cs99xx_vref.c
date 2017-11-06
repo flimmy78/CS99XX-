@@ -566,7 +566,7 @@ void test_vref(uint16_t cur_h)
 			l_short_vref = SHORT_V_DC_10MA;//SHORT_V_DC_2MA /* 2014.10.21 ir太容易进入短路报警 */
 			break;
 		case GR:
-			/* 无短路基准 */
+            l_short_vref = DAC_SHORT_VREF;
 			break;
 		case BBD:
 			/* 短路基准 */

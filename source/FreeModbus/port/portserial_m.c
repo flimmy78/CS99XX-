@@ -27,6 +27,7 @@
 
 #include    "ucos_ii.h"
 #include	"BSP_config.h"
+#include	"test_tools.h"
 
 #if MB_MASTER_RTU_ENABLED > 0 || MB_MASTER_ASCII_ENABLED
 /* ----------------------- static functions ---------------------------------*/

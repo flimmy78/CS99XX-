@@ -142,6 +142,8 @@ static void fail_mode_stop_dispose(void)
     
 	if(g_cur_step->next == NULL)
 	{
+        OVER = 1;
+        
 		/* 列表显示打开 */
 		if(sys_par.is_table_dis)
 		{

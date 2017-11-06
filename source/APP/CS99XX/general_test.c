@@ -28,8 +28,6 @@
 #include    "cs99xx_led.h"
 #include    "cs99xx_collect.h"
 #include    "test_com.h"
-#include    "acw_test_g.h"
-#include    "acw_test.h"
 
 
 
@@ -1229,10 +1227,22 @@ void install_run_test_fun(void)
             }
             break;
         case DCW:
+            /* 当是G模式时 */
+            if(g_cur_file->work_mode == G_MODE)
+            {
+                run_cs99xx_test_fun = run_dcw_test_g;
+            }
+            /* N模式 */
+            else
+            {
+                run_cs99xx_test_fun = run_dcw_test;
+            }
             break;
         case IR:
+            run_cs99xx_test_fun = run_ir_test;
             break;
         case GR:
+            run_cs99xx_test_fun = run_gr_test;
             break;
     }
 }
@@ -1468,7 +1478,7 @@ void testing_process_control(uint8_t *st)
                    显示测试失败
                 */
                 if( FAIL && OVER && sys_par.plc_signal != EACH_STEP
-                    && (sys_par.fail_mode == FAIL_MODE_CON 
+                    && (sys_par.fail_mode == FAIL_MODE_CON
                     || sys_par.fail_mode == FAIL_MODE_HALT
                     || sys_par.fail_mode == FAIL_MODE_CON
                     || sys_par.fail_mode == FAIL_MODE_RESTART
@@ -1479,7 +1489,6 @@ void testing_process_control(uint8_t *st)
                     *st = TEST_FAIL_CONTROL;
                     return;
                 }
-                
                 
                 *st = TEST_QUIT_CONTROL;
                 return;
@@ -1555,26 +1564,14 @@ void testing_process_control(uint8_t *st)
             }
             break;
         }
-        case TEST_FAIL_CONTROL:/* 异常处理 */
+        case TEST_FAIL_CONTROL:
         {
             save_cur_result(&cur_result);
-            
-            /* 大电容测试等待电容发电完成 */
-            if(type_spe.dcw_big_cap_en == ENABLE && cur_mode == DCW
-                && test_flag.dis_charge_end == 0)
-            {
-                dis_charge_remain_vol();
-            }
             
             app_ctrl_exit_sw(EXIT_STOP, DISABLE);/* 关闭复位中断 */
             dis_fail();
             clear_keyboard();
             *st = TEST_QUIT_CONTROL;
-//             else if(CONT)
-//             {
-//                 CONT = 0;
-//                 *st = TEST_TESTING_CONTROL;
-//             }
             break;
         }
         case TEST_PASS_CONTROL:
@@ -1609,10 +1606,6 @@ void testing_process_control(uint8_t *st)
 			/* 退出测试 */
             else
             {
-//                 dis_stop();
-//                 LCD_REFRESH();
-//                 app_ctrl_exit_sw(EXIT_STOP, DISABLE);	/* 关闭复位中断 */
-//                 clear_keyboard();
                 *st = TEST_QUIT_CONTROL;
             }
             break;

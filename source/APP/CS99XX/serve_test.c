@@ -1709,28 +1709,7 @@ void load_data(void)
             }
             g_dis_time = tes_t;
             
-			switch(cur_gear)
-			{
-				case DC_2uA:
-					cur_gear_comm = DC_0_GEAR_COMM;
-					break;
-				case DC_20uA:
-					cur_gear_comm = DC_1_GEAR_COMM;
-					break;
-				case DC_200uA:
-					cur_gear_comm = DC_2_GEAR_COMM;
-					break;
-				case DC_2mA:
-					cur_gear_comm = DC_3_GEAR_COMM;
-					break;
-				case DC_10mA:
-				case DC_20mA:
-					cur_gear_comm = DC_4_GEAR_COMM;
-					break;
-				case DC_50mA:
-					cur_gear_comm = DC_5_GEAR_COMM;
-					break;
-			}
+			cur_gear_comm = dc_gear[cur_gear].comm;
             
             cur_real_gear_comm = cur_gear;
 			

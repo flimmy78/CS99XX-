@@ -5,6 +5,14 @@
 #include "cs99xx_struct.h"
 #include "cs99xx_it.h"
 
+#include    "test_tools.h"
+#include    "acw_test_g.h"
+#include    "acw_test.h"
+#include    "dcw_test.h"
+#include    "dcw_test_g.h"
+#include    "ir_test.h"
+#include    "gr_test.h"
+
 #ifndef NULL
 #define NULL 0
 #endif
@@ -54,8 +62,6 @@ typedef enum{
     STAGE_FAIL_CONT = 10,   /* Ê§°Ü¼ÌÐø½×¶Î */
 }TEST_STAGE;
 
-extern void cs_delay_ms(int time);
-extern void cs_delay_us(int time);
 extern void close_test_timer(void);
 extern void open_test_timer(void);
 extern void init_com_test_env(TEST_DATA_STRUCT *test_data);

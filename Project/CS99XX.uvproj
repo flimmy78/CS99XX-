@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\45PE16;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\source\BSP\SPI_FLASH;..\Project;..\source\APP\ACW;..\source\APP\TEST_COM</IncludePath>
+              <IncludePath>..\source\Libraries\CMSIS;..\source\Libraries\STM32F10x_StdPeriph_Driver\inc;..\source\USER;..\source\APP;..\source\APP\CS99XX;..\source\APP\AutoCal;..\source\BSP\45PE16;..\source\BSP\ADC;..\source\BSP\ADC_DMA;..\source\BSP\BSP_Config;..\source\BSP\DAC;..\source\BSP\EE_I2C;..\source\BSP\FSMC_Config;..\source\BSP\GPIO_Config;..\source\BSP\IIC_Config;..\source\BSP\KeyBoard;..\source\BSP\m45pe16_spi_flash;..\source\BSP\MC14094;..\source\BSP\RTC_Config;..\source\BSP\SineWave;..\source\BSP\SPI_CPLD;..\source\BSP\Timer5;..\source\BSP\Timer_Config;..\source\CMSIS;..\source\Comm_app;..\source\FreeModbus\modbus\include;..\source\FreeModbus\modbus;..\source\FreeModbus\port;..\source\uCGUI;..\source\uCGUI\GUI_LIB\Heads;..\source\uCGUI\GUI_LIB;..\source\uCOSII\core;..\source\uCOSII\port;..\source\uCGUI\GUI_LIB\EnglishFont;..\source\uCGUI\GUI_LIB\Picture;..\source\FreeModbus\modbus\rtu;..\source\module\DC_GR_MODULE;..\source\module;..\source\BSP\SPI_FLASH;..\Project;..\source\APP\ACW;..\source\APP\TEST_COM;..\source\APP\DCW;..\source\APP\IR;..\source\APP\GR</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -835,6 +835,11 @@
               <FileType>1</FileType>
               <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
             </File>
+            <File>
+              <FileName>test_tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_tools.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -859,6 +864,71 @@
               <FileName>acw_test_g.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_test_g.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DCW</GroupName>
+          <Files>
+            <File>
+              <FileName>dcw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_test_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_test_g.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IR</GroupName>
+          <Files>
+            <File>
+              <FileName>ir_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>ir_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ir_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_test.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>GR</GroupName>
+          <Files>
+            <File>
+              <FileName>gr_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>gr_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>gr_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_test.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2313,6 +2383,11 @@
               <FileType>1</FileType>
               <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
             </File>
+            <File>
+              <FileName>test_tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_tools.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2337,6 +2412,71 @@
               <FileName>acw_test_g.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\ACW\acw_test_g.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DCW</GroupName>
+          <Files>
+            <File>
+              <FileName>dcw_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>dcw_test_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DCW\dcw_test_g.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IR</GroupName>
+          <Files>
+            <File>
+              <FileName>ir_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>ir_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ir_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\ir_test.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>GR</GroupName>
+          <Files>
+            <File>
+              <FileName>gr_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>gr_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>gr_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\GR\gr_test.c</FilePath>
             </File>
           </Files>
         </Group>

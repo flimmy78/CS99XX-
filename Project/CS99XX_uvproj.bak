@@ -835,6 +835,11 @@
               <FileType>1</FileType>
               <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
             </File>
+            <File>
+              <FileName>test_tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_tools.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2377,6 +2382,11 @@
               <FileName>test_com.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\TEST_COM\test_com.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\TEST_COM\test_tools.c</FilePath>
             </File>
           </Files>
         </Group>

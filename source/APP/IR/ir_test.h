@@ -11,6 +11,11 @@ typedef struct{
     uint8_t judge_err_en;///<判断异常标记
     uint8_t forever_testing;///<永远测试，当测试时间为0时使用
     uint8_t fail_cont;///<当发生失败断续时置1
+    uint8_t soft_range;///<当前IR软件档位
+	uint8_t gear_hold;///<IR档位保持开关
+    uint32_t gear_hold_time;///<IR档位保持时间 ms
+    uint32_t dly;///<IR换档延时 ms
+    uint8_t cur_res_area;/* 当前电阻所在的校准点区间 */
 }IR_TEST_FLAG;
 
 #ifdef   _IR_TEST_GLOBALS

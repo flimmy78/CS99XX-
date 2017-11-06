@@ -391,6 +391,8 @@ _SERVE_TEST int8_t steps_pass;           /* 步间PASS */
 _SERVE_TEST uint16_t cur_offset;         /* 当前偏移电流或电阻 */
 _SERVE_TEST uint16_t cur_real_offset;    /* 当前的真是电流偏移 */
 _SERVE_TEST uint8_t cur_vol_gear;        /* 当前ir电压档位 0-9 */
+_SERVE_TEST uint8_t cur_vol_gear_max;	/* 当前ir电压档位最大值 */
+_SERVE_TEST uint8_t cur_res_area;/* 当前电阻所在的校准点区间 */
 
 _SERVE_TEST uint8_t err_charge;          /* 充电错误 */
 _SERVE_TEST uint8_t err_real;            /* 真实电流错误 */
@@ -434,7 +436,7 @@ extern void startup(void);
 extern void stop_test(void);
 extern void test_pass(void);
 extern void test_fail(void);
-extern void ir_set_gear(const uint8_t gear, uint8_t soft_gear);
+//extern void ir_set_gear(const uint8_t gear, uint8_t soft_gear);
 extern void bbd_auto_select_gear(void);
 extern void bbd_load_gear(void);
 extern void shift_cur_gear(uint8_t mode);

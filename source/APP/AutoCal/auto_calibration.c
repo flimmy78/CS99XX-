@@ -625,7 +625,7 @@ static void init_ir_res_cal_info(AUTO_CAL_IR_RES *info, uint8_t n)
 {
     get_res_cal_point_info(IR, &info->base, n);
     
-    info->k = &ratio_ir.res_k[info->base.gear][0];
+//    info->k = &ratio_ir.res_k[info->base.gear][0];
     
     info->count_ratio = count_vol_ratio;
     info->save = auto_cal_save_ratio;
@@ -911,7 +911,7 @@ static void auto_cal_ir_fun(void)
                 }
 			}
 			
-            ratio_ir.res_k[n][i] = (float)std_res * temp_cur / (float)temp_vol;
+//            ratio_ir.res_k[n][i] = (float)std_res * temp_cur / (float)temp_vol;
 			
 // 			ratio_ir.res_k[cur_gear-1][i] = (float)std_res * temp_cur / (float)temp_vol;
 		}

@@ -1389,7 +1389,7 @@ void load_ratio(uint8_t mode)
             cur_dac_b = ratio_ir.dac_b[vol_segment];
             cur_adc_k = ratio_ir.adc_v_k[vol_segment];
             cur_adc_b = ratio_ir.adc_v_b[vol_segment];
-            cur_res_k = ratio_ir.res_k[cur_gear-1][cur_vol_gear];
+//            cur_res_k = ratio_ir.res_k[cur_gear-1][cur_vol_gear];
             
             SAFE_FLOAT_VOLU_CAL(cur_dac_k, cur_dac_k);
             SAFE_FLOAT_VOLU_CAL(cur_dac_b, cur_dac_b);
@@ -1825,6 +1825,10 @@ void load_data(void)
             cur_ad_vol = 0;
             g_ir_dly = 500;/* 启动后首先要进入延时 */
 			
+            g_test_data.cur_gear = cur_gear;
+            g_test_data.gear_max = cur_gear_max;
+            g_test_data.gear_min = cur_gear_min;
+            
 			cur_ir_dis_gear = cur_gear;/* ir显示档位 只有在非自动挡才用到 */
             cur_ir_dis_gear_0 = cur_ir_dis_gear - 1;
             cur_ir_dis_gear_1 = cur_ir_dis_gear + 1;

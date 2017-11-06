@@ -569,40 +569,40 @@ void irq_stop_relay_motion(void)
  * 返回  ：无
  */
 
-void ir_set_gear_s(const uint8_t gear)
-{
-	switch(gear)
-	{
-		case IR_10MOHM:
-			mc14094_set_gear(MC14094_C_10M);
-			break;
-		case IR_100MOHM:
-			mc14094_set_gear(MC14094_C_100M);
-			break;
-		case IR_1GOHM:
-			mc14094_set_gear(MC14094_C_1G);
-			break;
-		case IR_10GOHM:
-			mc14094_set_gear(MC14094_C_10G);
-			break;
-		case IR_100GOHM:
-			mc14094_set_gear(MC14094_C_100G);
-			break;
-	}
-}
+//void ir_set_gear_s(const uint8_t gear)
+//{
+//	switch(gear)
+//	{
+//		case IR_10MOHM:
+//			mc14094_set_gear(MC14094_C_10M);
+//			break;
+//		case IR_100MOHM:
+//			mc14094_set_gear(MC14094_C_100M);
+//			break;
+//		case IR_1GOHM:
+//			mc14094_set_gear(MC14094_C_1G);
+//			break;
+//		case IR_10GOHM:
+//			mc14094_set_gear(MC14094_C_10G);
+//			break;
+//		case IR_100GOHM:
+//			mc14094_set_gear(MC14094_C_100G);
+//			break;
+//	}
+//}
 
-void ir_set_gear(const uint8_t gear, uint8_t soft_gear)
-{
-    float temp = 0;
-    
-    ir_set_gear_s(gear);
-    
-    temp = ratio_ir.res_k[soft_gear][cur_vol_gear];
-    
-    SAFE_FLOAT_VOLU_CAL(cur_res_k, temp); /* 进行浮点数安全赋值处理 */
-	
-    cur_gear_comm = gear;
-}
+//void ir_set_gear(const uint8_t gear, uint8_t soft_gear)
+//{
+//    float temp = 0;
+//    
+//    ir_set_gear_s(gear);
+//    
+////    temp = ratio_ir.res_k[soft_gear][cur_vol_gear];
+//    
+//    SAFE_FLOAT_VOLU_CAL(cur_res_k, temp); /* 进行浮点数安全赋值处理 */
+//	
+//    cur_gear_comm = gear;
+//}
 /*
  * 函数名：bbd_auto_select_gear
  * 描述  ：bbd自动换挡

@@ -90,11 +90,13 @@ typedef struct{
 	float dac_b[2];
 	float adc_v_k[2];/* 电压系数 */
 	float adc_v_b[2];
-    
-    float res_k[CAL_POINTS][SECT_VOL];/* 18个电阻采样点 22个电压采样点 电压100v-5000v */
-    
-    float free_space[212];/* 机动空间 以便增加数据 不影响整体大小 保持整个 结构size 不变 */
-    
+	float da_ad_k[2];/* da与ad的对应系数k */
+	float da_ad_b[2];
+	
+	float res_3_k[CAL_POINTS][SECT_VOL];//16个电阻校准点 5个档位 22个电压点
+	float cur_ad_v[CAL_POINTS][SECT_VOL];//16个电阻校准点 5个档位 22个电压点 的电流采样电压值记录
+	uint8_t gear_b[CAL_POINTS][SECT_VOL];//16个电阻校准点 22个电压点 在校准时所在的硬件档位记录
+	
     uint32_t crc_val;/* crc校验值 必须放在最后一个字段 */
 }RATIO_IR;
 

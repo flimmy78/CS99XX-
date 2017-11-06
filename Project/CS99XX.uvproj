@@ -676,11 +676,6 @@
               <FilePath>..\source\APP\CS99XX\cs99xx_interface.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_ir_shift_gear.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_ir_shift_gear.c</FilePath>
-            </File>
-            <File>
               <FileName>cs99xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_it.c</FilePath>
@@ -909,6 +904,11 @@
               <FileName>ir_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\IR\ir_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>cs99xx_ir_shift_gear.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\cs99xx_ir_shift_gear.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2224,11 +2224,6 @@
               <FilePath>..\source\APP\CS99XX\cs99xx_interface.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_ir_shift_gear.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\APP\CS99XX\cs99xx_ir_shift_gear.c</FilePath>
-            </File>
-            <File>
               <FileName>cs99xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\CS99XX\cs99xx_it.c</FilePath>
@@ -2457,6 +2452,11 @@
               <FileName>ir_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\IR\ir_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>cs99xx_ir_shift_gear.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\IR\cs99xx_ir_shift_gear.c</FilePath>
             </File>
           </Files>
         </Group>

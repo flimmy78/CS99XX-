@@ -76,4 +76,43 @@ void ir_relay_ready(void)
     MC14094_Updata();/* 向4094发送数据 更新继电器状态 */
 }
 
+/*
+ * 函数名：ir_set_gear
+ * 描述  ：ir档位设置
+ * 输入  ：无
+ * 输出  ：无
+ * 返回  ：无
+ */
+
+void ir_set_gear_s(const uint8_t gear)
+{
+	switch(gear)
+	{
+		case IR_10MOHM:
+			mc14094_set_gear(MC14094_C_10M);
+			break;
+		case IR_100MOHM:
+			mc14094_set_gear(MC14094_C_100M);
+			break;
+		case IR_1GOHM:
+			mc14094_set_gear(MC14094_C_1G);
+			break;
+		case IR_10GOHM:
+			mc14094_set_gear(MC14094_C_10G);
+			break;
+		case IR_100GOHM:
+			mc14094_set_gear(MC14094_C_100G);
+			break;
+	}
+}
+
+void ir_set_gear(const uint8_t gear)
+{
+    ir_set_gear_s(gear);
+	
+	clear_slither_data();/* 换挡后要清空滤波缓冲区 */
+    
+//    cur_gear_comm = gear;
+}
+
 /******************* (C) COPYRIGHT 2017 长盛仪器 *****END OF FILE****/

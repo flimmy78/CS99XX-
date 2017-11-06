@@ -463,6 +463,7 @@ typedef struct{
 typedef struct{
     uint16_t sample_vol_ad;///<电压采样AD
     uint16_t sample_cur_ad;///<电流采样AD
+    float cur_ad_vol;///<电流AD对应的电压值，基准电压是3.3V
     float vol_value;///<电压显示值
     float cur_value;///<电流显示值
     float real_value;///<真实电流显示值
@@ -492,6 +493,10 @@ typedef struct{
     float vol_ch_step;///< 电压缓变步进值
     float vol_ch_base;///< 电压变化的起始值
     float vol_ch_target;///< 电压变化的目标
+    uint8_t cur_gear;///<当前电流或电阻档位，只有在自动换档时使用的
+    uint8_t gear_max;///<IR档位最大值
+    uint8_t gear_min;///<IR档位最小值
+    uint8_t vol_gear;///<当前IR电压档位
 }TEST_DATA_STRUCT;
 
 /* 程序中各种档位定义 */

@@ -845,45 +845,45 @@ void init_ratio(uint8_t mode)
 	ratio_ir.adc_v_k[1] = 1.58793;/* 电压系数 */
 	ratio_ir.adc_v_b[1] = -12.26546;
     
-    for(i = 0; i < 3; i++)
-    {
-        for(j = 0; j < SECT_VOL; j++)
-        {
-            ratio_ir.res_k[i][j] = default_ir_res_k[0];
-        }
-    }
-    
-    for(i = 3; i < 6; i++)
-    {
-        for(j = 0; j < SECT_VOL; j++)
-        {
-            ratio_ir.res_k[i][j] = default_ir_res_k[1];
-        }
-    }
-    
-    for(i = 6; i < 9; i++)
-    {
-        for(j = 0; j < SECT_VOL; j++)
-        {
-            ratio_ir.res_k[i][j] = default_ir_res_k[2];
-        }
-    }
-    
-    for(i = 9; i < 12; i++)
-    {
-        for(j = 0; j < SECT_VOL; j++)
-        {
-            ratio_ir.res_k[i][j] = default_ir_res_k[3];
-        }
-    }
-    
-    for(i = 12; i < CAL_POINTS; i++)
-    {
-        for(j = 0; j < SECT_VOL; j++)
-        {
-            ratio_ir.res_k[i][j] = default_ir_res_k[4];
-        }
-    }
+//    for(i = 0; i < 3; i++)
+//    {
+//        for(j = 0; j < SECT_VOL; j++)
+//        {
+//            ratio_ir.res_k[i][j] = default_ir_res_k[0];
+//        }
+//    }
+//    
+//    for(i = 3; i < 6; i++)
+//    {
+//        for(j = 0; j < SECT_VOL; j++)
+//        {
+//            ratio_ir.res_k[i][j] = default_ir_res_k[1];
+//        }
+//    }
+//    
+//    for(i = 6; i < 9; i++)
+//    {
+//        for(j = 0; j < SECT_VOL; j++)
+//        {
+//            ratio_ir.res_k[i][j] = default_ir_res_k[2];
+//        }
+//    }
+//    
+//    for(i = 9; i < 12; i++)
+//    {
+//        for(j = 0; j < SECT_VOL; j++)
+//        {
+//            ratio_ir.res_k[i][j] = default_ir_res_k[3];
+//        }
+//    }
+//    
+//    for(i = 12; i < CAL_POINTS; i++)
+//    {
+//        for(j = 0; j < SECT_VOL; j++)
+//        {
+//            ratio_ir.res_k[i][j] = default_ir_res_k[4];
+//        }
+//    }
     }
 	/* GR DC */
     else if(mode == GR)
@@ -5222,9 +5222,11 @@ void start_correct_ir_res(const int8_t gear)
     cur_gear = target_gear;
     
     
-    delay_1 = 9;
+    delay_1 = 40;
     delay_2 = 90;
     
+	memset(&ratio_ir.res_3_k[gear - 1], 0, sizeof(ratio_ir.res_3_k[0]));
+	
     switch(type_spe.ir_vol_range)
     {
         case IR_1kV:
@@ -5237,7 +5239,7 @@ void start_correct_ir_res(const int8_t gear)
             break;
         case IR_2_5kV:
             vol_gear_num = 17;
-            vol_base = 4;/* 500v起始 */
+            vol_base = 0;/* 100v起始 32khz 功放从100v*/
             break;
         case IR_5kV:
             vol_gear_num = 22;
@@ -5295,18 +5297,18 @@ void start_correct_ir_res(const int8_t gear)
             
             vol_segment = confirm_vol_segment_ss(ir_vol);
             
-            
             MC14094_CMD(MC14094_A, MC14094_A_VOL_SEL, !vol_segment);
             MC14094_Updata();
             
             DAC_Vol[0] = ir_vol * ratio_ir.dac_k[vol_segment] + ratio_ir.dac_b[vol_segment];/* 输出电压 使用dcw的校准系数 */
-            g_ir_dly += 1000;
+            g_ir_dly += 200;
+			OSTimeDlyHMSM(0,0,1,0);
             
 			for(j = 0; j < cal_time; j++)
 			{
 				temp_vol = sample_vol * ratio_ir.adc_v_k[vol_segment] + ratio_ir.adc_v_b[vol_segment];
 				temp_cur = sample_cur;
-                
+				
                 if(cur_gear > 4)
                 {
                     OSTimeDlyHMSM(0,0,0,delay_2);
@@ -5318,6 +5320,7 @@ void start_correct_ir_res(const int8_t gear)
                 
                 if(++temp_delay > temp)
                 {
+					ir_auto_find_gear();
                     temp_delay = 0;
                     dis_correct_ir_vol();
                     GUI_DispDecAt(cur_gear, (X0 + X1) / 2 + 10, Y1 - 22 + 10, 1);
@@ -5327,6 +5330,7 @@ void start_correct_ir_res(const int8_t gear)
                 }
                 
 				CALIB_JUDGE_ERR(IR);
+				
 				if(STOP_PIN == 0)
 				{
 					stop_cal(IR);
@@ -5338,13 +5342,16 @@ void start_correct_ir_res(const int8_t gear)
             
             if(temp_vol == 0 || temp_cur == 0)
             {
-                ratio_ir.res_k[gear-1][i] = default_ir_res_k[gear-1];
+                ratio_ir.res_3_k[gear-1][i] = default_ir_res_k[gear-1];
             }
             else
             {
-                ratio_ir.res_k[gear-1][i] = (float)std_res * temp_cur / (float)temp_vol;
+				ratio_ir.res_3_k[gear-1][i] = (float)std_res * temp_cur / (float)temp_vol;
+				ratio_ir.cur_ad_v[gear-1][i] = cur_ad_vol;
+				ratio_ir.gear_b[gear-1][i] = cur_gear;
             }
 		}
+		
 		stop_cal(IR);
 		GUI_DispStringAt((const char*)"0.000", (X0+X1)/2+10, Y1-22);
 		ReFresh_LCD24064();

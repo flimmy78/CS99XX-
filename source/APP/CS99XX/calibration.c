@@ -27,6 +27,7 @@
 #include	"cs99xx_type.h"
 #include	"calibration.h"
 #include    "dc_module.h"
+#include    "ir_shift_gear.h"
 
 #define CALIB_JUDGE_ERR(m) if(-1 == c_judge_err(m)) { return;}
 
@@ -5320,13 +5321,13 @@ void start_correct_ir_res(const int8_t gear)
                 
                 if(++temp_delay > temp)
                 {
-					ir_auto_find_gear();
+					ir_auto_find_gear(&g_test_data);
                     temp_delay = 0;
                     dis_correct_ir_vol();
                     GUI_DispDecAt(cur_gear, (X0 + X1) / 2 + 10, Y1 - 22 + 10, 1);
                     
                     GUI_GotoXY((X0 + X1) / 2 + 10 + 10, Y1 - 22 + 10);
-                    GUI_DispFloatFix(cur_ad_vol, 5, 3);
+                    GUI_DispFloatFix(g_test_data.cur_ad_vol, 5, 3);
                 }
                 
 				CALIB_JUDGE_ERR(IR);
@@ -5347,7 +5348,7 @@ void start_correct_ir_res(const int8_t gear)
             else
             {
 				ratio_ir.res_3_k[gear-1][i] = (float)std_res * temp_cur / (float)temp_vol;
-				ratio_ir.cur_ad_v[gear-1][i] = cur_ad_vol;
+				ratio_ir.cur_ad_v[gear-1][i] = g_test_data.cur_ad_vol;
 				ratio_ir.gear_b[gear-1][i] = cur_gear;
             }
 		}
@@ -5916,7 +5917,7 @@ void start_correct_gr_cur(const uint16_t times)
             }
 		}
         
-        cur_ad_vol = sample_vol * 3.3 / 4095;
+        g_test_data.cur_ad_vol = sample_vol * 3.3 / 4095;
         
         if(++temp_delay > 5)
         {
@@ -5925,7 +5926,7 @@ void start_correct_gr_cur(const uint16_t times)
 //             GUI_DispDecAt(cur_gear, (X0 + X1) / 2 + 10, Y1 - 22 + 10, 1);
             
             GUI_GotoXY((X0 + X1) / 2 + 10 + 10, Y1 - 22 + 10);
-            GUI_DispFloatFix(cur_ad_vol, 5, 3);
+            GUI_DispFloatFix(g_test_data.cur_ad_vol, 5, 3);
             ReFresh_LCD24064();
         }
         

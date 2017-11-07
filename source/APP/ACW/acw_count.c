@@ -11,6 +11,12 @@
 
 static int8_t acw_judge_err(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data);
 
+/**
+  * @brief  计算出ACW的测试值，电压，电流
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_count_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	double cos_val = 0.0;
@@ -103,6 +109,13 @@ void acw_count_dis_value(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     }
 }
 
+
+/**
+  * @brief  ACW电压异常判断
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 uint8_t judge_acw_vol_exception(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
 	/* 电压上升 阶段 缓变阶段 */
@@ -153,6 +166,12 @@ uint8_t judge_acw_vol_exception(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data
     return ST_ERR_NONE;
 }
 
+/**
+  * @brief  ACW异常判断
+  * @param  [in] acw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 异常码
+  */
 int8_t acw_judge_err(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     int8_t err = ST_ERR_NONE;

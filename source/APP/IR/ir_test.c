@@ -7,6 +7,8 @@
 #include "ir_count.h"
 #include "ir_test.h"
 #include "ir_relay.h"
+#include "ir_shift_gear.h"
+#include "Timer5_Config.h"
 
 static uint16_t ir_zeo_t;///< 第〇阶段的累计时间
 static uint16_t ir_one_t;///< 第一阶段的累计时间
@@ -312,6 +314,7 @@ void ir_test_details(IR_STRUCT *ir_par, TEST_DATA_STRUCT *test_data)
                 ir_test_flag.judge_err_en = ENABLE;
                 load_ir_data(ir_par, test_data);
                 ir_test_ready(ir_par, test_data);
+                register_tim5_server_fun(shift_gear_dly);
             }
             break;
         }
@@ -370,7 +373,7 @@ void run_ir_test(NODE_STEP *step, NODE_STEP *next_step, TEST_DATA_STRUCT *test_d
     ir_test_details(ir_par, test_data);
     
     /* 自动换档 */
-    ir_auto_find_gear();
+    ir_auto_find_gear(test_data);
     
     /* 出现报警不再进行采样 测试结束不再进行采样 */
     if((test_data->fail_num) == ST_ERR_NONE && (!test_data->test_over))

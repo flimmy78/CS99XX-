@@ -283,7 +283,7 @@ _SERVE_TEST uint8_t result_r_queue_t;/* 队列尾 */
 /* 存放AD采集的电压和电流 */
 _SERVE_TEST uint16_t sample_vol;         /* 采样电压 */
 _SERVE_TEST uint16_t sample_cur;         /* 采样电流 */
-_SERVE_TEST float cur_ad_vol;            /* 采样电流 */
+//_SERVE_TEST float cur_ad_vol;            /* 采样电流 */
 _SERVE_TEST uint16_t adc_value[2];       /* 采样电流 */
 
 _SERVE_TEST uint8_t output_buf[10];      /* 输出采集值 */

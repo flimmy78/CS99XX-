@@ -4,6 +4,11 @@
 #include "cs99xx_struct.h"
 #include "MC14094.h"
 
+/**
+  * @brief  切换ACW电流档位
+  * @param  [in] gear 要切换的电流档位
+  * @retval 无
+  */
 void shift_acw_cur_gear(uint8_t gear)
 {
     switch(gear)
@@ -37,6 +42,12 @@ void shift_acw_cur_gear(uint8_t gear)
             break;
     }
 }
+/**
+  * @brief  ACW继电器进入测试就绪状态
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_into_test_relay_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     MC14094_CMD(MC14094_C, MC14094_C_GR, RELAY_OFF);/* ACW DCW IR */
@@ -50,6 +61,12 @@ void acw_into_test_relay_ready(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
     shift_acw_cur_gear(acw_par->gear_i);
 }
 
+/**
+  * @brief  ACW继电器退出测试就绪状态
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void acw_exit_test_relay_motion(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data)
 {
     irq_stop_relay_motion();//关高压
@@ -66,7 +83,11 @@ void acw_exit_test_relay_motion(ACW_STRUCT *acw_par, TEST_DATA_STRUCT *test_data
     shift_acw_cur_gear(acw_par->gear_i);
 }
 
-
+/**
+  * @brief  ACW测试电子开关打开
+  * @param  无
+  * @retval 无
+  */
 void acw_relay_ready(void)
 {
     MC14094_CMD(MC14094_A, MC14094_CD4053_B, RELAY_OFF);/* 启动测试时置0 */

@@ -19,7 +19,7 @@
 
 
 extern void shift_gear(uint8_t mode);
-extern void ir_auto_find_gear(void);
+//extern void ir_auto_find_gear(void);
 extern void ir_auto_shift_gear(void);
 extern void irq_stop_relay_motion(void);
 extern void on_switch_hv(void);

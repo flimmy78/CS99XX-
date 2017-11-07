@@ -906,9 +906,9 @@
               <FilePath>..\source\APP\IR\ir_test.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_ir_shift_gear.c</FileName>
+              <FileName>ir_shift_gear.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\APP\IR\cs99xx_ir_shift_gear.c</FilePath>
+              <FilePath>..\source\APP\IR\ir_shift_gear.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -929,6 +929,26 @@
               <FileName>gr_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\GR\gr_test.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DC_GR</GroupName>
+          <Files>
+            <File>
+              <FileName>dc_gr_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>dc_gr_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dc_gr_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_test.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2454,9 +2474,9 @@
               <FilePath>..\source\APP\IR\ir_test.c</FilePath>
             </File>
             <File>
-              <FileName>cs99xx_ir_shift_gear.c</FileName>
+              <FileName>ir_shift_gear.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\APP\IR\cs99xx_ir_shift_gear.c</FilePath>
+              <FilePath>..\source\APP\IR\ir_shift_gear.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2477,6 +2497,26 @@
               <FileName>gr_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\APP\GR\gr_test.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DC_GR</GroupName>
+          <Files>
+            <File>
+              <FileName>dc_gr_count.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_count.c</FilePath>
+            </File>
+            <File>
+              <FileName>dc_gr_relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_relay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dc_gr_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\APP\DC_GR\dc_gr_test.c</FilePath>
             </File>
           </Files>
         </Group>

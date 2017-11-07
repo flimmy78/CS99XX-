@@ -11,6 +11,12 @@
 
 static int8_t dcw_judge_err(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data);
 
+/**
+  * @brief  计算出DCW的测试值，电压，电流
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 void dcw_count_dis_value(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data)
 {
 	uint16_t temp_cur = 0;
@@ -85,6 +91,12 @@ void dcw_count_dis_value(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data)
     }
 }
 
+/**
+  * @brief  DCW电压异常判断
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 无
+  */
 uint8_t judge_dcw_vol_exception(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data)
 {
 	/* 电压上升 阶段 缓变阶段 */
@@ -135,11 +147,17 @@ uint8_t judge_dcw_vol_exception(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data
     return ST_ERR_NONE;
 }
 
+
+/**
+  * @brief  DCW异常判断
+  * @param  [in] dcw_par 当前步的设置数据
+  * @param  [in] test_data 测试数据
+  * @retval 异常码
+  */
 int8_t dcw_judge_err(DCW_STRUCT *dcw_par, TEST_DATA_STRUCT *test_data)
 {
     int8_t err = ST_ERR_NONE;
 	
-    
     /* 判断充电电流 */
     if(test_data->cur_value > dcw_par->charge_cur || dcw_par->charge_cur == 0)
     {

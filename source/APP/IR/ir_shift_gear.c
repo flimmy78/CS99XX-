@@ -1,7 +1,7 @@
 /*
  * Copyright(c) 2016,南京长盛仪器
  * All rights reserved
- * 文件名称：cs99xx_ir_shift_gear.c
+ * 文件名称：ir_shift_gear.c
  * 摘  要  ：主程序
  * 当前版本：V1.0，编写者：王鑫
  * 历史版本：
@@ -10,7 +10,7 @@
  */
 
 #include "stm32f10x.h"
-#include "cs99xx_ir_shift_gear.h"
+#include "ir_shift_gear.h"
 #include "serve_test.h"
 #include "cs99xx_type.h"
 #include "calibration.h"
@@ -18,6 +18,13 @@
 #include "ir_relay.h"
 #include "ir_test.h"
 
+void shift_gear_dly(void)
+{
+    if(ir_test_flag.dly > 0)
+    {
+        ir_test_flag.dly--;
+    }
+}
 
 void init_set_ir_gear(void)
 {
@@ -52,12 +59,12 @@ uint8_t get_cur_area(TEST_DATA_STRUCT *test_data)
 		return index_b[0];
 	}
 	
-	if(cur_ad_vol < ad_v_b[j - 1])
+	if(test_data->cur_ad_vol < ad_v_b[j - 1])
 	{
 		return index_b[j - 1];
 	}
 	
-	if(cur_ad_vol > ad_v_b[0])
+	if(test_data->cur_ad_vol > ad_v_b[0])
 	{
 		return index_b[0];
 	}
@@ -67,7 +74,7 @@ uint8_t get_cur_area(TEST_DATA_STRUCT *test_data)
 		ad_v_1 = ad_v_b[i];//大
 		ad_v_2 = ad_v_b[i + 1];//小
 		
-		if(cur_ad_vol <= ad_v_1 && cur_ad_vol >= ad_v_2)
+		if(test_data->cur_ad_vol <= ad_v_1 && test_data->cur_ad_vol >= ad_v_2)
 		{
 			flag = 1;
 			ad_v = (ad_v_1 + ad_v_2) / 2;
@@ -81,22 +88,22 @@ uint8_t get_cur_area(TEST_DATA_STRUCT *test_data)
 	}
 	
 	/* 如果测量值在均值附近的话就不在改变当前区域保持稳定 */
-	if(ad_v > cur_ad_vol)
+	if(ad_v > test_data->cur_ad_vol)
 	{
-		if(ad_v - cur_ad_vol < (3.3 * 3/4096))
+		if(ad_v - test_data->cur_ad_vol < (3.3 * 3/4096))
 		{
 			return index_b[i + 1];
 		}
 	}
 	else
 	{
-		if(cur_ad_vol - ad_v < (3.3 * 3/4096))
+		if(test_data->cur_ad_vol - ad_v < (3.3 * 3/4096))
 		{
 			return index_b[i + 1];
 		}
 	}
 	
-	if(cur_ad_vol < ad_v)
+	if(test_data->cur_ad_vol < ad_v)
 	{
 		return index_b[i + 1];
 	}
@@ -134,37 +141,6 @@ static void set_res_k(const uint8_t gear, TEST_DATA_STRUCT *test_data)
 		}
 	}
 }
-//void ir_auto_find_gear(void)
-//{
-//    uint8_t LEAD_T  = 20; /* 超前时间 */
-//	
-//    /* 延时时间还比LEAD_T大就退出 */
-//    if(g_ir_dly > LEAD_T)
-//    {
-//        return;
-//    }
-//	
-//	if(cur_ad_vol < 0.3)
-//	{
-//		if(cur_gear < cur_gear_max)
-//		{
-//			cur_gear++;
-//			ir_set_gear(cur_gear);
-//			g_ir_dly = 200;
-//		}
-//	}
-//	else if(cur_ad_vol > 3.1)
-//	{
-//		if(cur_gear > cur_gear_min)
-//		{
-//			cur_gear--;
-//			ir_set_gear(cur_gear);
-//			g_ir_dly = 200;
-//		}
-//	}
-//	
-//	set_res_k(cur_res_area, 0);
-//}
 
 void ir_auto_find_gear(TEST_DATA_STRUCT *test_data)
 {

@@ -1403,6 +1403,11 @@ void load_ratio(uint8_t mode)
             cur_adc_k = ratio_gr.adc_i_k[cur_gear];
             cur_adc_b = ratio_gr.adc_i_b[cur_gear];
             
+            g_test_data.cur_adc_k = ratio_gr.adc_i_k[cur_gear];
+            g_test_data.cur_adc_b = ratio_gr.adc_i_b[cur_gear];
+            g_test_data.out_da_k = ratio_gr.dac_k[cur_gear];
+            g_test_data.out_da_b = ratio_gr.dac_b[cur_gear];
+            
             SAFE_FLOAT_VOLU_CAL(cur_dac_k, cur_dac_k);
             SAFE_FLOAT_VOLU_CAL(cur_dac_b, cur_dac_b);
             SAFE_FLOAT_VOLU_CAL(cur_adc_k, cur_adc_k);
@@ -1714,11 +1719,16 @@ void load_data(void)
             cur_real_gear_comm = cur_gear;
 			
             confirm_vol_segment();/* 确定电压段 */
+            g_test_data.vol_segment = vol_segment;
+            g_test_data.vol_adc_k = ratio_dcw.adc_v_k[vol_segment];
+            g_test_data.vol_adc_b = ratio_dcw.adc_v_b[vol_segment];
+            g_test_data.cur_adc_k = ratio_dcw.adc_cur_k[cur_gear];
+            g_test_data.out_da_k = ratio_dcw.dac_k[vol_segment];
+            g_test_data.out_da_b = ratio_dcw.dac_b[vol_segment];
 			
 			if(cur_adc_cur_k != 0)
 			{
 				g_ad_dog = (cur_high + 1) / cur_adc_cur_k;
-//				ADC_WatchdogConfig(g_ad_dog);
 			}
 			break;
 		}
@@ -1822,7 +1832,7 @@ void load_data(void)
             
 			cur_gear_comm = cur_gear;
 			cur_ir_dis_gear = cur_gear;/* ir显示档位 只有在非自动挡才用到 */
-            cur_ad_vol = 0;
+            g_test_data.cur_ad_vol = 0;
             g_ir_dly = 500;/* 启动后首先要进入延时 */
 			
             g_test_data.cur_gear = cur_gear;
@@ -1836,6 +1846,11 @@ void load_data(void)
             count_gear_vol(cur_vol);/* 确定电压的档位 */
             
             confirm_vol_segment();/* 确定电压段 */
+            g_test_data.vol_segment = vol_segment;
+            g_test_data.vol_adc_k = ratio_ir.adc_v_k[vol_segment];
+            g_test_data.vol_adc_b = ratio_ir.adc_v_b[vol_segment];
+            g_test_data.out_da_k = ratio_ir.dac_k[vol_segment];
+            g_test_data.out_da_b = ratio_ir.dac_b[vol_segment];
 			g_ir_gear_hold = 100;//sys_par.ir_gear_hold;
 			
 			if(tes_t >= 600)

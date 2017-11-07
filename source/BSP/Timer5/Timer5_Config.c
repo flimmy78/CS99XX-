@@ -53,6 +53,67 @@ void TIM5_it_init(u16 arr,u16 psc)
 	TIM_Cmd(TIM5, ENABLE);/* 在外面用开关来控制 */
 	return;
 }
+
+
+#define TIM5_MAX_SERVER_FUN     30 ///< tim3最大的服务函数的个数
+
+
+/**
+  * @brief  定时器3服务函数指针池
+  */
+static TIM_SERVER_FUN  tim_server_fun_pool[TIM5_MAX_SERVER_FUN];
+
+/**
+  * @brief  注册定时器3的服务函数
+  * @param  [in] fun 定时器服务函数
+  * @retval 0 成功 1表示失败定时器服务函数池已满
+  */
+uint8_t register_tim5_server_fun(TIM_SERVER_FUN fun)
+{
+    int32_t i = 0;
+    
+    for(i = 0; i < TIM5_MAX_SERVER_FUN; i++)
+    {
+        if(tim_server_fun_pool[i] == NULL)
+        {
+            tim_server_fun_pool[i] = fun;
+            break;
+        }
+    }
+    
+    if(i == TIM5_MAX_SERVER_FUN)
+    {
+        return 1;
+    }
+    
+    return 0;
+}
+
+/**
+  * @brief  注销定时器3的服务函数
+  * @param  [in] fun 定时器服务函数
+  * @retval 0 成功 1表示失败定时器服务函数池已满
+  */
+uint8_t unregister_tim5_server_fun(TIM_SERVER_FUN fun)
+{
+    int32_t i = 0;
+    
+    for(i = 0; i < TIM5_MAX_SERVER_FUN; i++)
+    {
+        if(tim_server_fun_pool[i] == fun)
+        {
+            tim_server_fun_pool[i] = NULL;
+        }
+    }
+    
+    if(i == TIM5_MAX_SERVER_FUN)
+    {
+        return 1;
+    }
+    
+    return 0;
+}
+
 /*
  *函数名：TIM5_IRQHandler
  *描述：定时器5中断服务程序
@@ -61,8 +122,21 @@ void TIM5_it_init(u16 arr,u16 psc)
 */
 void TIM5_IRQHandler(void)
 {
+    int32_t i = 0;
+    
 	OSIntEnter();
 	
+    
+    for(i = 0; i < TIM5_MAX_SERVER_FUN; i++)
+    {
+        /* 执行服务函数 */
+        if(tim_server_fun_pool[i] != NULL)
+        {
+            tim_server_fun_pool[i]();
+        }
+    }
+    
+    
 	if (TIM_GetITStatus(TIM5, TIM_IT_Update) != RESET)
 	{
 		TIM_ClearFlag(TIM5, TIM_FLAG_Update);	     //清中断标记

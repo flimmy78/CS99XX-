@@ -33,7 +33,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\Project\cs99xx_update.h)(0x59FFEDDF)
+I (..\Project\cs99xx_update.h)(0x5A004C36)
 F (..\source\Libraries\CMSIS\system_stm32f10x.h)(0x4D783CAA)()
 F (..\source\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c)(0x56FC6A3C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\misc.o --omf_browse ..\..\cs99xx_zwp_output\obj\misc.crf --depend ..\..\cs99xx_zwp_output\obj\misc.d)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
@@ -738,7 +738,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\BSP\BSP_Config\BSP_config.h)(0x59F9451F)
 F (..\source\USER\os_cfg.h)(0x56D1513B)()
 F (..\source\USER\stm32f10x_conf.h)(0x563C3CCB)()
@@ -778,9 +778,9 @@ I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\app.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\irq.h)(0x568B4D96)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -832,12 +832,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -855,7 +855,7 @@ I (..\source\APP\CS99XX\cs99xx_type_config.h)(0x599E82DD)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 F (..\source\APP\CS99XX\cs99xx_type_config.h)(0x599E82DD)()
 F (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)()
-F (.\cs99xx_update.h)(0x59FFEDDF)()
+F (.\cs99xx_update.h)(0x5A004C36)()
 F (..\source\APP\app.c)(0x59F955F2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\app.o --omf_browse ..\..\cs99xx_zwp_output\obj\app.crf --depend ..\..\cs99xx_zwp_output\obj\app.d)
 I (D:\Keil\ARM\RV31\INC\string.h)(0x4F58357C)
 I (D:\Keil\ARM\RV31\INC\stdio.h)(0x4F58357C)
@@ -893,7 +893,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\BSP\BSP_Config\BSP_config.h)(0x59F9451F)
 I (..\source\BSP\KeyBoard\keyboard.h)(0x56F0BE36)
 I (..\source\BSP\RTC_Config\RTC_Config.h)(0x56F0BD49)
@@ -904,7 +904,7 @@ I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -936,7 +936,7 @@ I (..\source\Comm_app\mb_master.h)(0x56F334FF)
 I (..\source\FreeModbus\modbus\rtu\mbrtu.h)(0x5225EEF4)
 I (..\source\USER\SysTemConfig.h)(0x59F92B44)
 I (D:\Keil\ARM\RV31\INC\stdint.h)(0x4F58357C)
-I (..\Project\cs99xx_update.h)(0x59FFEDDF)
+I (..\Project\cs99xx_update.h)(0x5A004C36)
 I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_collect.h)(0x59F2ACFA)
 I (..\source\APP\CS99XX\cs99xx_result.h)(0x57BE812D)
@@ -953,7 +953,7 @@ I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
 I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
-F (..\source\APP\CS99XX\calibration.c)(0x59FFCC27)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\calibration.o --omf_browse ..\..\cs99xx_zwp_output\obj\calibration.crf --depend ..\..\cs99xx_zwp_output\obj\calibration.d)
+F (..\source\APP\CS99XX\calibration.c)(0x59FFF391)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\calibration.o --omf_browse ..\..\cs99xx_zwp_output\obj\calibration.crf --depend ..\..\cs99xx_zwp_output\obj\calibration.d)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
 I (D:\Keil\ARM\ARMCC\include\math.h)(0x51C7C554)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -990,7 +990,7 @@ I (..\source\uCGUI\GUI_LIB\Heads\GUI_ConfDefaults.h)(0x533B6634)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIConf.h)(0x534B3863)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIType.h)(0x533B6780)
 I (..\source\uCGUI\GUI_LIB\Heads\LCD.h)(0x533B65DE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
@@ -1009,16 +1009,17 @@ I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\cs99xx_collect.h)(0x59F2ACFA)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
 I (..\source\module\module.h)(0x591FA79A)
+I (..\source\APP\IR\ir_shift_gear.h)(0x5A00001D)
 F (..\source\APP\CS99XX\cs99xx.c)(0x59F9B483)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx.d)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.h)(0x56F361BC)
@@ -1056,8 +1057,8 @@ I (..\source\uCOSII\core\ucos_ii.h)(0x486309CE)
 I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1072,7 +1073,7 @@ I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\cs99xx_collect.h)(0x59F2ACFA)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
 I (..\source\module\module.h)(0x591FA79A)
@@ -1112,9 +1113,9 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -1127,7 +1128,7 @@ I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
-F (..\source\APP\CS99XX\cs99xx_collect.c)(0x59F9B1FB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_collect.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_collect.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_collect.d)
+F (..\source\APP\CS99XX\cs99xx_collect.c)(0x59FFF379)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_collect.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_collect.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_collect.d)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
 I (..\source\APP\CS99XX\cs99xx_collect.h)(0x59F2ACFA)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
@@ -1166,13 +1167,13 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1236,7 +1237,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783B
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -1253,7 +1254,7 @@ I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_err_log.h)(0x579EECE3)
 I (..\source\APP\app.h)(0x591FA799)
@@ -1292,7 +1293,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
 I (..\source\BSP\RTC_Config\RTC_Config.h)(0x56F0BD49)
@@ -1336,12 +1337,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1408,7 +1409,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1472,12 +1473,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1536,9 +1537,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1591,7 +1592,7 @@ I (..\source\APP\CS99XX\cs99xx_led.h)(0x56F0C275)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 F (..\source\APP\CS99XX\cs99xx_list.c)(0x5539E906)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_list.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_list.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_list.d)
 I (..\source\APP\CS99XX\cs99xx_list.h)(0x553F421B)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -1658,7 +1659,7 @@ I (..\source\uCGUI\GUI_LIB\Heads\GUI_ConfDefaults.h)(0x533B6634)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIConf.h)(0x534B3863)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIType.h)(0x533B6780)
 I (..\source\uCGUI\GUI_LIB\Heads\LCD.h)(0x533B65DE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
@@ -1673,7 +1674,7 @@ I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
@@ -1716,8 +1717,8 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1779,12 +1780,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1837,12 +1838,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1894,12 +1895,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -1952,12 +1953,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2010,12 +2011,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2067,12 +2068,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2124,12 +2125,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2157,7 +2158,7 @@ I (..\source\FreeModbus\modbus\include\mbframe.h)(0x5207A124)
 I (..\source\FreeModbus\modbus\include\mbutils.h)(0x5207A122)
 I (..\source\USER\SysTemConfig.h)(0x59F92B44)
 I (D:\Keil\ARM\RV31\INC\stdint.h)(0x4F58357C)
-I (..\Project\cs99xx_update.h)(0x59FFEDDF)
+I (..\Project\cs99xx_update.h)(0x5A004C36)
 I (D:\Keil\ARM\RV31\INC\stdio.h)(0x4F58357C)
 I (..\source\module\module.h)(0x591FA79A)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
@@ -2191,9 +2192,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\APP\CS99XX\cs99xx_plc.h)(0x591FA799)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2208,7 +2209,7 @@ I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 F (..\source\APP\CS99XX\cs99xx_pw.c)(0x56D4E104)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_pw.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_pw.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_pw.d)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
@@ -2246,12 +2247,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2305,12 +2306,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2379,12 +2380,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2399,7 +2400,7 @@ I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 F (..\source\APP\CS99XX\cs99xx_struct.c)(0x59FE65E9)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_struct.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_struct.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_struct.d)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -2441,7 +2442,7 @@ I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
@@ -2485,12 +2486,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2544,8 +2545,8 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2602,13 +2603,13 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_result.h)(0x57BE812D)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2622,7 +2623,7 @@ I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
 I (..\source\Comm_app\mb_server.h)(0x591FA79A)
 I (..\source\FreeModbus\modbus\include\mb.h)(0x5225EEF4)
@@ -2686,8 +2687,8 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2701,7 +2702,7 @@ I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Comm_app\mb_server.h)(0x591FA79A)
 I (..\source\FreeModbus\modbus\include\mb.h)(0x5225EEF4)
 I (..\source\FreeModbus\port\port.h)(0x56D7A457)
@@ -2752,12 +2753,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
 I (..\source\BSP\RTC_Config\RTC_Config.h)(0x56F0BD49)
 I (D:\Keil\ARM\ARMCC\include\time.h)(0x51C7C554)
-F (..\source\APP\CS99XX\serve_test.c)(0x59FFD7E8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\serve_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\serve_test.crf --depend ..\..\cs99xx_zwp_output\obj\serve_test.d)
+F (..\source\APP\CS99XX\serve_test.c)(0x59FFF379)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\serve_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\serve_test.crf --depend ..\..\cs99xx_zwp_output\obj\serve_test.d)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
 I (D:\Keil\ARM\ARMCC\include\math.h)(0x51C7C554)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
@@ -2797,12 +2798,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2816,7 +2817,7 @@ I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 I (..\source\Comm_app\mb_server.h)(0x591FA79A)
 I (..\source\FreeModbus\modbus\include\mb.h)(0x5225EEF4)
@@ -2899,12 +2900,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2957,12 +2958,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -2977,8 +2978,8 @@ I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
-F (..\source\APP\TEST_COM\cs99xx_relay_motion.c)(0x59FFCEEA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.d)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+F (..\source\APP\TEST_COM\cs99xx_relay_motion.c)(0x59FFF1C6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_relay_motion.d)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3007,7 +3008,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
@@ -3022,7 +3023,7 @@ I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.h)(0x56F361BC)
 I (..\source\APP\app.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_result.h)(0x57BE812D)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -3048,7 +3049,6 @@ I (..\source\APP\CS99XX\cs99xx_err_log.h)(0x579EECE3)
 I (..\source\APP\CS99XX\cs99xx_plc.h)(0x591FA799)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
 I (..\source\module\module.h)(0x591FA79A)
-I (..\source\APP\IR\cs99xx_ir_shift_gear.h)(0x56F0C22E)
 I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
 I (..\source\APP\TEST_COM\test_tools.h)(0x59FEA738)
 I (..\source\APP\ACW\acw_test_g.h)(0x59F9B34C)
@@ -3095,12 +3095,12 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -3127,7 +3127,7 @@ I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 F (..\source\APP\TEST_COM\test_com.c)(0x59FEA738)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\test_com.o --omf_browse ..\..\cs99xx_zwp_output\obj\test_com.crf --depend ..\..\cs99xx_zwp_output\obj\test_com.d)
 I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3168,7 +3168,7 @@ I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\BSP\Timer_Config\Timer_Config.h)(0x59F95FF1)
 F (..\source\APP\TEST_COM\test_tools.c)(0x59FEA738)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\test_tools.o --omf_browse ..\..\cs99xx_zwp_output\obj\test_tools.crf --depend ..\..\cs99xx_zwp_output\obj\test_tools.d)
 I (..\source\APP\TEST_COM\test_tools.h)(0x59FEA738)
-F (..\source\APP\ACW\acw_relay.c)(0x59F9A60D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\acw_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\acw_relay.crf --depend ..\..\cs99xx_zwp_output\obj\acw_relay.d)
+F (..\source\APP\ACW\acw_relay.c)(0x5A003973)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\acw_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\acw_relay.crf --depend ..\..\cs99xx_zwp_output\obj\acw_relay.d)
 I (..\source\APP\ACW\acw_relay.h)(0x59F9A545)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3198,12 +3198,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
 F (..\source\APP\ACW\acw_test.c)(0x59FECF83)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\acw_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\acw_test.crf --depend ..\..\cs99xx_zwp_output\obj\acw_test.d)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3232,7 +3232,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
@@ -3247,7 +3247,7 @@ I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\APP\ACW\acw_count.h)(0x59F960F0)
 I (..\source\APP\ACW\acw_relay.h)(0x59F9A545)
-F (..\source\APP\ACW\acw_count.c)(0x59FD13A0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\acw_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\acw_count.crf --depend ..\..\cs99xx_zwp_output\obj\acw_count.d)
+F (..\source\APP\ACW\acw_count.c)(0x5A0042B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\acw_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\acw_count.crf --depend ..\..\cs99xx_zwp_output\obj\acw_count.d)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.H)(0x56F361BC)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3277,8 +3277,8 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\ACW\acw_relay.h)(0x59F9A545)
 I (..\source\APP\ACW\acw_count.h)(0x59F960F0)
@@ -3321,12 +3321,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\ACW\acw_relay.h)(0x59F9A545)
 I (..\source\APP\ACW\acw_count.h)(0x59F960F0)
 I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
 I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
@@ -3336,7 +3336,7 @@ I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
-F (..\source\APP\DCW\dcw_count.c)(0x59FE80E6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dcw_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\dcw_count.crf --depend ..\..\cs99xx_zwp_output\obj\dcw_count.d)
+F (..\source\APP\DCW\dcw_count.c)(0x5A004313)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dcw_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\dcw_count.crf --depend ..\..\cs99xx_zwp_output\obj\dcw_count.d)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.H)(0x56F361BC)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3366,8 +3366,8 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\DCW\dcw_relay.h)(0x59FE7816)
 I (..\source\APP\DCW\dcw_count.h)(0x59FE651A)
@@ -3380,7 +3380,7 @@ I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
 I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
-F (..\source\APP\DCW\dcw_relay.c)(0x59FE651A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dcw_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\dcw_relay.crf --depend ..\..\cs99xx_zwp_output\obj\dcw_relay.d)
+F (..\source\APP\DCW\dcw_relay.c)(0x5A003969)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dcw_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\dcw_relay.crf --depend ..\..\cs99xx_zwp_output\obj\dcw_relay.d)
 I (..\source\APP\DCW\dcw_relay.h)(0x59FE7816)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3410,12 +3410,13 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
+I (..\source\APP\TEST_COM\test_tools.h)(0x59FEA738)
 F (..\source\APP\DCW\dcw_test.c)(0x59FECF83)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dcw_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\dcw_test.crf --depend ..\..\cs99xx_zwp_output\obj\dcw_test.d)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3444,7 +3445,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
@@ -3489,12 +3490,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\DCW\dcw_relay.h)(0x59FE7816)
 I (..\source\APP\DCW\dcw_count.h)(0x59FE651A)
 I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
 I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
@@ -3504,7 +3505,7 @@ I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
-F (..\source\APP\IR\ir_count.c)(0x59FE796F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_count.crf --depend ..\..\cs99xx_zwp_output\obj\ir_count.d)
+F (..\source\APP\IR\ir_count.c)(0x5A0045A6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_count.crf --depend ..\..\cs99xx_zwp_output\obj\ir_count.d)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.H)(0x56F361BC)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3534,8 +3535,8 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\IR\ir_relay.h)(0x59FFCE5B)
 I (..\source\APP\IR\ir_count.h)(0x59FE7816)
@@ -3548,7 +3549,7 @@ I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
 I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
 I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
-F (..\source\APP\IR\ir_relay.c)(0x59FFD380)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_relay.crf --depend ..\..\cs99xx_zwp_output\obj\ir_relay.d)
+F (..\source\APP\IR\ir_relay.c)(0x5A003AD2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_relay.crf --depend ..\..\cs99xx_zwp_output\obj\ir_relay.d)
 I (..\source\APP\IR\ir_relay.h)(0x59FFCE5B)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3578,12 +3579,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
-F (..\source\APP\IR\ir_test.c)(0x59FED038)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_test.crf --depend ..\..\cs99xx_zwp_output\obj\ir_test.d)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+F (..\source\APP\IR\ir_test.c)(0x5A000499)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_test.crf --depend ..\..\cs99xx_zwp_output\obj\ir_test.d)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3612,7 +3613,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
@@ -3627,7 +3628,9 @@ I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\APP\IR\ir_count.h)(0x59FE7816)
 I (..\source\APP\IR\ir_relay.h)(0x59FFCE5B)
-F (..\source\APP\IR\cs99xx_ir_shift_gear.c)(0x59FFEDA6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\cs99xx_ir_shift_gear.o --omf_browse ..\..\cs99xx_zwp_output\obj\cs99xx_ir_shift_gear.crf --depend ..\..\cs99xx_zwp_output\obj\cs99xx_ir_shift_gear.d)
+I (..\source\APP\IR\ir_shift_gear.h)(0x5A00001D)
+I (..\source\BSP\Timer5\Timer5_Config.h)(0x5A0004C6)
+F (..\source\APP\IR\ir_shift_gear.c)(0x59FFFFFE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\ir_shift_gear.o --omf_browse ..\..\cs99xx_zwp_output\obj\ir_shift_gear.crf --depend ..\..\cs99xx_zwp_output\obj\ir_shift_gear.d)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3656,11 +3659,11 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\IR\cs99xx_ir_shift_gear.h)(0x56F0C22E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
-I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\IR\ir_shift_gear.h)(0x5A00001D)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
+I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -3677,7 +3680,7 @@ I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 I (D:\Keil\ARM\RV31\INC\string.h)(0x4F58357C)
 I (..\source\APP\IR\ir_relay.h)(0x59FFCE5B)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
-F (..\source\APP\GR\gr_count.c)(0x59FE8797)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\gr_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\gr_count.crf --depend ..\..\cs99xx_zwp_output\obj\gr_count.d)
+F (..\source\APP\GR\gr_count.c)(0x5A004C2F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\gr_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\gr_count.crf --depend ..\..\cs99xx_zwp_output\obj\gr_count.d)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.H)(0x56F361BC)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3707,8 +3710,8 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\GR\gr_relay.h)(0x59FE7816)
 I (..\source\APP\GR\gr_count.h)(0x59FE7816)
@@ -3721,7 +3724,7 @@ I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
 I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
 I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
 I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
-F (..\source\APP\GR\gr_relay.c)(0x59FE6797)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\gr_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\gr_relay.crf --depend ..\..\cs99xx_zwp_output\obj\gr_relay.d)
+F (..\source\APP\GR\gr_relay.c)(0x5A0041FF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\gr_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\gr_relay.crf --depend ..\..\cs99xx_zwp_output\obj\gr_relay.d)
 I (..\source\APP\GR\gr_relay.h)(0x59FE7816)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3751,12 +3754,12 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
 F (..\source\APP\GR\gr_test.c)(0x59FED038)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\gr_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\gr_test.crf --depend ..\..\cs99xx_zwp_output\obj\gr_test.d)
-I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59F961F2)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -3785,7 +3788,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
 I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
@@ -3800,6 +3803,131 @@ I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
 I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
 I (..\source\APP\GR\gr_count.h)(0x59FE7816)
 I (..\source\APP\GR\gr_relay.h)(0x59FE7816)
+F (..\source\APP\DC_GR\dc_gr_count.c)(0x5A004116)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dc_gr_count.o --omf_browse ..\..\cs99xx_zwp_output\obj\dc_gr_count.crf --depend ..\..\cs99xx_zwp_output\obj\dc_gr_count.d)
+I (..\source\BSP\SPI_CPLD\SPI_CPLD.H)(0x56F361BC)
+I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
+I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
+I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\source\Libraries\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (..\source\USER\stm32f10x_conf.h)(0x563C3CCB)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_bkp.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_cec.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
+I (..\source\APP\DC_GR\dc_gr_relay.h)(0x5A004117)
+I (..\source\APP\DC_GR\dc_gr_count.h)(0x5A004133)
+I (..\source\APP\DC_GR\dc_gr_test.h)(0x5A0041A2)
+I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
+I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
+I (..\source\APP\TEST_COM\test_tools.h)(0x59FEA738)
+I (..\source\APP\ACW\acw_test_g.h)(0x59F9B34C)
+I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
+I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
+I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
+I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
+I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
+F (..\source\APP\DC_GR\dc_gr_relay.c)(0x5A004169)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dc_gr_relay.o --omf_browse ..\..\cs99xx_zwp_output\obj\dc_gr_relay.crf --depend ..\..\cs99xx_zwp_output\obj\dc_gr_relay.d)
+I (..\source\APP\DC_GR\dc_gr_relay.h)(0x5A004117)
+I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
+I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
+I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\source\Libraries\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (..\source\USER\stm32f10x_conf.h)(0x563C3CCB)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_bkp.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_cec.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\BSP\MC14094\MC14094.h)(0x579EECE4)
+F (..\source\APP\DC_GR\dc_gr_test.c)(0x5A0041A2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\dc_gr_test.o --omf_browse ..\..\cs99xx_zwp_output\obj\dc_gr_test.crf --depend ..\..\cs99xx_zwp_output\obj\dc_gr_test.d)
+I (..\source\APP\TEST_COM\cs99xx_relay_motion.h)(0x59FFF067)
+I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
+I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
+I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\source\Libraries\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (..\source\USER\stm32f10x_conf.h)(0x563C3CCB)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_bkp.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_cec.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
+I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
+I (..\source\APP\TEST_COM\cs99xx_vref.h)(0x564680FD)
+I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
+I (..\source\APP\TEST_COM\test_com.h)(0x59FEA737)
+I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
+I (..\source\APP\TEST_COM\test_tools.h)(0x59FEA738)
+I (..\source\APP\ACW\acw_test_g.h)(0x59F9B34C)
+I (..\source\APP\ACW\acw_test.h)(0x59FE8797)
+I (..\source\APP\DCW\dcw_test.h)(0x59FE86C7)
+I (..\source\APP\DCW\dcw_test_g.h)(0x59FE77C9)
+I (..\source\APP\IR\ir_test.h)(0x59FFDC93)
+I (..\source\APP\GR\gr_test.h)(0x59FE8A80)
+I (..\source\APP\DC_GR\dc_gr_count.h)(0x5A004133)
+I (..\source\APP\DC_GR\dc_gr_test.h)(0x5A0041A2)
+I (..\source\APP\DC_GR\dc_gr_relay.h)(0x5A004117)
 F (..\source\APP\AutoCal\auto_cal_comm.c)(0x591FA799)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\auto_cal_comm.o --omf_browse ..\..\cs99xx_zwp_output\obj\auto_cal_comm.crf --depend ..\..\cs99xx_zwp_output\obj\auto_cal_comm.d)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
@@ -3831,9 +3959,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783B
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\APP\AutoCal\auto_cal_comm.h)(0x591FA799)
 I (..\source\APP\AutoCal\auto_calibration.h)(0x591FA799)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -3917,9 +4045,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -3982,14 +4110,14 @@ I (..\source\uCGUI\GUI_LIB\Heads\GUI_ConfDefaults.h)(0x533B6634)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIConf.h)(0x534B3863)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIType.h)(0x533B6780)
 I (..\source\uCGUI\GUI_LIB\Heads\LCD.h)(0x533B65DE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\AutoCal\auto_calibration.h)(0x591FA799)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
@@ -4054,7 +4182,7 @@ I (..\source\uCGUI\GUI_LIB\Heads\GUI_ConfDefaults.h)(0x533B6634)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIConf.h)(0x534B3863)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIType.h)(0x533B6780)
 I (..\source\uCGUI\GUI_LIB\Heads\LCD.h)(0x533B65DE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
@@ -4067,11 +4195,11 @@ I (..\source\BSP\DAC\DAC_VREF.h)(0x59F95CCE)
 I (..\source\BSP\SPI_CPLD\SPI_CPLD.h)(0x56F361BC)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
 I (..\source\APP\CS99XX\cs99xx_it.h)(0x591FA799)
-I (..\source\BSP\Timer5\Timer5_Config.h)(0x56F0BF22)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\BSP\Timer5\Timer5_Config.h)(0x5A0004C6)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
-I (..\Project\cs99xx_update.h)(0x59FFEDDF)
+I (..\Project\cs99xx_update.h)(0x5A004C36)
 I (..\source\BSP\SPI_FLASH\spi_flash.h)(0x579EECE4)
 F (..\source\BSP\FSMC_Config\STM32_FSMC.C)(0x551A55EA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\stm32_fsmc.o --omf_browse ..\..\cs99xx_zwp_output\obj\stm32_fsmc.crf --depend ..\..\cs99xx_zwp_output\obj\stm32_fsmc.d)
 I (..\source\BSP\FSMC_Config\STM32_FSMC.H)(0x56F0BB54)
@@ -4140,7 +4268,7 @@ I (..\source\uCGUI\GUI_LIB\Heads\GUI_ConfDefaults.h)(0x533B6634)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIConf.h)(0x534B3863)
 I (..\source\uCGUI\GUI_LIB\Heads\GUIType.h)(0x533B6780)
 I (..\source\uCGUI\GUI_LIB\Heads\LCD.h)(0x533B65DE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
@@ -4153,7 +4281,7 @@ I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\BSP\RTC_Config\RTC_Config.h)(0x56F0BD49)
 I (D:\Keil\ARM\ARMCC\include\time.h)(0x51C7C554)
 I (..\source\APP\app.h)(0x591FA799)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
@@ -4195,8 +4323,8 @@ I (..\source\BSP\BSP_Config\BSP_config.h)(0x59F9451F)
 I (..\source\BSP\Timer_Config\Timer_Config.h)(0x59F95FF1)
 I (..\source\APP\app.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -4288,8 +4416,8 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -4429,9 +4557,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -4514,9 +4642,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\BSP\ADC\STM32_ADC.H)(0x591FA799)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -4530,7 +4658,7 @@ I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)
 I (..\source\BSP\EE_I2C\i2c_ee.h)(0x56F0BE8B)
-F (..\source\BSP\Timer5\Timer5_Config.c)(0x5668F0D5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\timer5_config.o --omf_browse ..\..\cs99xx_zwp_output\obj\timer5_config.crf --depend ..\..\cs99xx_zwp_output\obj\timer5_config.d)
+F (..\source\BSP\Timer5\Timer5_Config.c)(0x5A0004C6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\timer5_config.o --omf_browse ..\..\cs99xx_zwp_output\obj\timer5_config.crf --depend ..\..\cs99xx_zwp_output\obj\timer5_config.d)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -4559,7 +4687,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (..\source\BSP\Timer5\Timer5_Config.h)(0x56F0BF22)
+I (..\source\BSP\Timer5\Timer5_Config.h)(0x5A0004C6)
 I (..\source\BSP\BSP_Config\BSP_config.h)(0x59F9451F)
 I (..\source\uCOSII\core\ucos_ii.h)(0x486309CE)
 I (..\source\USER\app_cfg.h)(0x591FA79A)
@@ -4634,7 +4762,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (D:\Keil\ARM\RV31\INC\string.h)(0x4F58357C)
 F (..\source\uCOSII\core\os_core.c)(0x486309CE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\os_core.o --omf_browse ..\..\cs99xx_zwp_output\obj\os_core.crf --depend ..\..\cs99xx_zwp_output\obj\os_core.d)
 I (..\source\uCOSII\core\ucos_ii.h)(0x486309CE)
@@ -4736,8 +4864,8 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -4968,13 +5096,13 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\irq.h)(0x568B4D96)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -5048,13 +5176,13 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\irq.h)(0x568B4D96)
 I (..\source\APP\CS99XX\cs99xx_mem_api.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_eep_manage.h)(0x57BEDAF5)
 I (..\source\APP\CS99XX\cs99xx_flash_manage.h)(0x57C0DCFB)
 I (..\source\APP\CS99XX\on_chip_flash_api.h)(0x56F0C17E)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -5133,7 +5261,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\Comm_app\mb_master.h)(0x56F334FF)
 I (..\source\Comm_app\mb_cmd_define.h)(0x591FA79A)
 I (..\source\FreeModbus\modbus\include\mb.h)(0x5225EEF4)
@@ -5147,7 +5275,7 @@ I (..\source\FreeModbus\modbus\include\mb_m.h)(0x55C59CE1)
 F (..\source\Comm_app\mb_master.h)(0x56F334FF)()
 F (..\source\Comm_app\mb_server.c)(0x591FA79A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\mb_server.o --omf_browse ..\..\cs99xx_zwp_output\obj\mb_server.crf --depend ..\..\cs99xx_zwp_output\obj\mb_server.d)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\Libraries\CMSIS\stm32f10x.h)(0x502F32D8)
 I (..\source\Libraries\CMSIS\core_cm3.h)(0x4D523B58)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -5177,7 +5305,7 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -5377,7 +5505,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\FreeModbus\port\user_mb_app.h)(0x56D14F15)
 I (..\source\FreeModbus\modbus\include\mb_m.h)(0x55C59CE1)
 I (..\source\FreeModbus\modbus\include\mbutils.h)(0x5207A122)
@@ -5809,7 +5937,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 F (..\source\FreeModbus\modbus\functions\mbfuncdisc_m.c)(0x55C591BB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\mbfuncdisc_m.o --omf_browse ..\..\cs99xx_zwp_output\obj\mbfuncdisc_m.crf --depend ..\..\cs99xx_zwp_output\obj\mbfuncdisc_m.d)
 I (D:\Keil\ARM\RV31\INC\stdlib.h)(0x4F58357C)
 I (D:\Keil\ARM\RV31\INC\string.h)(0x4F58357C)
@@ -5936,7 +6064,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\FreeModbus\port\user_mb_app.h)(0x56D14F15)
 I (..\source\FreeModbus\modbus\include\mbutils.h)(0x5207A122)
 I (..\source\Comm_app\mb_server.h)(0x591FA79A)
@@ -6069,7 +6197,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\FreeModbus\modbus\rtu\mbrtu.h)(0x5225EEF4)
 F (..\source\FreeModbus\port\portevent_m.c)(0x5225EEF4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\source\Libraries\CMSIS -I..\source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\source\USER -I..\source\APP -I..\source\APP\CS99XX -I..\source\APP\AutoCal -I..\source\BSP\45PE16 -I..\source\BSP\ADC -I..\source\BSP\ADC_DMA -I..\source\BSP\BSP_Config -I..\source\BSP\DAC -I..\source\BSP\EE_I2C -I..\source\BSP\FSMC_Config -I..\source\BSP\GPIO_Config -I..\source\BSP\IIC_Config -I..\source\BSP\KeyBoard -I..\source\BSP\m45pe16_spi_flash -I..\source\BSP\MC14094 -I..\source\BSP\RTC_Config -I..\source\BSP\SineWave -I..\source\BSP\SPI_CPLD -I..\source\BSP\Timer5 -I..\source\BSP\Timer_Config -I..\source\CMSIS -I..\source\Comm_app -I..\source\FreeModbus\modbus\include -I..\source\FreeModbus\modbus -I..\source\FreeModbus\port -I..\source\uCGUI -I..\source\uCGUI\GUI_LIB\Heads -I..\source\uCGUI\GUI_LIB -I..\source\uCOSII\core -I..\source\uCOSII\port -I..\source\uCGUI\GUI_LIB\EnglishFont -I..\source\uCGUI\GUI_LIB\Picture -I..\source\FreeModbus\modbus\rtu -I..\source\module\DC_GR_MODULE -I..\source\module -I..\source\BSP\SPI_FLASH -I..\Project -I..\source\APP\ACW -I..\source\APP\TEST_COM -I..\source\APP\DCW -I..\source\APP\IR -I..\source\APP\GR-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I Device\Include-o ..\..\cs99xx_zwp_output\obj\portevent_m.o --omf_browse ..\..\cs99xx_zwp_output\obj\portevent_m.crf --depend ..\..\cs99xx_zwp_output\obj\portevent_m.d)
 I (..\source\FreeModbus\modbus\include\mb.h)(0x5225EEF4)
@@ -6223,9 +6351,9 @@ I (..\source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
 I (..\source\module\module.h)(0x591FA79A)
 I (..\source\module\DC_GR_MODULE\dc_module_bridge.h)(0x591FA79A)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
@@ -6284,7 +6412,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\module\DC_GR_MODULE\dc_module_bridge.h)(0x591FA79A)
 I (..\source\Comm_app\mb_cmd_define.h)(0x591FA79A)
 I (..\source\module\module.h)(0x591FA79A)
@@ -6325,10 +6453,10 @@ I (D:\Keil\ARM\RV31\INC\string.h)(0x4F58357C)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
 I (..\source\APP\CS99XX\calibration.h)(0x59FFCB0F)
 I (..\source\Comm_app\mb_cmd_define.h)(0x591FA79A)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -6377,7 +6505,7 @@ I (..\source\USER\app_cfg.h)(0x591FA79A)
 I (..\source\USER\os_cfg.h)(0x56D1513B)
 I (..\source\uCOSII\port\os_cpu.h)(0x57BE812F)
 I (..\source\APP\CS99XX\cs99xx_config.h)(0x591FA799)
-I (..\source\APP\CS99XX\cs99xx_struct.h)(0x59FFD910)
+I (..\source\APP\CS99XX\cs99xx_struct.h)(0x5A0046F7)
 I (..\source\BSP\KeyBoard\keyboard.h)(0x56F0BE36)
 I (..\source\APP\GUI_Draw.h)(0x591FA799)
 I (..\source\uCGUI\GUI_LIB\Heads\gui.h)(0x533B8228)
@@ -6389,7 +6517,7 @@ I (..\source\uCGUI\GUI_LIB\EnglishFont\Font_DIY.h)(0x56AAD3A8)
 I (..\source\uCGUI\GUI_LIB\Picture\picture.h)(0x533B667C)
 I (..\source\uCGUI\GUI_LIB\LCD24064.H)(0x5521EA71)
 I (..\source\module\DC_GR_MODULE\dc_module.h)(0x591FA79A)
-I (..\source\APP\CS99XX\serve_test.h)(0x59FFCE44)
+I (..\source\APP\CS99XX\serve_test.h)(0x59FFF2BE)
 I (..\source\BSP\GPIO_Config\STM32_GPIO_Config.h)(0x576387FE)
 I (..\source\APP\CS99XX\cs99xx_parameter.h)(0x59F9B483)
 I (..\source\APP\CS99XX\cs99xx_type.h)(0x591FA799)

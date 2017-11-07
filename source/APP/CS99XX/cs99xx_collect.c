@@ -148,7 +148,7 @@ void count_dis_value(void)
 	{
 		temp_vol = sample_vol;
 		temp_cur = sample_cur;
-        cur_ad_vol = sample_cur * 3.3 / 4096;/* 计算出电流ad采样端的电压值 */
+        g_test_data.cur_ad_vol = sample_cur * 3.3 / 4096;/* 计算出电流ad采样端的电压值 */
 		
 		if(temp_vol == 0)
 		{

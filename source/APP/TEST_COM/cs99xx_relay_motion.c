@@ -28,7 +28,6 @@
 #include    "cs99xx_err_log.h"
 #include    "cs99xx_plc.h"
 #include    "dc_module.h"
-#include    "cs99xx_ir_shift_gear.h"
 #include    "test_com.h"
 
 
